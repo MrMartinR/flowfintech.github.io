@@ -1,8 +1,21 @@
 .content {
-  position: absolute;
-  left: 20%;
-  top: 20%;
+  position: center;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: rgb(240, 240, 240);
+  text-align: center;
+  display: flex;
+}
+
+.poison {
+  position: center;
+  left: 50%;
+  top: 50%;
   -webkit-transform: translate(-20%, -20%);
   transform: translate(-20%, -20%);
   background-color: rgb(240, 240, 240);
+  text-align: center;
+  display: flex;
 }
