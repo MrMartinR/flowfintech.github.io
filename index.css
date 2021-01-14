@@ -1,21 +1,56 @@
-.content {
+.table {
+  font-family: 'poppins';
   position: center;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  background-color: rgb(240, 240, 240);
   text-align: center;
-  display: flex;
+  display: inline-flex;
+  border: 4px solid rgb(187, 187, 187);
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  resize: both;
+  color: rgb(121, 121, 121);
+  text-decoration: none;
+}
+.row {
+  font-family: 'poppins';
+  padding: 60px;
 }
 
-.poison {
-  position: center;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-20%, -20%);
-  transform: translate(-20%, -20%);
-  background-color: rgb(240, 240, 240);
-  text-align: center;
-  display: flex;
+a:link {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+}
+/* A link that is hovered on */
+a:hover {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+}
+/* A link that is selected */
+a:active {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+}
+
+.image {
+  position: relative;
+  height: 400px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 30px;
+  resize: both;
+}
+
+.content {
+  font-family: 'poppins';
+  /* background: white; */
+  height: 600px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  resize: both;
+  /* overflow: auto; */
 }

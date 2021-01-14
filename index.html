@@ -4,20 +4,7 @@
     <meta charset="utf-8" />
     <title>Flow</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,64 +25,51 @@
       rel="stylesheet"
       href="/index.css"
     />
-
+ 
   </head>
   <body">
-    <div>
-    <div class="content" height="500">
-      <img src="/cover.svg" alt="Flow" height="500" />     
-    </div>
-      <br>
-      <br>
-      <div>
-        <br>
-
-# About The Project
-
-This project implements a finance management application to track investments, personal finance, budget, retirements, Financial Independence Retire Early movement FIRE, all stuff related to Personal Finance. 
-
-## Background Information
-
-When a business or an individual is in need of a loan, they reach out to loan originator. In most case, the loan originator does not have the money to give to this client. So, what the loan originator does is to float the loan and allow investors to fund it. The floating or display of a loan that need funding is done on a platform. Sometimes, the loan originator have their own platform.
-Now, the investor does not just invest in one platform but in multiple platforms and at times with different loan originator on the same platform (now referred to as a market place as it has more that one loan originator). These bring us to our application, `Flow`, an investment management application.
-
-Using Flow, an investor is able to take the information `after` investing in a platform and add it to our application for easier management. In the past, the investor would have numerous excel files that stored this data which is messy, not easily accessible and does not have that good user experience with tools such as sort, classify by, just ready available to them; so Flow.
-
-
-<br>
-        ## About The Project
-
-        This project implements an investment management application to track investments, personal finance, budget, retirements, Financial Independence Retire Early movement FIRE, all stuff related to Personal Finance.
-        
-        ### Background information
-        
-        When a business or an individual is in need of a loan, they reach out to loan originator. In most case, the loan originator does not have the money to give to this client. So, what the loan originator does is to float the loan and allow investors to fund it. The floating or display of a loan that need funding is done on a platform. Sometimes, the loan originator have their own platform.
-        Now, the investor does not just invest in one platform but in multiple platforms and at times with different loan originator on the same platform (now referred to as a market place as it has more that one loan originator). These bring us to our application, `Flow`, an investment management application.
-        
-        Using Flow, an investor is able to take the information `after` investing in a platform and add it to our application for easier management. In the past, the investor would have numerous excel files that stored this data which is messy, not easily accessible and does not have that good user experience with tools such as sort, classify by, just ready available to them; so Flow.</div>
-      
-        <br>
-        <div class="poison">
-        <center><h2>Choose your Poison</h2></center>
-
-        <br>
-        <center> <a href="https://github.com/FlowFintech/FlowBack"><img src="backend.svg" alt="Backend"  height="300">Backend</a></center>
-        <a href="./docs/index.html"><center><h2>Code Documentation</h2></a></center>
-
-        <br>
-
-      <a href="https://github.com/FlowFintech/FlowFront"><center><img src="frontend.svg" alt="Frontend" height="300">Frontend</a></center>
-
-
-
+    <div class="image">
+      <img src="/cover.svg" alt="Flow" height="400" />     
     </div>
 
-    <center><h2>Production</h2></center>
-    <div   class="content">
-      <h2><a href="https://flowfin.tech">Blog</a></h2>
-      <h2><a href="https://api.flowfin.tech">App</a></h2>
+    <div class="content">
+      <h1>About The Project</h1>
+      <p>This project implements a finance management application to track investments, personal finance, budget, retirements, Financial Independence Retire Early movement FIRE, all stuff related to Personal Finance. </p>
+      <h1>Background Information</h1>
+      <p>When a business or an individual is in need of a loan, they reach out to loan originator. In most case, the loan originator does not have the money to give to this client. So, what the loan originator does is to float the loan and allow investors to fund it. The floating or display of a loan that need funding is done on a platform. Sometimes, the loan originator have their own platform.</p>
+      <p>Now, the investor does not just invest in one platform but in multiple platforms and at times with different loan originator on the same platform (now referred to as a market place as it has more that one loan originator). These bring us to our application, `Flow`, an investment management application.</p>
+      <p>Using Flow, an investor is able to take the information `after` investing in a platform and add it to our application for easier management. In the past, the investor would have numerous excel files that stored this data which is messy, not easily accessible and does not have that good user experience with tools such as sort, classify by, just ready available to them; so Flow.</p>
     </div>
 
-  </div>
+
+  <div class="table">
+    <table>
+        <tr>
+          <div class="row">
+          <h1>Frontend</h1>
+          <img src="frontend.svg" alt="Frontend" height="300">
+          <a href="https://github.com/FlowFintech/FlowFront"><h2>GitHub</h2></a>
+          <a href="./docs-front/index.html"><h2>Code Documentation</h2></a>
+        </div>
+        </tr>
+        <tr>
+          <div class="row">
+            <h1>Backend</h1>
+            <img src="backend.svg" alt="Backend" height="300">
+            <a href="https://github.com/FlowFintech/FlowBack"><h2>GitHub</h2></a>
+            <a href="./docs/index.html"><h2>Code Documentation</h2></a>
+          </div>
+        </tr>
+        <tr>
+          <div class="row">
+            <h1>Production</h1>
+            <img src="safari-pinned-tab.svg" alt="Flow Production" height="300">
+            <a href="https://flowfin.tech"><h2>The Blog</h2></a>
+            <a href="https://api.flowfin.tech"><h2>The App</h2></a>
+            <a href="https://app.swaggerhub.com/apis/Flow-Fintech/FlowAPI/1.0.0"><h2>The API</h2></a>
+          </div>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
