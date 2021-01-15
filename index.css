@@ -36,18 +36,23 @@ a:active {
 }
 
 .image {
-  position: relative;
-  height: 400px;
-  width: 60%;
+  /* position: relative; */
+  /* height: 300px; */
+  width: 50%;
   margin: 0 auto;
-  padding: 30px;
-  resize: both;
+  /* padding: 30px; */
+  /* resize: both; */
 }
-
+.code {
+  padding: 0 24px 0 24px;
+  border-radius: 8px;
+  color: rgb(232, 232, 232);
+  background-color: rgb(67, 67, 67);
+  display: inline-flex;
+}
 .content {
   font-family: 'poppins';
-  /* background: white; */
-  height: 600px;
+  color: rgb(85, 85, 85);
   width: 70%;
   margin: 0 auto;
   padding: 20px;

@@ -28,8 +28,10 @@
  
   </head>
   <body">
+    <br>
+    <br>
     <div class="image">
-      <img src="/cover.svg" alt="Flow" height="400" />     
+      <img src="./assets/flow-header.svg" alt="Flow" height="300" />     
     </div>
 
     <div class="content">
@@ -42,36 +44,114 @@
     </div>
 
 
-  <div class="table">
-    <table>
-        <tr>
-          <div class="row">
-          <h1>Frontend</h1>
-          <img src="frontend.svg" alt="Frontend" height="300">
-          <a href="https://github.com/FlowFintech/FlowFront"><h2>GitHub</h2></a>
-          <a href="./docs-front/index.html"><h2>Code Documentation</h2></a>
+    <div class="content">
+      <div>
+        <h2>Packager Manager</h2>
+        <a href="https://yarnpkg.com"><img src="./assets/yarn.svg" alt="Yarn" height="60"></a>
+
+      <br>
+
+        <div>
+          <h3>macOS</h3> via <a href="http://brew.sh/"><u>Homebrew</u></a><br>
+          <div class="code">
+            <p>brew install yarn</p>
+          </div>
         </div>
-        </tr>
-        <tr>
-          <div class="row">
-            <h1>Backend</h1>
-            <img src="backend.svg" alt="Backend" height="300">
-            <a href="https://github.com/FlowFintech/FlowBack"><h2>GitHub</h2></a>
-            <a href="./docs/index.html"><h2>Code Documentation</h2></a>
-            <a href="./assets/semi-real-data.zip"><h2>Real Data for PostgreSQL</h2></a>
+
+        <br>
+      
+
+        <div>
+          <h3>Ubuntu/Debian</h3>
+          <div class="code">
+            <p>curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -</p>
           </div>
-        </tr>
-        <tr>
-          <div class="row">
-            <h1>Production</h1>
-            <img src="safari-pinned-tab.svg" alt="Flow Production" height="300">
-            <a href="https://flowfin.tech"><h2>The Blog</h2></a>
-            <a href="https://api.flowfin.tech"><h2>The App</h2></a>
-            <a href="https://app.swaggerhub.com/apis/Flow-Fintech/FlowAPI/1.0.0"><h2>The API</h2></a>
-            <a href="./assets/Flow_API_v1.postman_collection.json"><h2>Postman API Collection</h2></a>
+          <br> <br>
+          <div class="code">
+            <p>echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list</p>
           </div>
-        </tr>
-      </table>
+        </div>
+      </div>
     </div>
+  
+    <br>
+
+    <div class="content">
+      <h2>Tasks Manager</h2>
+      <a href="https://trello.com/b/CLQSqEKd/flow"><img src="./assets/trello.svg" alt="Trello" height="60"></a>
+      This is a Kanban board we use to assign and track the development task.
+    </div>
+
+    <div class="content">
+      <h2>Comunication</h2>
+      <a href="https://slack.com/"><img src="./assets/slack.svg" alt="Slack" height="60"></a>
+      Here is where we fight, disscuss and chat about the project.
+    </div>
+
+    <div class="content">
+      <h2>Tools and Extensions</h2>
+      <div>
+        <a href="https://www.postman.com"><img src="./assets/postman.svg" alt="Postman" height="60"></a>
+        <b>Postman</b> is a collaboration platform for API development. You can find the  <a href="./docs/Flow_API_v1.postman_collection.json">postman collection <u>file here</u></a>
+      </div>
+      <br>
+      <div>
+        <a href="https://code.visualstudio.com"><img src="./assets/vs-code.svg" alt="VS Code" height="60"></a>
+        <b>VS Code</b> Shared settings.json file configuration on .vscode root folder
+        <div>
+          <a style="margin-left: 60px" href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"><img src="./assets/prettier.svg" alt="Prettier" height="40"></a>
+          Code formatter using prettier
+        </div>
+      </div>
+      <div>
+        <a href="https://desktop.github.com"><img src="./assets/github.svg" alt="GitHub Desktop" height="60"></a>
+        You can use GitHub Desktop for Windows and macOS for deal with the repos.
+      </div>
+    </div>
+
+
+    <div class="content">
+      <h1>Frontend</h1>
+      <div>
+        <a href="https://github.com/FlowFintech/FlowFront"><img src="./assets/octocat.svg" alt="GitHub Repository" height="60">GitHub Repository</a>
+      </div>
+      <br>
+      <div>
+        <a href="./docs-front/index.html"><img src="./assets/frontend.svg" alt="Code Documentation" height="60">Code Documentation</a>
+      </div>
+    </div>
+
+
+    <div class="content">
+      <h1>Backend</h1>
+
+      <div>
+        <a href="https://github.com/FlowFintech/FlowBack"><img src="./assets/octocat.svg" alt="GitHub Repository" height="60">GitHub Repository</a>
+      </div>
+      <br>
+      <div>
+        <a href="./docs-back/index.html"><img src="./assets/backend.svg" alt="Code Documentation" height="60">Code Documentation</a>
+      </div>
+      <br>
+      <div>
+        <a href="./assets/semi-real-data.zip"><img src="./assets/postgresql.svg" alt="Data for PostgreSQL" height="60">Real Data for PostgreSQL</a>
+      </div>
+      <br>
+      <div>
+        <a href="https://app.swaggerhub.com/apis/Flow-Fintech/FlowAPI/1.0.0"><img src="./assets/swagger.svg" alt="API Documentation" height="60">API Documentation</a>
+      </div>
+
+    </div>
+
+    <br>
+
+    <div class="content">
+      <h1>End Points</h1>
+      <a href="https://flowfin.tech"><h2>The Blog</h2></a>https://flowfin.tech
+      <a href="https://dev.flowfin.tech"><h2>The Developer Portal</h2></a>https://api.flowfin.tech
+      <a href="https://app.flowfin.tech"><h2>The App</h2></a>https://app.flowfin.tech
+      <a href="https://api.flowfin.tech"><h2>The API</h2></a>https://api.flowfin.tech
+    </div>
+    
   </body>
 </html>
