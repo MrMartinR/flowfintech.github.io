@@ -35,6 +35,10 @@ a:active {
   text-decoration: none;
 }
 
+.indent {
+  margin-left: 40px;
+}
+
 .image {
   /* position: relative; */
   /* height: 300px; */
