@@ -1,0 +1,87 @@
+.table {
+  font-family: 'poppins';
+  position: center;
+  /* text-align: center; */
+  /* display: inline-flex; */
+  /* border: 4px solid rgb(187, 187, 187); */
+  border-radius: 8px;
+  background-color: rgb(240, 240, 240);
+  /* border-collapse: collapse; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  border-spacing: 0 1.1em;
+  /* resize: both; */
+  /* color: rgb(121, 121, 121); */
+  /* text-decoration: none; */
+}
+.row {
+  font-family: 'poppins';
+  padding: 60px;
+  border-bottom: 1px solid black;
+
+  /* white-space: nowrap; */
+}
+
+.column {
+  white-space: nowrap;
+}
+
+a:link {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+}
+/* A link that is hovered on */
+a:hover {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+}
+/* A link that is selected */
+a:active {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+}
+
+.indent {
+  margin-left: 40px;
+}
+
+.image {
+  /* position: relative; */
+  /* height: 300px; */
+  width: 50%;
+  margin: 0 auto;
+  /* padding: 30px; */
+  /* resize: both; */
+}
+.code {
+  padding: 0 24px 0 24px;
+  border-radius: 8px;
+  color: rgb(232, 232, 232);
+  background-color: rgb(67, 67, 67);
+  display: inline-flex;
+}
+.content {
+  font-family: 'poppins';
+  color: rgb(85, 85, 85);
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  resize: both;
+
+  /* overflow: auto; */
+}
+
+.table-content {
+  font-family: 'poppins';
+  border-radius: 8px;
+  color: rgb(85, 85, 85);
+  width: 86%;
+  margin: 0 auto;
+  padding: 20px;
+  resize: both;
+  background-color: rgb(240, 240, 240);
+}
