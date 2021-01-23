@@ -1,1109 +1,1189 @@
-<h1 id="react-typescript-style-guide">React TypeScript Style Guide</h1>
-<h2 id="table-of-contents">Table of Contents</h2>
-<ol>
-  <li><a href="#basic-rules">Basic Rules</a></li>
-  <li>
-    <a href="#class-vs-reactcreateclass-vs-stateless"
-      >Class vs <code>React.createClass</code> vs stateless</a
-    >
-  </li>
-  <li><a href="#div-vs-fragment">Div vs Fragment</a></li>
-  <li><a href="#mixins">Mixins</a></li>
-  <li><a href="#naming">Naming</a></li>
-  <li>
-    <a href="#type-vs-interface"><code>type</code> vs <code>interface</code></a>
-  </li>
-  <li>
-    <a href="#null-vs-undefined"
-      ><code>null</code> vs. <code>undefined</code></a
-    >
-  </li>
-  <li><a href="#declaration">Declaration</a></li>
-  <li><a href="#alignment">Alignment</a></li>
-  <li><a href="#quotes">Quotes</a></li>
-  <li><a href="#spacing">Spacing</a></li>
-  <li><a href="#semicolons">Semicolons</a></li>
-  <li>
-    <a href="#array">Annotate Arrays as <code>Type[]</code></a>
-  </li>
-  <li><a href="#props">Props</a></li>
-  <li><a href="#refs">Refs</a></li>
-  <li><a href="#parentheses">Parentheses</a></li>
-  <li><a href="#tags">Tags</a></li>
-  <li><a href="#methods">Methods</a></li>
-  <li><a href="#ordering">Ordering</a></li>
-  <li>
-    <a href="#ismounted"><code>isMounted</code></a>
-  </li>
-</ol>
-<h2 id="basic-rules">Basic Rules</h2>
-<ul>
-  <li>
-    Only include one React component per file.
-    <ul>
-      <li>
-        However, multiple
-        <a
-          href="https://facebook.github.io/react/docs/reusable-components.html#stateless-functions"
-          >Stateless, or Pure, Components</a
-        >
-        are allowed per file.
-      </li>
-    </ul>
-  </li>
-  <li>Always use TSX syntax.</li>
-  <li>
-    Do not use <code>React.createElement</code> unless youâ€™re initializing the
-    app from a file that is not TSX.
-  </li>
-  <li>
-    <a
-      href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md"
-      ><code>react/forbid-prop-types</code></a
-    >
-    will allow <code>arrays</code> and <code>objects</code> only if it is
-    explicitly noted what <code>array</code> and <code>object</code> contains,
-    using <code>arrayOf</code>, <code>objectOf</code>, or <code>shape</code>.
-  </li>
-</ul>
-<h2 id="class-vs-react-createclass-vs-stateless">
-  Class vs <code>React.createClass</code> vs stateless
-</h2>
-<ul>
-  <li>
-    <p>
-      If you have internal state and/or refs, prefer
-      <code>class extends React.Component</code> over
-      <code>React.createClass</code>.
-    </p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-const <span class="hljs-type">Listing</span> = <span class="hljs-type">React</span>.createClass({
-  <span class="hljs-comment">// ...</span>
-  render() {
-    <span class="hljs-keyword">return</span> &lt;div&gt;{<span class="hljs-keyword">this</span>.state.hello}&lt;/div&gt;;
-  }
-});
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>React TypeScript Style Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <body style="background-color:rgb(240, 240, 240);">
 
-<span class="hljs-comment">// good</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Listing</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-  <span class="hljs-comment">// ...</span>
-  render() {
-    <span class="hljs-keyword">return</span> &lt;div&gt;{<span class="hljs-keyword">this</span>.state.hello}&lt;/div&gt;;
-  }
-}
-</code></pre>
-    <p>
-      And if you donâ€™t have state or refs, prefer normal functions (not arrow
-      functions) over classes:
-    </p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Listing</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-  render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{this.props.hello}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
-  }
-}
+    <link
+      rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+    />
+ 
+    <link
+      rel="stylesheet"
+      href="/react-typescript.css"
+    />
+ 
+  </head>
+  <body>
+    <div class="content">
+      <h1>React TypeScript Style Guide</h1>
+    </div> 
+    <div class="table-contents">
+      <h2>Table of Contents</h2>
+      <li><a href="#basic-rules">Basic Rules</a></li>
+      <li><a href="#class-vs-reactcreateclass-vs-stateless">Class vs <code>React.createClass</code> vs stateless</a></li>
+      <li><a href="#div-vs-fragment">Div vs Fragment</a></li>
+      <li><a href="#mixins">Mixins</a></li>
+      <li><a href="#naming">Naming</a></li>
+      <li><a href="#type-vs-interface"><code>type</code> vs <code>interface</code></a></li>
+      <li><a href="#null-vs-undefined"><code>null</code> vs. <code>undefined</code></a></li>
+      <li><a href="#declaration">Declaration</a></li>
+      <li><a href="#alignment">Alignment</a></li>
+      <li><a href="#quotes">Quotes</a></li>
+      <li><a href="#spacing">Spacing</a></li>
+      <li><a href="#semicolons">Semicolons</a></li>
+      <li><a href="#array">Annotate Arrays as <code>Type[]</code></a></li>
+      <li><a href="#props">Props</a></li>
+      <li><a href="#refs">Refs</a></li>
+      <li><a href="#parentheses">Parentheses</a></li>
+      <li><a href="#tags">Tags</a></li>
+      <li><a href="#methods">Methods</a></li>
+      <li><a href="#ismounted"><code>isMounted</code></a></li>
+    </div>
 
-<span class="hljs-comment">// bad (relying on function name inference is discouraged)</span>
-<span class="hljs-keyword">const</span> Listing = <span class="hljs-function">(<span class="hljs-params">{ hello }</span>) =&gt;</span> (
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{hello}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
-);
+    <div class="content">
 
-<span class="hljs-comment">// good</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Listing</span>(<span class="hljs-params">{ hello }</span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{hello}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
-}
-</code></pre>
-  </li>
-</ul>
-<h2 id="div-vs-fragment">Div vs Fragment</h2>
-<ul>
-  <li>
-    Use <a href="https://reactjs.org/docs/fragments.html">Fragments</a> instead
-    of Div
-  </li>
-</ul>
-<h2 id="mixins">Mixins</h2>
-<ul>
-  <li>
-    <a
-      href="https://facebook.github.io/react/blog/2016/07/13/mixins-considered-harmful.html"
-      >Do not use mixins</a
-    >.
-  </li>
-</ul>
-<h2 id="naming">Naming</h2>
-<ul>
-  <li>
-    <strong>Directories</strong>:
-    <ul>
-      <li>Normal Directoires: Use <code>kebab-case</code>.</li>
-      <li>Component Directories: Use <code>CamelCase</code>.</li>
-    </ul>
-  </li>
-  <li>
-    <strong>Extensions</strong>: Use <code>.tsx</code> extension for React
-    components and files with JSX content, and <code>ts</code> for pure
-    TypeScipt files.
-  </li>
-  <li>
-    <p><strong>Filenames</strong>:</p>
-    <ul>
-      <li>
-        Use PascalCase for Components. E.g., <code>LoanDetails.tsx</code>.
-      </li>
-      <li>
-        Use camelCase for ts functions. E.g. <code>myControl.ts</code>,
-        <code>utils.ts</code>
-        <blockquote>
+      <div class="section">
+        <h2 id="basic-rules">Basic Rules</h2>
+        <li>Only include one React component per file. However, multiple <a href="https://facebook.github.io/react/docs/reusable-components.html#stateless-functions">Stateless, or Pure, Components</a> are allowed per file.</li>
+        <li>Always use TSX syntax.</li>
+        <li>Do not use <code>React.createElement</code> unless you're initializing the app from a file that is not TSX.</li>
+        <li><a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md"><code>react/forbid-prop-types</code></a>will allow <code>arrays</code> and <code>objects</code> only if it is explicitly noted what <code>array</code> and <code>object</code> contains, using <code>arrayOf</code>, <code>objectOf</code>, or <code>shape</code>.</li>
+      </div>
+
+      <br>
+
+      <div class="section">
+      <h2 id="class-vs-react-createclass-vs-stateless">Class vs <code>React.createClass</code> vs stateless</h2>
+        If you have internal state and/or refs, prefer <code>class extends React.Component</code> over <code>React.createClass</code>.
+        <br>
+        <br>
+          <div class="code">
+    <pre><span>// bad</span>
+      <code>
+      const <span>Listing</span> = <span>React</span>.createClass({
+      <span> ...</span>
+      render() {
+        <span>return</span> &lt;div&gt;{<span>this</span>.state.hello}&lt;/div&gt;;
+        }
+      })
+    </code></pre></div>
+        <div class="code">
+      <pre><span>// good</span>
+        <code>
+        <span><span>class</span> <span>Listing</span> <span>extends</span> <span>React</span>.<span>Component</span> </span>{
+          <span>...</span>
+          render() {
+            <span>return</span> &lt;div&gt;{<span>this</span>.state.hello}&lt;/div&gt;;
+          }
+        }
+        </code></pre></div>
+        <br>
+        <br>
+            And if you don't have state or refs, prefer normal functions (not arrow
+            functions) over classes:
+            <br>
+            <div class="code">
+          <pre>// bad
+            <code>
+            class Listing extends React.Component{
+              render() {
+                return&lt;div&gt;{this.props.hello}&lt;/div&gt;;
+              }
+            }
+          </code></pre></div>
+      <br>
+      <br>
+      <div class="code">
+        <pre>// bad (relying on function name inference is discouraged)
+          <code>
+          const Listing = ({ hello }) =&gt; (
+            &lt;div&gt;{hello}&lt;/div&gt;
+          )
+        </code></pre></div>
+      <br>
+      <br>
+        <div class="code">
+          <pre>// good
+            <code>
+          function Listing ( { hello } ) {
+            return &lt;div&gt;{hello}&lt;/div&gt;;
+          }
+        </code></pre></div>
+
+      <br><br>
+    </div>
+
+    <br>
+      <div class="section">
+        <h2 id="div-vs-fragment">Div vs Fragment</h2>
+        Use <a href="https://reactjs.org/docs/fragments.html">Fragments</a> instead of Div
+      </div>
+      
+    <br>
+
+      <div class="section">
+        <h2 id="mixins">Mixins</h2>
+        <a href="https://facebook.github.io/react/blog/2016/07/13/mixins-considered-harmful.html">Do not use mixins</a>
+      </div>
+      
+    <br>
+
+    <div class="section">
+      <h2 id="naming">Naming</h2>
+      <ul>
+        <li>
+          <strong>Directories</strong>:
+          <ul>
+            <li>Normal Directoires: Use <code>kebab-case</code>.</li>
+            <li>Component Directories: Use <code>CamelCase</code>.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Extensions</strong>: Use <code>.tsx</code> extension for React
+          components and files with JSX content, and <code>ts</code> for pure
+          TypeScipt files.
+        </li>
+        <li>
+          <p><strong>Filenames</strong>:</p>
+          <ul>
+            <li>
+              Use PascalCase for Components. E.g., <code>LoanDetails.tsx</code>.
+            </li>
+            <li>
+              Use camelCase for ts functions. E.g. <code>myControl.ts</code>,
+              <code>utils.ts</code>
+              <blockquote>
+                <p>
+                  We will use camelCase for acronyms that are more than 2 characters,
+                  UPPERCASE for the rest
+                </p>
+              </blockquote>
+            </li>
+          </ul>
+          <pre><code><span>// bad</span>
+      HTMLTag
+
+      <span>// good</span>
+      htmlTag
+
+      <span>// good</span>
+      sourceIO
+
+      <span>// bad</span>
+      ActionsCRUD
+
+      <span>// good</span>
+      actionsCrud
+      </code></pre>
+        </li>
+        <li>
           <p>
-            We will use camelCase for acronyms that are more than 2 characters,
-            UPPERCASE for the rest
+            <strong>Reference Naming</strong>: Use PascalCase for React components and
+            camelCase for their instances.
           </p>
-        </blockquote>
-      </li>
-    </ul>
-    <pre><code><span class="hljs-comment">// bad</span>
-HTMLTag
+        </li>
+      </ul>
+      <pre><code>```tsx
+      <span>// bad</span>
+      <span>import</span> loanDetails <span>from</span> <span>'./LoanDetails'</span>
 
-<span class="hljs-comment">// good</span>
-htmlTag
+      <span>// good</span>
+      <span>import</span> LoanDetails <span>from</span> <span>'./LoanDetails'</span>
 
-<span class="hljs-comment">// good</span>
-sourceIO
+      <span>// bad</span>
+      const LoanItem = &lt;LoanDetails /&gt;
 
-<span class="hljs-comment">// bad</span>
-ActionsCRUD
+      <span>// good</span>
+      const loanItem = &lt;LoanDetails /&gt;
+      ```
+      </code></pre>
+      <ul>
+        <li>
+          <p>
+            <strong>Component Naming</strong>: Use the filename as the component name.
+            For example, <code>LoanDetails.tsx</code> should have a reference name of
+            <code>LoanDetails</code>. However, for root components of a directory, use
+            <code>index.tsx</code> as the filename and use the directory name as the
+            component name:
+          </p>
+          <pre><code><span>// bad</span>
+      <span>import</span> Footer <span>from</span> <span>'./Footer/Footer'</span>
 
-<span class="hljs-comment">// good</span>
-actionsCrud
-</code></pre>
-  </li>
-  <li>
-    <p>
-      <strong>Reference Naming</strong>: Use PascalCase for React components and
-      camelCase for their instances.
-    </p>
-  </li>
-</ul>
-<pre><code>```tsx
-<span class="hljs-comment">// bad</span>
-<span class="hljs-keyword">import</span> loanDetails <span class="hljs-keyword">from</span> <span class="hljs-string">'./LoanDetails'</span>
+      <span>// bad</span>
+      <span>import</span> Footer <span>from</span> <span>'./Footer/index'</span>
 
-<span class="hljs-comment">// good</span>
-<span class="hljs-keyword">import</span> LoanDetails <span class="hljs-keyword">from</span> <span class="hljs-string">'./LoanDetails'</span>
+      <span>// good</span>
+      <span>import</span> Footer <span>from</span> <span>'./Footer'</span>
+      </code></pre>
+        </li>
+        <li>
+          <p>
+            <strong>Higher-order Component Naming</strong>: Use a composite of the
+            higher-order component's name and the passed-in component's name as
+            the <code>displayName</code> on the generated component. For example, the
+            higher-order component <code>withFoo()</code>, when passed a component
+            <code>Bar</code> should produce a component with a
+            <code>displayName</code> of <code>withFoo(Bar)</code>.
+          </p>
+          <pre><code><span>// bad</span>
+      <span>export</span> <span>default</span> <span><span>function</span> <span>withFoo</span>(<span>WrappedComponent</span>) </span>{
+        <span>return</span> <span><span>function</span> <span>WithFoo</span>(<span>props</span>) </span>{
+          <span>return</span> <span><span>&lt;<span>WrappedComponent</span> {<span class="hljs-attr">...props</span>} <span class="hljs-attr">foo</span> /&gt;</span>;</span>
+        }
+      }
 
-<span class="hljs-comment">// bad</span>
-const LoanItem = &lt;LoanDetails /&gt;
+      <span>// good</span>
+      <span>export</span> <span>default</span> <span><span>function</span> <span>withFoo</span>(<span>WrappedComponent</span>) </span>{
+        <span><span>function</span> <span>WithFoo</span>(<span>props</span>) </span>{
+          <span>return</span> <span><span>&lt;<span>WrappedComponent</span> {<span class="hljs-attr">...props</span>} <span class="hljs-attr">foo</span> /&gt;</span>;</span>
+        }
 
-<span class="hljs-comment">// good</span>
-const loanItem = &lt;LoanDetails /&gt;
-```
-</code></pre>
-<ul>
-  <li>
-    <p>
-      <strong>Component Naming</strong>: Use the filename as the component name.
-      For example, <code>LoanDetails.tsx</code> should have a reference name of
-      <code>LoanDetails</code>. However, for root components of a directory, use
-      <code>index.tsx</code> as the filename and use the directory name as the
-      component name:
-    </p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-<span class="hljs-keyword">import</span> Footer <span class="hljs-keyword">from</span> <span class="hljs-string">'./Footer/Footer'</span>
+        <span>const</span> wrappedComponentName = WrappedComponent.displayName
+          || WrappedComponent.name
+          || <span>'Component'</span>;
 
-<span class="hljs-comment">// bad</span>
-<span class="hljs-keyword">import</span> Footer <span class="hljs-keyword">from</span> <span class="hljs-string">'./Footer/index'</span>
+        WithFoo.displayName = <span>`withFoo(<span class="hljs-subst">${wrappedComponentName}</span>)`</span>;
+        <span>return</span> WithFoo;
+      }
+      </code></pre>
+        </li>
+        <li>
+          <p>
+            <strong>Props Naming</strong>: Avoid using DOM component prop names for
+            different purposes.
+          </p>
+          <pre><code><span>// bad</span>
+      &lt;MyComponent style=<span>"fancy"</span> /&gt;
 
-<span class="hljs-comment">// good</span>
-<span class="hljs-keyword">import</span> Footer <span class="hljs-keyword">from</span> <span class="hljs-string">'./Footer'</span>
-</code></pre>
-  </li>
-  <li>
-    <p>
-      <strong>Higher-order Component Naming</strong>: Use a composite of the
-      higher-order componentâ€™s name and the passed-in componentâ€™s name as
-      the <code>displayName</code> on the generated component. For example, the
-      higher-order component <code>withFoo()</code>, when passed a component
-      <code>Bar</code> should produce a component with a
-      <code>displayName</code> of <code>withFoo(Bar)</code>.
-    </p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">withFoo</span>(<span class="hljs-params">WrappedComponent</span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">WithFoo</span>(<span class="hljs-params">props</span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">WrappedComponent</span> {<span class="hljs-attr">...props</span>} <span class="hljs-attr">foo</span> /&gt;</span>;</span>
-  }
-}
+      <span>// bad</span>
+      &lt;MyComponent className=<span>"fancy"</span> /&gt;
 
-<span class="hljs-comment">// good</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">withFoo</span>(<span class="hljs-params">WrappedComponent</span>) </span>{
-  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">WithFoo</span>(<span class="hljs-params">props</span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">WrappedComponent</span> {<span class="hljs-attr">...props</span>} <span class="hljs-attr">foo</span> /&gt;</span>;</span>
-  }
+      <span>// good</span>
+      &lt;MyComponent <span class="hljs-built_in">variant</span>=<span>"fancy"</span> /&gt;
+      </code></pre>
+        </li>
+        <li>
+          <p>
+            <strong>Variable and Function</strong>: Use <code>camelCase</code> for
+            variable and function names
+          </p>
+          <p><strong>Bad</strong></p>
+          <pre><code><span>var</span> FooVar;
+      <span><span>function</span> <span>BarFunc</span><span>()</span> </span>{ }
+      </code></pre>
+          <p><strong>Good</strong></p>
+          <pre><code><span>var</span> fooVar;
+      <span><span>function</span> <span>barFunc</span><span>()</span> </span>{ }
+      </code></pre>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p><strong>Class</strong></p>
+          <ul>
+            <li>
+              <p>Use <code>PascalCase</code> for class names.</p>
+              <p><strong>Bad</strong></p>
+              <pre><code><span><span>class</span> <span>foo</span> </span>{ }
+      </code></pre>
+              <p><strong>Good</strong></p>
+              <pre><code><span><span>class</span> <span>Foo</span> </span>{ }
+      </code></pre>
+            </li>
+            <li>
+              <p>Use <code>camelCase</code> of class members and methods</p>
+              <p><em>Bad</em></p>
+              <pre><code class="lang-ts"><span><span>class</span> <span>Foo</span> </span>{
+        Bar: number;
+        Baz() { }
+      }
+      </code></pre>
+              <p><em>Good</em></p>
+              <pre><code class="lang-ts"><span><span>class</span> <span>Foo</span> </span>{
+        bar: number;
+        baz() { }
+      }
+      </code></pre>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            <strong>Interface</strong> (* Use <code>interface</code> ONLY when you
+            want <code>extends</code> or <code>implements</code>)
+          </p>
+          <ul>
+            <li>
+              <p>Use <code>PascalCase</code> for name.</p>
+            </li>
+            <li>
+              <p>Use <code>camelCase</code> for members.</p>
+            </li>
+            <li>
+              <p>Don&#39;t prefix with <code>I</code></p>
+            </li>
+          </ul>
+          <p><em>Bad</em></p>
+          <pre><code><span><span>interface</span> <span>IFoo</span> </span>{
+      }
+      </code></pre>
+          <p><em>Good</em></p>
+          <pre><code><span><span>interface</span> <span>Foo</span> </span>{
+      }
+      </code></pre>
+        </li>
+        <li>
+          <p><strong>Type</strong></p>
+          <ul>
+            <li>
+              <p>Use <code>PascalCase</code> for name.</p>
+            </li>
+            <li>
+              <p>Use <code>camelCase</code> for members.</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p><strong>Namespace</strong>: Use <code>PascalCase</code> for names</p>
+          <p><em>Bad</em></p>
+          <pre><code class="lang-ts">  <span>namespace</span> <span>foo</span> {
+        }
+      </code></pre>
+          <p><em>Good</em></p>
+          <pre><code class="lang-ts">  <span>namespace</span> <span>Foo</span> {
+        }
+      </code></pre>
+        </li>
+        <li>
+          <p><strong>Enum</strong></p>
+          <ul>
+            <li>
+              <p>Use <code>PascalCase</code> for enum names</p>
+              <p><em>Bad</em></p>
+              <pre><code class="lang-ts"><span><span>enum</span> <span>color</span> {</span>
+      }
+      </code></pre>
+              <p><em>Good</em></p>
+              <pre><code class="lang-ts"><span><span>enum</span> <span>Color</span> {</span>
+      }
+      </code></pre>
+            </li>
+            <li>
+              <p>Use <code>PascalCase</code> for enum member</p>
+              <p><em>Bad</em></p>
+              <pre><code><span><span>enum</span> <span>Color</span> {</span>
+        red
+      }
+      </code></pre>
+              <p><em>Good</em></p>
+              <pre><code><span><span>enum</span> <span>Color</span> {</span>
+        Red
+      }
+      </code></pre>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+      
+    <br>
 
-  <span class="hljs-keyword">const</span> wrappedComponentName = WrappedComponent.displayName
-    || WrappedComponent.name
-    || <span class="hljs-string">'Component'</span>;
+    <div class="section">
+      <h2 id="type-vs-interface">Type vs. Interface</h2>
+      <ul>
+        <li>
+          Use <code>type</code> AS DEFAULT option and when you <em>might</em> need a
+          union or intersection:
+        </li>
+      </ul>
+      <pre><code><span>type</span> Foo = <span>number</span> | { someProperty: <span>number</span> }
+      </code></pre>
+      <ul>
+        <li>
+          Use <code>interface</code> ONLY when you want <code>extends</code> or
+          <code>implements</code> e.g.
+        </li>
+      </ul>
+      <pre><code><span class="hljs-selector-tag">interface</span> <span class="hljs-selector-tag">Foo</span> {
+        <span class="hljs-attribute">foo</span>: string;
+      }
+      <span class="hljs-selector-tag">interface</span> <span class="hljs-selector-tag">FooBar</span> <span class="hljs-selector-tag">extends</span> <span class="hljs-selector-tag">Foo</span> {
+        <span class="hljs-attribute">bar</span>: string;
+      }
+      <span class="hljs-selector-tag">class</span> <span class="hljs-selector-tag">X</span> <span class="hljs-selector-tag">implements</span> <span class="hljs-selector-tag">FooBar</span> {
+        <span class="hljs-attribute">foo</span>: string;
+        <span class="hljs-attribute">bar</span>: string;
+      }
+      </code></pre>
+    </div>
+      
+    <br>
 
-  WithFoo.displayName = <span class="hljs-string">`withFoo(<span class="hljs-subst">${wrappedComponentName}</span>)`</span>;
-  <span class="hljs-keyword">return</span> WithFoo;
-}
-</code></pre>
-  </li>
-  <li>
-    <p>
-      <strong>Props Naming</strong>: Avoid using DOM component prop names for
-      different purposes.
-    </p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-&lt;MyComponent style=<span class="hljs-string">"fancy"</span> /&gt;
+    <div class="section">
+      <h2 id="null-vs-undefined">Null vs. Undefined</h2>
+      <ul>
+        <li>
+          <p>Prefer not to use either for explicit unavailability</p>
+          <p><em>Bad</em></p>
+          <pre><code>  let foo = { <span>x:</span> <span class="hljs-number">123</span>, <span>y:</span> undefined }
+      </code></pre>
+          <p><em>Good</em></p>
+          <pre><code>  let <span>foo:</span> { <span>x:</span> number, y?: number } = { <span>x:</span><span class="hljs-number">123</span> }
+      </code></pre>
+        </li>
+        <li>
+          <p>
+            Use <code>undefined</code> in general (do consider returning an object
+            like <code>{valid:boolean, value?:Foo}</code> instead)
+          </p>
+          <p><strong>Bad</strong></p>
+          <pre><code>  <span>return</span> <span class="hljs-literal">null</span>
+      </code></pre>
+          <p><strong>Good</strong></p>
+          <pre><code>  <span>return</span> <span class="hljs-literal">undefined</span>
+      </code></pre>
+        </li>
+        <li>
+          <p>
+            Use <code>null</code> where it&#39;s a part of the API or conventional
+          </p>
+          <p><em>Bad</em></p>
+          <pre><code>  cb(<span>undefined</span>)
+      </code></pre>
+          <p><em>Good</em></p>
+          <pre><code>  cb(<span>null</span>)
+      </code></pre>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            Use <em>truthy</em> check for <strong>objects</strong> being
+            <code>null</code> or <code>undefined</code> <em>Bad</em>
+          </p>
+          <pre><code>  <span>if</span> (<span>error</span> === <span>null</span>)
+      </code></pre>
+          <p><em>Good</em></p>
+          <pre><code>  <span>if</span> (<span>error</span>)
+      </code></pre>
+        </li>
+        <li>
+          <p>
+            Use <code>== null</code> / <code>!= null</code> (not <code>===</code> /
+            <code>!==</code>) to check for <code>null</code> /
+            <code>undefined</code> on primitives as it works for both
+            <code>null</code>/<code>undefined</code> but not other falsy values (like
+            <code>&#39;&#39;</code>, <code>0</code>, <code>false</code>) e.g.
+          </p>
+          <p><em>Bad</em></p>
+          <pre><code>  <span>if</span> (<span class="hljs-literal">error</span> !== <span>null</span>) // does <span>not</span> rule <span>out</span> undefined
+      </code></pre>
+          <p><em>Good</em></p>
+          <pre><code>  <span>if</span> (<span class="hljs-literal">error</span> != <span>null</span>) // rules <span>out</span> both <span>null</span> <span>and</span> undefined
+      </code></pre>
+        </li>
+      </ul>
+    </div>
+      
+    <br>
 
-<span class="hljs-comment">// bad</span>
-&lt;MyComponent className=<span class="hljs-string">"fancy"</span> /&gt;
+    <div class="section">
+      <h2 id="declaration">Declaration</h2>
+      <ul>
+        <li>
+          <p>
+            Do not use <code>displayName</code> for naming components. Instead, name
+            the component by reference.
+          </p>
+          <pre><code><span>// bad</span>
+      export <span>default</span> <span class="hljs-type">React</span>.createClass({
+        displayName: <span class="hljs-symbol">'LoanDetail</span>s',
+        <span>// stuff goes here</span>
+      });
 
-<span class="hljs-comment">// good</span>
-&lt;MyComponent <span class="hljs-built_in">variant</span>=<span class="hljs-string">"fancy"</span> /&gt;
-</code></pre>
-  </li>
-  <li>
-    <p>
-      <strong>Variable and Function</strong>: Use <code>camelCase</code> for
-      variable and function names
-    </p>
-    <p><strong>Bad</strong></p>
-    <pre><code class="lang-tsx"><span class="hljs-keyword">var</span> FooVar;
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">BarFunc</span><span class="hljs-params">()</span> </span>{ }
-</code></pre>
-    <p><strong>Good</strong></p>
-    <pre><code class="lang-tsx"><span class="hljs-keyword">var</span> fooVar;
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">barFunc</span><span class="hljs-params">()</span> </span>{ }
-</code></pre>
-  </li>
-</ul>
-<ul>
-  <li>
-    <p><strong>Class</strong></p>
-    <ul>
-      <li>
-        <p>Use <code>PascalCase</code> for class names.</p>
-        <p><strong>Bad</strong></p>
-        <pre><code class="lang-tsx"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">foo</span> </span>{ }
-</code></pre>
-        <p><strong>Good</strong></p>
-        <pre><code class="lang-tsx"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{ }
-</code></pre>
-      </li>
-      <li>
-        <p>Use <code>camelCase</code> of class members and methods</p>
-        <p><em>Bad</em></p>
-        <pre><code class="lang-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
-  Bar: number;
-  Baz() { }
-}
-</code></pre>
-        <p><em>Good</em></p>
-        <pre><code class="lang-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
-  bar: number;
-  baz() { }
-}
-</code></pre>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>
-      <strong>Interface</strong> (* Use <code>interface</code> ONLY when you
-      want <code>extends</code> or <code>implements</code>)
-    </p>
-    <ul>
-      <li>
-        <p>Use <code>PascalCase</code> for name.</p>
-      </li>
-      <li>
-        <p>Use <code>camelCase</code> for members.</p>
-      </li>
-      <li>
-        <p>Don&#39;t prefix with <code>I</code></p>
-      </li>
-    </ul>
-    <p><em>Bad</em></p>
-    <pre><code class="lang-tsx"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">IFoo</span> </span>{
-}
-</code></pre>
-    <p><em>Good</em></p>
-    <pre><code class="lang-tsx"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Foo</span> </span>{
-}
-</code></pre>
-  </li>
-  <li>
-    <p><strong>Type</strong></p>
-    <ul>
-      <li>
-        <p>Use <code>PascalCase</code> for name.</p>
-      </li>
-      <li>
-        <p>Use <code>camelCase</code> for members.</p>
-      </li>
-    </ul>
-  </li>
-</ul>
-<ul>
-  <li>
-    <p><strong>Namespace</strong>: Use <code>PascalCase</code> for names</p>
-    <p><em>Bad</em></p>
-    <pre><code class="lang-ts">  <span class="hljs-keyword">namespace</span> <span class="hljs-title">foo</span> {
-  }
-</code></pre>
-    <p><em>Good</em></p>
-    <pre><code class="lang-ts">  <span class="hljs-keyword">namespace</span> <span class="hljs-title">Foo</span> {
-  }
-</code></pre>
-  </li>
-  <li>
-    <p><strong>Enum</strong></p>
-    <ul>
-      <li>
-        <p>Use <code>PascalCase</code> for enum names</p>
-        <p><em>Bad</em></p>
-        <pre><code class="lang-ts"><span class="hljs-class"><span class="hljs-keyword">enum</span> <span class="hljs-title">color</span> {</span>
-}
-</code></pre>
-        <p><em>Good</em></p>
-        <pre><code class="lang-ts"><span class="hljs-class"><span class="hljs-keyword">enum</span> <span class="hljs-title">Color</span> {</span>
-}
-</code></pre>
-      </li>
-      <li>
-        <p>Use <code>PascalCase</code> for enum member</p>
-        <p><em>Bad</em></p>
-        <pre><code class="lang-tsx"><span class="hljs-class"><span class="hljs-keyword">enum</span> <span class="hljs-title">Color</span> {</span>
-  red
-}
-</code></pre>
-        <p><em>Good</em></p>
-        <pre><code class="lang-tsx"><span class="hljs-class"><span class="hljs-keyword">enum</span> <span class="hljs-title">Color</span> {</span>
-  Red
-}
-</code></pre>
-      </li>
-    </ul>
-  </li>
-</ul>
-<h2 id="type-vs-interface">Type vs. Interface</h2>
-<!-- Remove spaces in the brackets?? -->
-<ul>
-  <li>
-    Use <code>type</code> AS DEFAULT option and when you <em>might</em> need a
-    union or intersection:
-  </li>
-</ul>
-<pre><code><span class="hljs-keyword">type</span> Foo = <span class="hljs-keyword">number</span> | { someProperty: <span class="hljs-keyword">number</span> }
-</code></pre>
-<ul>
-  <li>
-    Use <code>interface</code> ONLY when you want <code>extends</code> or
-    <code>implements</code> e.g.
-  </li>
-</ul>
-<pre><code><span class="hljs-selector-tag">interface</span> <span class="hljs-selector-tag">Foo</span> {
-  <span class="hljs-attribute">foo</span>: string;
-}
-<span class="hljs-selector-tag">interface</span> <span class="hljs-selector-tag">FooBar</span> <span class="hljs-selector-tag">extends</span> <span class="hljs-selector-tag">Foo</span> {
-  <span class="hljs-attribute">bar</span>: string;
-}
-<span class="hljs-selector-tag">class</span> <span class="hljs-selector-tag">X</span> <span class="hljs-selector-tag">implements</span> <span class="hljs-selector-tag">FooBar</span> {
-  <span class="hljs-attribute">foo</span>: string;
-  <span class="hljs-attribute">bar</span>: string;
-}
-</code></pre>
-<h2 id="null-vs-undefined">Null vs. Undefined</h2>
-<ul>
-  <li>
-    <p>Prefer not to use either for explicit unavailability</p>
-    <p><em>Bad</em></p>
-    <pre><code class="lang-tsx">  let foo = { <span class="hljs-string">x:</span> <span class="hljs-number">123</span>, <span class="hljs-string">y:</span> undefined }
-</code></pre>
-    <p><em>Good</em></p>
-    <pre><code class="lang-tsx">  let <span class="hljs-string">foo:</span> { <span class="hljs-string">x:</span> number, y?: number } = { <span class="hljs-string">x:</span><span class="hljs-number">123</span> }
-</code></pre>
-  </li>
-  <li>
-    <p>
-      Use <code>undefined</code> in general (do consider returning an object
-      like <code>{valid:boolean, value?:Foo}</code> instead)
-    </p>
-    <p><strong>Bad</strong></p>
-    <pre><code class="lang-tsx">  <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
-</code></pre>
-    <p><strong>Good</strong></p>
-    <pre><code class="lang-tsx">  <span class="hljs-keyword">return</span> <span class="hljs-literal">undefined</span>
-</code></pre>
-  </li>
-  <li>
-    <p>
-      Use <code>null</code> where it&#39;s a part of the API or conventional
-    </p>
-    <p><em>Bad</em></p>
-    <pre><code class="lang-tsx">  cb(<span class="hljs-name">undefined</span>)
-</code></pre>
-    <p><em>Good</em></p>
-    <pre><code class="lang-tsx">  cb(<span class="hljs-name">null</span>)
-</code></pre>
-  </li>
-</ul>
-<ul>
-  <li>
-    <p>
-      Use <em>truthy</em> check for <strong>objects</strong> being
-      <code>null</code> or <code>undefined</code> <em>Bad</em>
-    </p>
-    <pre><code class="lang-tsx">  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">error</span> === <span class="hljs-keyword">null</span>)
-</code></pre>
-    <p><em>Good</em></p>
-    <pre><code class="lang-tsx">  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">error</span>)
-</code></pre>
-  </li>
-  <li>
-    <p>
-      Use <code>== null</code> / <code>!= null</code> (not <code>===</code> /
-      <code>!==</code>) to check for <code>null</code> /
-      <code>undefined</code> on primitives as it works for both
-      <code>null</code>/<code>undefined</code> but not other falsy values (like
-      <code>&#39;&#39;</code>, <code>0</code>, <code>false</code>) e.g.
-    </p>
-    <p><em>Bad</em></p>
-    <pre><code class="lang-tsx">  <span class="hljs-keyword">if</span> (<span class="hljs-literal">error</span> !== <span class="hljs-keyword">null</span>) // does <span class="hljs-keyword">not</span> rule <span class="hljs-keyword">out</span> undefined
-</code></pre>
-    <p><em>Good</em></p>
-    <pre><code class="lang-tsx">  <span class="hljs-keyword">if</span> (<span class="hljs-literal">error</span> != <span class="hljs-keyword">null</span>) // rules <span class="hljs-keyword">out</span> both <span class="hljs-keyword">null</span> <span class="hljs-keyword">and</span> undefined
-</code></pre>
-  </li>
-</ul>
-<h2 id="declaration">Declaration</h2>
-<ul>
-  <li>
-    <p>
-      Do not use <code>displayName</code> for naming components. Instead, name
-      the component by reference.
-    </p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-export <span class="hljs-keyword">default</span> <span class="hljs-type">React</span>.createClass({
-  displayName: <span class="hljs-symbol">'LoanDetail</span>s',
-  <span class="hljs-comment">// stuff goes here</span>
-});
+      <span>// good</span>
+      export <span>default</span> <span><span>class</span> <span>LoanDetails</span> <span>extends</span> <span>React</span>.<span>Component</span> </span>{
+      }
+      </code></pre>
+        </li>
+      </ul>
+    </div>
+      
+    <br>
 
-<span class="hljs-comment">// good</span>
-export <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LoanDetails</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-}
-</code></pre>
-  </li>
-</ul>
-<h2 id="alignment">Alignment</h2>
-<ul>
-  <li>
-    <p>Follow these alignment styles for TSX syntax.</p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-&lt;Foo superLongParam=<span class="hljs-string">"bar"</span>
-     anotherSuperLongParam=<span class="hljs-string">"baz"</span> /&gt;
+    <div class="section">
+      <h2 id="alignment">Alignment</h2>
+      <ul>
+        <li>
+          <p>Follow these alignment styles for TSX syntax.</p>
+          <pre><code><span>// bad</span>
+      &lt;Foo superLongParam=<span>"bar"</span>
+          anotherSuperLongParam=<span>"baz"</span> /&gt;
 
-<span class="hljs-comment">// good</span>
-&lt;Foo
-  superLongParam=<span class="hljs-string">"bar"</span>
-  anotherSuperLongParam=<span class="hljs-string">"baz"</span>
-/&gt;
+      <span>// good</span>
+      &lt;Foo
+        superLongParam=<span>"bar"</span>
+        anotherSuperLongParam=<span>"baz"</span>
+      /&gt;
 
-<span class="hljs-comment">// if props fit in one line then keep it on the same line</span>
-&lt;Foo bar=<span class="hljs-string">"bar"</span> /&gt;
+      <span>// if props fit in one line then keep it on the same line</span>
+      &lt;Foo bar=<span>"bar"</span> /&gt;
 
-<span class="hljs-comment">// children get indented normally</span>
-&lt;Foo
-  superLongParam=<span class="hljs-string">"bar"</span>
-  anotherSuperLongParam=<span class="hljs-string">"baz"</span>
-&gt;
-  &lt;Quux /&gt;
-&lt;/Foo&gt;
+      <span>// children get indented normally</span>
+      &lt;Foo
+        superLongParam=<span>"bar"</span>
+        anotherSuperLongParam=<span>"baz"</span>
+      &gt;
+        &lt;Quux /&gt;
+      &lt;/Foo&gt;
 
-<span class="hljs-comment">// bad</span>
-{showButton &amp;&amp;
-  &lt;<span class="hljs-keyword">Button</span> /&gt;
-}
+      <span>// bad</span>
+      {showButton &amp;&amp;
+        &lt;<span>Button</span> /&gt;
+      }
 
-<span class="hljs-comment">// bad</span>
-{
-  showButton &amp;&amp;
-    &lt;<span class="hljs-keyword">Button</span> /&gt;
-}
+      <span>// bad</span>
+      {
+        showButton &amp;&amp;
+          &lt;<span>Button</span> /&gt;
+      }
 
-<span class="hljs-comment">// good</span>
-{showButton &amp;&amp; (
-  &lt;<span class="hljs-keyword">Button</span> /&gt;
-)}
+      <span>// good</span>
+      {showButton &amp;&amp; (
+        &lt;<span>Button</span> /&gt;
+      )}
 
-<span class="hljs-comment">// good</span>
-{showButton &amp;&amp; &lt;<span class="hljs-keyword">Button</span> /&gt;}
+      <span>// good</span>
+      {showButton &amp;&amp; &lt;<span>Button</span> /&gt;}
 
-<span class="hljs-comment">// good</span>
-{someReallyLongConditional
-  &amp;&amp; anotherLongConditional
-  &amp;&amp; (
-    &lt;Foo
-      superLongParam=<span class="hljs-string">"bar"</span>
-      anotherSuperLongParam=<span class="hljs-string">"baz"</span>
-    /&gt;
-  )
-}
+      <span>// good</span>
+      {someReallyLongConditional
+        &amp;&amp; anotherLongConditional
+        &amp;&amp; (
+          &lt;Foo
+            superLongParam=<span>"bar"</span>
+            anotherSuperLongParam=<span>"baz"</span>
+          /&gt;
+        )
+      }
 
-<span class="hljs-comment">// good</span>
-{someConditional ? (
-  &lt;Foo /&gt;
-) : (
-  &lt;Foo
-    superLongParam=<span class="hljs-string">"bar"</span>
-    anotherSuperLongParam=<span class="hljs-string">"baz"</span>
-  /&gt;
-)}
-</code></pre>
-  </li>
-</ul>
-<h2 id="quotes">Quotes</h2>
-<ul>
-  <li>Prefer single quotes (<code>&#39;</code>) unless escaping.</li>
-  <li>When you can&#39;t use double quotes, try using back ticks (`).</li>
-</ul>
-<h2 id="spacing">Spacing</h2>
-<ul>
-  <li>
-    <p>Always include a single space in your self-closing tag.</p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-<span class="hljs-params">&lt;Foo/&gt;</span>
-
-<span class="hljs-comment">// very bad</span>
-<span class="hljs-params">&lt;Foo                 /&gt;</span>
-
-<span class="hljs-comment">// bad</span>
-<span class="hljs-params">&lt;Foo
- /&gt;</span>
-
-<span class="hljs-comment">// good</span>
-<span class="hljs-params">&lt;Foo /&gt;</span>
-</code></pre>
-  </li>
-  <li>
-    <p>Do not pad TSX curly braces with spaces.</p>
-    <pre><code class="lang-tsx">// <span class="hljs-keyword">bad
-</span>&lt;Foo <span class="hljs-keyword">bar={ </span><span class="hljs-keyword">baz </span>} /&gt;
-
-// good
-&lt;Foo <span class="hljs-keyword">bar={baz} </span>/&gt;
-</code></pre>
-  </li>
-  <li>
-    <p>Indentation: Use <code>2</code> spaces (AKA soft tabs). Not tabs.</p>
-  </li>
-</ul>
-<h2 id="semicolons">Semicolons</h2>
-<ul>
-  <li>Do Not Use semicolons to end lines.</li>
-</ul>
-<h2 id="array">Array</h2>
-<ul>
-  <li>
-    Annotate arrays as <code>foos: Foo[]</code> instead of
-    <code>foos: Array&lt;Foo&gt;</code>.
-  </li>
-</ul>
-<h2 id="props">Props</h2>
-<ul>
-  <li>
-    <p>
-      Always use camelCase for prop names, or PascalCase if the prop value is a
-      React component.
-    </p>
-    <pre><code class="lang-tsx">// bad
-<span class="hljs-tag">&lt;<span class="hljs-name">Foo</span>
-  <span class="hljs-attr">UserName</span>=<span class="hljs-string">"hello"</span>
-  <span class="hljs-attr">phone_number</span>=<span class="hljs-string">{12345678}</span>
-/&gt;</span>
-
-// good
-<span class="hljs-tag">&lt;<span class="hljs-name">Foo</span>
-  <span class="hljs-attr">userName</span>=<span class="hljs-string">"hello"</span>
-  <span class="hljs-attr">phoneNumber</span>=<span class="hljs-string">{12345678}</span>
-  <span class="hljs-attr">Component</span>=<span class="hljs-string">{SomeComponent}</span>
-/&gt;</span>
-</code></pre>
-  </li>
-  <li>
-    <p>Omit the value of the prop when it is explicitly <code>true</code>.</p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-<span class="hljs-params">&lt;Foo
-  hidden={true}
-/&gt;</span>
-
-<span class="hljs-comment">// good</span>
-<span class="hljs-params">&lt;Foo
-  hidden
-/&gt;</span>
-
-<span class="hljs-comment">// good</span>
-<span class="hljs-params">&lt;Foo hidden /&gt;</span>
-</code></pre>
-  </li>
-  <li>
-    <p>
-      Always include an <code>alt</code> prop on <code>&lt;img&gt;</code> tags.
-      If the image is presentational, <code>alt</code> can be an empty string or
-      the <code>&lt;img&gt;</code> must have
-      <code>role=&quot;presentation&quot;</code>.
-    </p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-&lt;<span class="hljs-selector-tag">img</span> src=<span class="hljs-string">"hello.jpg"</span> /&gt;
-
-<span class="hljs-comment">// good</span>
-&lt;<span class="hljs-selector-tag">img</span> src=<span class="hljs-string">"hello.jpg"</span> alt=<span class="hljs-string">"Me waving hello"</span> /&gt;
-
-<span class="hljs-comment">// good</span>
-&lt;<span class="hljs-selector-tag">img</span> src=<span class="hljs-string">"hello.jpg"</span> alt=<span class="hljs-string">""</span> /&gt;
-
-<span class="hljs-comment">// good</span>
-&lt;<span class="hljs-selector-tag">img</span> src=<span class="hljs-string">"hello.jpg"</span> role=<span class="hljs-string">"presentation"</span> /&gt;
-</code></pre>
-  </li>
-  <li>
-    <p>
-      Do not use words like &quot;image&quot;, &quot;photo&quot;, or
-      &quot;picture&quot; in <code>&lt;img&gt;</code> <code>alt</code> props.
-    </p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-&lt;<span class="hljs-selector-tag">img</span> src=<span class="hljs-string">"hello.jpg"</span> alt=<span class="hljs-string">"Picture of me waving hello"</span> /&gt;
-
-<span class="hljs-comment">// good</span>
-&lt;<span class="hljs-selector-tag">img</span> src=<span class="hljs-string">"hello.jpg"</span> alt=<span class="hljs-string">"Me waving hello"</span> /&gt;
-</code></pre>
-  </li>
-  <li>
-    <p>
-      Use only valid, non-abstract
-      <a href="https://www.w3.org/TR/wai-aria/#usage_intro">ARIA roles</a>.
-    </p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad - not an ARIA role</span>
-&lt;<span class="hljs-selector-tag">div</span> role=<span class="hljs-string">"datepicker"</span> /&gt;
-
-<span class="hljs-comment">// bad - abstract ARIA role</span>
-&lt;<span class="hljs-selector-tag">div</span> role=<span class="hljs-string">"range"</span> /&gt;
-
-<span class="hljs-comment">// good</span>
-&lt;<span class="hljs-selector-tag">div</span> role=<span class="hljs-string">"button"</span> /&gt;
-</code></pre>
-  </li>
-  <li>
-    <p>Do not use <code>accessKey</code> on elements.</p>
-    <pre><code class="lang-tsx">  <span class="hljs-comment">// bad</span>
-  &lt;<span class="hljs-selector-tag">div</span> accessKey=<span class="hljs-string">"h"</span> /&gt;
-
-  <span class="hljs-comment">// good</span>
-  &lt;<span class="hljs-selector-tag">div</span> /&gt;
-</code></pre>
-  </li>
-  <li>
-    <p>
-      Avoid using an array index as <code>key</code> prop, prefer a stable ID.
-      We donâ€™t recommend using indexes for keys if the order of items may
-      change.
-    </p>
-    <pre><code class="lang-tsx">  <span class="hljs-comment">// bad</span>
-  {todos.map(<span class="hljs-function">(<span class="hljs-params">todo, index</span>) =&gt;</span>
-    &lt;Todo
-      {...todo}
-      key={index}
-    /&gt;
-  )}
-
-  <span class="hljs-comment">// good</span>
-  {todos.map(<span class="hljs-function"><span class="hljs-params">todo</span> =&gt;</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Todo</span>
-      {<span class="hljs-attr">...todo</span>}
-      <span class="hljs-attr">key</span>=<span class="hljs-string">{todo.id}</span>
-    /&gt;</span>
-  ))}</span>
-</code></pre>
-  </li>
-  <li>
-    <p>Always define explicit defaultProps for all non-required props.</p>
-    <pre><code class="lang-tsx">  <span class="hljs-comment">// bad</span>
-  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">SFC</span>(<span class="hljs-params">{ foo, bar, children }</span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{foo}{bar}{children}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
-  }
-  SFC.propTypes = {
-    <span class="hljs-attr">foo</span>: PropTypes.number.isRequired,
-    <span class="hljs-attr">bar</span>: PropTypes.string,
-    <span class="hljs-attr">children</span>: PropTypes.node,
-  };
-
-  <span class="hljs-comment">// good</span>
-  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">SFC</span>(<span class="hljs-params">{ foo, bar, children }</span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{foo}{bar}{children}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
-  }
-  SFC.propTypes = {
-    <span class="hljs-attr">foo</span>: PropTypes.number.isRequired,
-    <span class="hljs-attr">bar</span>: PropTypes.string,
-    <span class="hljs-attr">children</span>: PropTypes.node,
-  };
-  SFC.defaultProps = {
-    <span class="hljs-attr">bar</span>: <span class="hljs-string">''</span>,
-    <span class="hljs-attr">children</span>: <span class="hljs-literal">null</span>,
-  };
-</code></pre>
-  </li>
-  <li>
-    <p>Use spread props sparingly.</p>
-    <p>Exceptions:</p>
-    <ul>
-      <li>
-        <p>HOCs that proxy down props and hoist propTypes</p>
-        <pre><code class="lang-tsx">function <span class="hljs-type">HOC</span>(<span class="hljs-type">WrappedComponent</span>) {
-  <span class="hljs-keyword">return</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Proxy</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-    <span class="hljs-type">Proxy</span>.propTypes = {
-      text: <span class="hljs-type">PropTypes</span>.string,
-      isLoading: <span class="hljs-type">PropTypes</span>.bool
-    };
-
-    render() {
-      <span class="hljs-keyword">return</span> &lt;<span class="hljs-type">WrappedComponent</span> {...<span class="hljs-keyword">this</span>.props} /&gt;
-    }
-  }
-}
-</code></pre>
-      </li>
-      <li>
-        <p>
-          Spreading objects with known, explicit props. This can be particularly
-          useful when testing React components with Mochaâ€™s beforeEach
-          construct.
-        </p>
-        <pre><code class="lang-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Foo</span> </span>{
-  <span class="hljs-keyword">const</span> props = {
-    <span class="hljs-attr">text</span>: <span class="hljs-string">''</span>,
-    <span class="hljs-attr">isPublished</span>: <span class="hljs-literal">false</span>
-  }
-
-  <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> {<span class="hljs-attr">...props</span>} /&gt;</span>);
-}</span>
-</code></pre>
-        <p>
-          Notes for use: Filter out unnecessary props when possible. Also, use
-          <a href="https://www.npmjs.com/package/prop-types-exact"
-            >prop-types-exact</a
-          >
-          to help prevent bugs.
-        </p>
-        <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-render() {
-  const { irrelevantProp, ...relevantProps } = <span class="hljs-keyword">this</span>.props;
-  <span class="hljs-keyword">return</span> &lt;WrappedComponent {...<span class="hljs-keyword">this</span>.props} /&gt;
-}
-
-<span class="hljs-comment">// good</span>
-render() {
-  const { irrelevantProp, ...relevantProps } = <span class="hljs-keyword">this</span>.props;
-  <span class="hljs-keyword">return</span> &lt;WrappedComponent {...relevantProps} /&gt;
-}
-</code></pre>
-      </li>
-    </ul>
-  </li>
-</ul>
-<h2 id="refs">Refs</h2>
-<ul>
-  <li>
-    <p>Always use ref callbacks.</p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-&lt;Foo
-  <span class="hljs-keyword">ref</span>=<span class="hljs-string">"myRef"</span>
-/&gt;
-
-<span class="hljs-comment">// good</span>
-&lt;Foo
-  <span class="hljs-keyword">ref</span>={(<span class="hljs-keyword">ref</span>) =&gt; { <span class="hljs-keyword">this</span>.myRef = <span class="hljs-keyword">ref</span>; }}
-/&gt;
-</code></pre>
-  </li>
-</ul>
-<h2 id="parentheses">Parentheses</h2>
-<ul>
-  <li>
-    <p>Wrap JSX tags in parentheses when they span more than one line.</p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-render() {
-  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">MyComponent</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"long body"</span> <span class="hljs-attr">foo</span>=<span class="hljs-string">"bar"</span>&gt;</span>
-           <span class="hljs-tag">&lt;<span class="hljs-name">MyChild</span> /&gt;</span>
-         <span class="hljs-tag">&lt;/<span class="hljs-name">MyComponent</span>&gt;</span></span>;
-}
-
-<span class="hljs-comment">// good</span>
-render() {
-  <span class="hljs-keyword">return</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">MyComponent</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"long body"</span> <span class="hljs-attr">foo</span>=<span class="hljs-string">"bar"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">MyChild</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">MyComponent</span>&gt;</span></span>
-  );
-}
-
-<span class="hljs-comment">// good, when single line</span>
-render() {
-  <span class="hljs-keyword">const</span> body = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>hello<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
-  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">MyComponent</span>&gt;</span>{body}<span class="hljs-tag">&lt;/<span class="hljs-name">MyComponent</span>&gt;</span></span>;
-}
-</code></pre>
-  </li>
-</ul>
-<h2 id="tags">Tags</h2>
-<ul>
-  <li>
-    <p>
-      Always self-close tags that have no children. eslint:
-      <a
-        href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md"
-        ><code>react/self-closing-comp</code></a
-      >
-    </p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-&lt;Foo variant=<span class="hljs-string">"stuff"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">Foo</span>&gt;</span></span>
-
-<span class="hljs-comment">// good</span>
-&lt;Foo variant=<span class="hljs-string">"stuff"</span> /&gt;
-</code></pre>
-  </li>
-  <li>
-    <p>
-      If your component has multiline properties, close its tag on a new line.
-    </p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-&lt;Foo
-  <span class="hljs-built_in">bar</span>=<span class="hljs-string">"bar"</span>
-  baz=<span class="hljs-string">"baz"</span> /&gt;
-
-<span class="hljs-comment">// good</span>
-&lt;Foo
-  <span class="hljs-built_in">bar</span>=<span class="hljs-string">"bar"</span>
-  baz=<span class="hljs-string">"baz"</span>
-/&gt;
-</code></pre>
-  </li>
-</ul>
-<h2 id="methods">Methods</h2>
-<ul>
-  <li>
-    <p>
-      Use arrow functions to close over local variables. It is handy when you
-      need to pass additional data to an event handler. Although, make sure they
-      <a
-        href="https://www.bignerdranch.com/blog/choosing-the-best-approach-for-react-event-handlers/"
-        >do not massively hurt performance</a
-      >, in particular when passed to custom components that might be
-      PureComponents, because they will trigger a possibly needless rerender
-      every time.
-    </p>
-    <pre><code class="lang-tsx"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ItemList</span>(<span class="hljs-params">props</span>) </span>{
-  <span class="hljs-keyword">return</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-      {props.items.map((item, index) =&gt; (
-        <span class="hljs-tag">&lt;<span class="hljs-name">Item</span>
-          <span class="hljs-attr">key</span>=<span class="hljs-string">{item.key}</span>
-          <span class="hljs-attr">onClick</span>=<span class="hljs-string">{(event)</span> =&gt;</span> { doSomethingWith(event, item.name, index); }}
+      <span>// good</span>
+      {someConditional ? (
+        &lt;Foo /&gt;
+      ) : (
+        &lt;Foo
+          superLongParam=<span>"bar"</span>
+          anotherSuperLongParam=<span>"baz"</span>
         /&gt;
-      ))}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-  );
-}</span>
-</code></pre>
-  </li>
-  <li>
-    <p>Bind event handlers for the render method in the constructor.</p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-  onClickDiv() {
-    <span class="hljs-comment">// do stuff</span>
-  }
+      )}
+      </code></pre>
+        </li>
+      </ul>
+    </div>
+      
+    <br>
 
-  render() {
-    <span class="hljs-keyword">return</span> &lt;div onClick={<span class="hljs-keyword">this</span>.onClickDiv.bind(<span class="hljs-keyword">this</span>)} /&gt;;
-  }
-}
+    <div class="section">
+      <h2 id="quotes">Quotes</h2>
+      <ul>
+        <li>Prefer single quotes (<code>&#39;</code>) unless escaping.</li>
+        <li>When you can&#39;t use double quotes, try using back ticks (`).</li>
+      </ul>
+    </div>
+      
+    <br>
 
-<span class="hljs-comment">// very bad</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-  onClickDiv = () =&gt; {
-    <span class="hljs-comment">// do stuff</span>
-  }
+    <div class="section">
+      <h2 id="spacing">Spacing</h2>
+      <ul>
+        <li>
+          <p>Always include a single space in your self-closing tag.</p>
+          <pre><code><span>// bad</span>
+      <span>&lt;Foo/&gt;</span>
 
-  render() {
-    <span class="hljs-keyword">return</span> &lt;div onClick={<span class="hljs-keyword">this</span>.onClickDiv} /&gt;
-  }
-}
+      <span>// very bad</span>
+      <span>&lt;Foo                 /&gt;</span>
 
-<span class="hljs-comment">// good</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-  constructor(props) {
-    <span class="hljs-keyword">super</span>(props);
+      <span>// bad</span>
+      <span>&lt;Foo
+      /&gt;</span>
 
-    <span class="hljs-keyword">this</span>.onClickDiv = <span class="hljs-keyword">this</span>.onClickDiv.bind(<span class="hljs-keyword">this</span>);
-  }
+      <span>// good</span>
+      <span>&lt;Foo /&gt;</span>
+      </code></pre>
+        </li>
+        <li>
+          <p>Do not pad TSX curly braces with spaces.</p>
+          <pre><code>// <span>bad
+      </span>&lt;Foo <span>bar={ </span><span>baz </span>} /&gt;
 
-  onClickDiv() {
-    <span class="hljs-comment">// do stuff</span>
-  }
+      // good
+      &lt;Foo <span>bar={baz} </span>/&gt;
+      </code></pre>
+        </li>
+        <li>
+          <p>Indentation: Use <code>2</code> spaces (AKA soft tabs). Not tabs.</p>
+        </li>
+      </ul>
+    </div>
+      
+    <br>
 
-  render() {
-    <span class="hljs-keyword">return</span> &lt;div onClick={<span class="hljs-keyword">this</span>.onClickDiv} /&gt;;
-  }
-}
-</code></pre>
-  </li>
-  <li>
-    <p>
-      Do not use underscore prefix for internal methods of a React component.
-    </p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-<span class="hljs-type">React</span>.createClass({
-  _onClickSubmit() {
-    <span class="hljs-comment">// do stuff</span>
-  },
+    <div class="section">
+      <h2 id="semicolons">Semicolons</h2>
+      <ul>
+        <li>Do Not Use semicolons to end lines.</li>
+      </ul>
+    </div>
+      
+    <br>
 
-  <span class="hljs-comment">// other stuff</span>
-});
+    <div class="section">
+      <h2 id="array">Array</h2>
+      <ul>
+        <li>
+          Annotate arrays as <code>foos: Foo[]</code> instead of
+          <code>foos: Array&lt;Foo&gt;</code>.
+        </li>
+      </ul>
+    </div>
+      
+    <br>
 
-<span class="hljs-comment">// good</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-  onClickSubmit() {
-    <span class="hljs-comment">// do stuff</span>
-  }
+    <div class="section">
+      <h2 id="props">Props</h2>
+      <ul>
+        <li>
+          <p>
+            Always use camelCase for prop names, or PascalCase if the prop value is a
+            React component.
+          </p>
+          <pre><code>// bad
+      <span>&lt;<span>Foo</span>
+        <span class="hljs-attr">UserName</span>=<span>"hello"</span>
+        <span class="hljs-attr">phone_number</span>=<span>{12345678}</span>
+      /&gt;</span>
 
-  <span class="hljs-comment">// other stuff</span>
-}
-</code></pre>
-  </li>
-  <li>
-    <p>Be sure to return a value in your <code>render</code> methods.</p>
-    <pre><code class="lang-tsx"><span class="hljs-comment">// bad</span>
-render() {
-  (&lt;<span class="hljs-keyword">div</span> /&gt;);
-}
+      // good
+      <span>&lt;<span>Foo</span>
+        <span class="hljs-attr">userName</span>=<span>"hello"</span>
+        <span class="hljs-attr">phoneNumber</span>=<span>{12345678}</span>
+        <span class="hljs-attr">Component</span>=<span>{SomeComponent}</span>
+      /&gt;</span>
+      </code></pre>
+        </li>
+        <li>
+          <p>Omit the value of the prop when it is explicitly <code>true</code>.</p>
+          <pre><code><span>// bad</span>
+      <span>&lt;Foo
+        hidden={true}
+      /&gt;</span>
 
-<span class="hljs-comment">// good</span>
-render() {
-  <span class="hljs-keyword">return</span> (&lt;<span class="hljs-keyword">div</span> /&gt;);
-}
-</code></pre>
-  </li>
-</ul>
-<h2 id="ordering">Ordering</h2>
-<ul>
-  <li>
-    <p>Ordering for <code>class extends React.Component</code>:</p>
-    <ol>
-      <li>optional <code>static</code> methods</li>
-      <li><code>constructor</code></li>
-      <li><code>getChildContext</code></li>
-      <li><code>componentWillMount</code></li>
-      <li><code>componentDidMount</code></li>
-      <li><code>componentWillReceiveProps</code></li>
-      <li><code>shouldComponentUpdate</code></li>
-      <li><code>componentWillUpdate</code></li>
-      <li><code>componentDidUpdate</code></li>
-      <li><code>componentWillUnmount</code></li>
-      <li>
-        <em>event handlers starting with &#39;handle&#39;</em> like
-        <code>handleSubmit()</code> or <code>handleChangeDescription()</code>
-      </li>
-      <li>
-        <em>event handlers starting with &#39;on&#39;</em> like
-        <code>onClickSubmit()</code> or <code>onChangeDescription()</code>
-      </li>
-      <li>
-        <em>getter methods for <code>render</code></em> like
-        <code>getSelectReason()</code> or <code>getFooterContent()</code>
-      </li>
-      <li>
-        <em>optional render methods</em> like <code>renderNavigation()</code> or
-        <code>renderProfilePicture()</code>
-      </li>
-      <li><code>render</code></li>
-    </ol>
-  </li>
-  <li>
-    <p>
-      How to define <code>propTypes</code>, <code>defaultProps</code>,
-      <code>contextTypes</code>, etc...
-    </p>
-    <pre><code class="lang-tsx"><span class="hljs-keyword">import</span> <span class="hljs-type">React</span> from <span class="hljs-symbol">'reac</span>t'
-<span class="hljs-keyword">import</span> <span class="hljs-type">PropTypes</span> from <span class="hljs-symbol">'prop</span>-types'
+      <span>// good</span>
+      <span>&lt;Foo
+        hidden
+      /&gt;</span>
 
-const propTypes = {
-  id: <span class="hljs-type">PropTypes</span>.number.isRequired,
-  url: <span class="hljs-type">PropTypes</span>.string.isRequired,
-  text: <span class="hljs-type">PropTypes</span>.string,
-};
+      <span>// good</span>
+      <span>&lt;Foo hidden /&gt;</span>
+      </code></pre>
+        </li>
+        <li>
+          <p>
+            Always include an <code>alt</code> prop on <code>&lt;img&gt;</code> tags.
+            If the image is presentational, <code>alt</code> can be an empty string or
+            the <code>&lt;img&gt;</code> must have
+            <code>role=&quot;presentation&quot;</code>.
+          </p>
+          <pre><code><span>// bad</span>
+      &lt;<span class="hljs-selector-tag">img</span> src=<span>"hello.jpg"</span> /&gt;
 
-const defaultProps = {
-  text: <span class="hljs-symbol">'Hello</span> <span class="hljs-type">World</span>',
-};
+      <span>// good</span>
+      &lt;<span class="hljs-selector-tag">img</span> src=<span>"hello.jpg"</span> alt=<span>"Me waving hello"</span> /&gt;
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Link</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-  static methodsAreOk() {
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
-  }
+      <span>// good</span>
+      &lt;<span class="hljs-selector-tag">img</span> src=<span>"hello.jpg"</span> alt=<span>""</span> /&gt;
 
-  render() {
-    <span class="hljs-keyword">return</span> &lt;a href={<span class="hljs-keyword">this</span>.props.url} data-id={<span class="hljs-keyword">this</span>.props.id}&gt;{<span class="hljs-keyword">this</span>.props.text}&lt;/a&gt;;
-  }
-}
+      <span>// good</span>
+      &lt;<span class="hljs-selector-tag">img</span> src=<span>"hello.jpg"</span> role=<span>"presentation"</span> /&gt;
+      </code></pre>
+        </li>
+        <li>
+          <p>
+            Do not use words like &quot;image&quot;, &quot;photo&quot;, or
+            &quot;picture&quot; in <code>&lt;img&gt;</code> <code>alt</code> props.
+          </p>
+          <pre><code><span>// bad</span>
+      &lt;<span class="hljs-selector-tag">img</span> src=<span>"hello.jpg"</span> alt=<span>"Picture of me waving hello"</span> /&gt;
 
-<span class="hljs-type">Link</span>.propTypes = propTypes;
-<span class="hljs-type">Link</span>.defaultProps = defaultProps;
+      <span>// good</span>
+      &lt;<span class="hljs-selector-tag">img</span> src=<span>"hello.jpg"</span> alt=<span>"Me waving hello"</span> /&gt;
+      </code></pre>
+        </li>
+        <li>
+          <p>
+            Use only valid, non-abstract
+            <a href="https://www.w3.org/TR/wai-aria/#usage_intro">ARIA roles</a>.
+          </p>
+          <pre><code><span>// bad - not an ARIA role</span>
+      &lt;<span class="hljs-selector-tag">div</span> role=<span>"datepicker"</span> /&gt;
 
-export <span class="hljs-keyword">default</span> <span class="hljs-type">Link</span>;
-</code></pre>
-  </li>
-  <li>
-    <p>Ordering for <code>React.createClass</code>:</p>
-    <ol>
-      <li><code>displayName</code></li>
-      <li><code>propTypes</code></li>
-      <li><code>contextTypes</code></li>
-      <li><code>childContextTypes</code></li>
-      <li><code>mixins</code></li>
-      <li><code>statics</code></li>
-      <li><code>defaultProps</code></li>
-      <li><code>getDefaultProps</code></li>
-      <li><code>getInitialState</code></li>
-      <li><code>getChildContext</code></li>
-      <li><code>componentWillMount</code></li>
-      <li><code>componentDidMount</code></li>
-      <li><code>componentWillReceiveProps</code></li>
-      <li><code>shouldComponentUpdate</code></li>
-      <li><code>componentWillUpdate</code></li>
-      <li><code>componentDidUpdate</code></li>
-      <li><code>componentWillUnmount</code></li>
-      <li>
-        <em>clickHandlers or eventHandlers</em> like
-        <code>onClickSubmit()</code> or <code>onChangeDescription()</code>
-      </li>
-      <li>
-        <em>getter methods for <code>render</code></em> like
-        <code>getSelectReason()</code> or <code>getFooterContent()</code>
-      </li>
-      <li>
-        <em>optional render methods</em> like <code>renderNavigation()</code> or
-        <code>renderProfilePicture()</code>
-      </li>
-      <li><code>render</code></li>
-    </ol>
-  </li>
-</ul>
-<h2 id="-ismounted-"><code>isMounted</code></h2>
-<ul>
-  <li>Do not use <code>isMounted</code>.</li>
-</ul>
-<p>
-  <strong><a href="#table-of-contents">â¬† back to top</a></strong>
-</p>
+      <span>// bad - abstract ARIA role</span>
+      &lt;<span class="hljs-selector-tag">div</span> role=<span>"range"</span> /&gt;
+
+      <span>// good</span>
+      &lt;<span class="hljs-selector-tag">div</span> role=<span>"button"</span> /&gt;
+      </code></pre>
+        </li>
+        <li>
+          <p>Do not use <code>accessKey</code> on elements.</p>
+          <pre><code>  <span>// bad</span>
+        &lt;<span class="hljs-selector-tag">div</span> accessKey=<span>"h"</span> /&gt;
+
+        <span>// good</span>
+        &lt;<span class="hljs-selector-tag">div</span> /&gt;
+      </code></pre>
+        </li>
+        <li>
+          <p>
+            Avoid using an array index as <code>key</code> prop, prefer a stable ID.
+            We don't recommend using indexes for keys if the order of items may
+            change.
+          </p>
+          <pre><code>  <span>// bad</span>
+        {todos.map(<span>(<span>todo, index</span>) =&gt;</span>
+          &lt;Todo
+            {...todo}
+            key={index}
+          /&gt;
+        )}
+
+        <span>// good</span>
+        {todos.map(<span><span>todo</span> =&gt;</span> (
+          <span><span>&lt;<span>Todo</span>
+            {<span class="hljs-attr">...todo</span>}
+            <span class="hljs-attr">key</span>=<span>{todo.id}</span>
+          /&gt;</span>
+        ))}</span>
+      </code></pre>
+        </li>
+        <li>
+          <p>Always define explicit defaultProps for all non-required props.</p>
+          <pre><code>  <span>// bad</span>
+        <span><span>function</span> <span>SFC</span>(<span>{ foo, bar, children }</span>) </span>{
+          <span>return</span> <span><span>&lt;<span>div</span>&gt;</span>{foo}{bar}{children}<span>&lt;/<span>div</span>&gt;</span></span>;
+        }
+        SFC.propTypes = {
+          <span class="hljs-attr">foo</span>: PropTypes.number.isRequired,
+          <span class="hljs-attr">bar</span>: PropTypes.string,
+          <span class="hljs-attr">children</span>: PropTypes.node,
+        };
+
+        <span>// good</span>
+        <span><span>function</span> <span>SFC</span>(<span>{ foo, bar, children }</span>) </span>{
+          <span>return</span> <span><span>&lt;<span>div</span>&gt;</span>{foo}{bar}{children}<span>&lt;/<span>div</span>&gt;</span></span>;
+        }
+        SFC.propTypes = {
+          <span class="hljs-attr">foo</span>: PropTypes.number.isRequired,
+          <span class="hljs-attr">bar</span>: PropTypes.string,
+          <span class="hljs-attr">children</span>: PropTypes.node,
+        };
+        SFC.defaultProps = {
+          <span class="hljs-attr">bar</span>: <span>''</span>,
+          <span class="hljs-attr">children</span>: <span class="hljs-literal">null</span>,
+        };
+      </code></pre>
+        </li>
+        <li>
+          <p>Use spread props sparingly.</p>
+          <p>Exceptions:</p>
+          <ul>
+            <li>
+              <p>HOCs that proxy down props and hoist propTypes</p>
+              <pre><code>function <span class="hljs-type">HOC</span>(<span class="hljs-type">WrappedComponent</span>) {
+        <span>return</span> <span><span>class</span> <span>Proxy</span> <span>extends</span> <span>React</span>.<span>Component</span> </span>{
+          <span class="hljs-type">Proxy</span>.propTypes = {
+            text: <span class="hljs-type">PropTypes</span>.string,
+            isLoading: <span class="hljs-type">PropTypes</span>.bool
+          };
+
+          render() {
+            <span>return</span> &lt;<span class="hljs-type">WrappedComponent</span> {...<span>this</span>.props} /&gt;
+          }
+        }
+      }
+      </code></pre>
+            </li>
+            <li>
+              <p>
+                Spreading objects with known, explicit props. This can be particularly
+                useful when testing React components with Mocha's beforeEach
+                construct.
+              </p>
+              <pre><code><span>export</span> <span>default</span> <span><span>function</span> <span>Foo</span> </span>{
+        <span>const</span> props = {
+          <span class="hljs-attr">text</span>: <span>''</span>,
+          <span class="hljs-attr">isPublished</span>: <span class="hljs-literal">false</span>
+        }
+
+        <span>return</span> (<span><span>&lt;<span>div</span> {<span class="hljs-attr">...props</span>} /&gt;</span>);
+      }</span>
+      </code></pre>
+              <p>
+                Notes for use: Filter out unnecessary props when possible. Also, use
+                <a href="https://www.npmjs.com/package/prop-types-exact"
+                  >prop-types-exact</a
+                >
+                to help prevent bugs.
+              </p>
+              <pre><code><span>// bad</span>
+      render() {
+        const { irrelevantProp, ...relevantProps } = <span>this</span>.props;
+        <span>return</span> &lt;WrappedComponent {...<span>this</span>.props} /&gt;
+      }
+
+      <span>// good</span>
+      render() {
+        const { irrelevantProp, ...relevantProps } = <span>this</span>.props;
+        <span>return</span> &lt;WrappedComponent {...relevantProps} /&gt;
+      }
+      </code></pre>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+      
+    <br>
+
+    <div class="section">
+      <h2 id="refs">Refs</h2>
+      <ul>
+        <li>
+          <p>Always use ref callbacks.</p>
+          <pre><code><span>// bad</span>
+      &lt;Foo
+        <span>ref</span>=<span>"myRef"</span>
+      /&gt;
+
+      <span>// good</span>
+      &lt;Foo
+        <span>ref</span>={(<span>ref</span>) =&gt; { <span>this</span>.myRef = <span>ref</span>; }}
+      /&gt;
+      </code></pre>
+        </li>
+      </ul>
+    </div>
+      
+    <br>
+
+    <div class="section">
+      <h2 id="parentheses">Parentheses</h2>
+      <ul>
+        <li>
+          <p>Wrap JSX tags in parentheses when they span more than one line.</p>
+          <pre><code><span>// bad</span>
+      render() {
+        <span>return</span> <span><span>&lt;<span>MyComponent</span> <span class="hljs-attr">variant</span>=<span>"long body"</span> <span class="hljs-attr">foo</span>=<span>"bar"</span>&gt;</span>
+                <span>&lt;<span>MyChild</span> /&gt;</span>
+              <span>&lt;/<span>MyComponent</span>&gt;</span></span>;
+      }
+
+      <span>// good</span>
+      render() {
+        <span>return</span> (
+          <span><span>&lt;<span>MyComponent</span> <span class="hljs-attr">variant</span>=<span>"long body"</span> <span class="hljs-attr">foo</span>=<span>"bar"</span>&gt;</span>
+            <span>&lt;<span>MyChild</span> /&gt;</span>
+          <span>&lt;/<span>MyComponent</span>&gt;</span></span>
+        );
+      }
+
+      <span>// good, when single line</span>
+      render() {
+        <span>const</span> body = <span><span>&lt;<span>div</span>&gt;</span>hello<span>&lt;/<span>div</span>&gt;</span></span>;
+        <span>return</span> <span><span>&lt;<span>MyComponent</span>&gt;</span>{body}<span>&lt;/<span>MyComponent</span>&gt;</span></span>;
+      }
+      </code></pre>
+        </li>
+      </ul>
+    </div>
+      
+    <br>
+
+    <div class="section">
+      <h2 id="tags">Tags</h2>
+      <ul>
+        <li>
+          <p>
+            Always self-close tags that have no children. eslint:
+            <a
+              href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md"
+              ><code>react/self-closing-comp</code></a
+            >
+          </p>
+          <pre><code><span>// bad</span>
+      &lt;Foo variant=<span>"stuff"</span>&gt;<span><span>&lt;/<span>Foo</span>&gt;</span></span>
+
+      <span>// good</span>
+      &lt;Foo variant=<span>"stuff"</span> /&gt;
+      </code></pre>
+        </li>
+        <li>
+          <p>
+            If your component has multiline properties, close its tag on a new line.
+          </p>
+          <pre><code><span>// bad</span>
+      &lt;Foo
+        <span class="hljs-built_in">bar</span>=<span>"bar"</span>
+        baz=<span>"baz"</span> /&gt;
+
+      <span>// good</span>
+      &lt;Foo
+        <span class="hljs-built_in">bar</span>=<span>"bar"</span>
+        baz=<span>"baz"</span>
+      /&gt;
+      </code></pre>
+        </li>
+      </ul>
+    </div>
+      
+    <br>
+
+    <div class="section">
+      <h2 id="methods">Methods</h2>
+      <ul>
+        <li>
+          <p>
+            Use arrow functions to close over local variables. It is handy when you
+            need to pass additional data to an event handler. Although, make sure they
+            <a
+              href="https://www.bignerdranch.com/blog/choosing-the-best-approach-for-react-event-handlers/"
+              >do not massively hurt performance</a
+            >, in particular when passed to custom components that might be
+            PureComponents, because they will trigger a possibly needless rerender
+            every time.
+          </p>
+          <pre><code><span><span>function</span> <span>ItemList</span>(<span>props</span>) </span>{
+        <span>return</span> (
+          <span><span>&lt;<span>ul</span>&gt;</span>
+            {props.items.map((item, index) =&gt; (
+              <span>&lt;<span>Item</span>
+                <span class="hljs-attr">key</span>=<span>{item.key}</span>
+                <span class="hljs-attr">onClick</span>=<span>{(event)</span> =&gt;</span> { doSomethingWith(event, item.name, index); }}
+              /&gt;
+            ))}
+          <span>&lt;/<span>ul</span>&gt;</span>
+        );
+      }</span>
+      </code></pre>
+        </li>
+        <li>
+          <p>Bind event handlers for the render method in the constructor.</p>
+          <pre><code><span>// bad</span>
+      <span><span>class</span> <span>extends</span> <span>React</span>.<span>Component</span> </span>{
+        onClickDiv() {
+          <span>// do stuff</span>
+        }
+
+        render() {
+          <span>return</span> &lt;div onClick={<span>this</span>.onClickDiv.bind(<span>this</span>)} /&gt;;
+        }
+      }
+
+      <span>// very bad</span>
+      <span><span>class</span> <span>extends</span> <span>React</span>.<span>Component</span> </span>{
+        onClickDiv = () =&gt; {
+          <span>// do stuff</span>
+        }
+
+        render() {
+          <span>return</span> &lt;div onClick={<span>this</span>.onClickDiv} /&gt;
+        }
+      }
+
+      <span>// good</span>
+      <span><span>class</span> <span>extends</span> <span>React</span>.<span>Component</span> </span>{
+        constructor(props) {
+          <span>super</span>(props);
+
+          <span>this</span>.onClickDiv = <span>this</span>.onClickDiv.bind(<span>this</span>);
+        }
+
+        onClickDiv() {
+          <span>// do stuff</span>
+        }
+
+        render() {
+          <span>return</span> &lt;div onClick={<span>this</span>.onClickDiv} /&gt;;
+        }
+      }
+      </code></pre>
+        </li>
+        <li>
+          <p>
+            Do not use underscore prefix for internal methods of a React component.
+          </p>
+          <pre><code><span>// bad</span>
+      <span class="hljs-type">React</span>.createClass({
+        _onClickSubmit() {
+          <span>// do stuff</span>
+        },
+
+        <span>// other stuff</span>
+      });
+
+      <span>// good</span>
+      <span><span>class</span> <span>extends</span> <span>React</span>.<span>Component</span> </span>{
+        onClickSubmit() {
+          <span>// do stuff</span>
+        }
+
+        <span>// other stuff</span>
+      }
+      </code></pre>
+        </li>
+        <li>
+          <p>Be sure to return a value in your <code>render</code> methods.</p>
+          <pre><code><span>// bad</span>
+      render() {
+        (&lt;<span>div</span> /&gt;);
+      }
+
+      <span>// good</span>
+      render() {
+        <span>return</span> (&lt;<span>div</span> /&gt;);
+      }
+      </code></pre>
+        </li>
+      </ul>
+    </div>
+      
+    <br>
+
+    <div class="section">
+      <h2 id="ordering">Ordering</h2>
+      <ul>
+        <li>
+          <p>Ordering for <code>class extends React.Component</code>:</p>
+          <ol>
+            <li>optional <code>static</code> methods</li>
+            <li><code>constructor</code></li>
+            <li><code>getChildContext</code></li>
+            <li><code>componentWillMount</code></li>
+            <li><code>componentDidMount</code></li>
+            <li><code>componentWillReceiveProps</code></li>
+            <li><code>shouldComponentUpdate</code></li>
+            <li><code>componentWillUpdate</code></li>
+            <li><code>componentDidUpdate</code></li>
+            <li><code>componentWillUnmount</code></li>
+            <li>
+              <em>event handlers starting with &#39;handle&#39;</em> like
+              <code>handleSubmit()</code> or <code>handleChangeDescription()</code>
+            </li>
+            <li>
+              <em>event handlers starting with &#39;on&#39;</em> like
+              <code>onClickSubmit()</code> or <code>onChangeDescription()</code>
+            </li>
+            <li>
+              <em>getter methods for <code>render</code></em> like
+              <code>getSelectReason()</code> or <code>getFooterContent()</code>
+            </li>
+            <li>
+              <em>optional render methods</em> like <code>renderNavigation()</code> or
+              <code>renderProfilePicture()</code>
+            </li>
+            <li><code>render</code></li>
+          </ol>
+        </li>
+        <li>
+          <p>
+            How to define <code>propTypes</code>, <code>defaultProps</code>,
+            <code>contextTypes</code>, etc...
+          </p>
+          <pre><code><span>import</span> <span class="hljs-type">React</span> from <span class="hljs-symbol">'reac</span>t'
+      <span>import</span> <span class="hljs-type">PropTypes</span> from <span class="hljs-symbol">'prop</span>-types'
+
+      const propTypes = {
+        id: <span class="hljs-type">PropTypes</span>.number.isRequired,
+        url: <span class="hljs-type">PropTypes</span>.string.isRequired,
+        text: <span class="hljs-type">PropTypes</span>.string,
+      };
+
+      const defaultProps = {
+        text: <span class="hljs-symbol">'Hello</span> <span class="hljs-type">World</span>',
+      };
+
+      <span><span>class</span> <span>Link</span> <span>extends</span> <span>React</span>.<span>Component</span> </span>{
+        static methodsAreOk() {
+          <span>return</span> <span class="hljs-literal">true</span>;
+        }
+
+        render() {
+          <span>return</span> &lt;a href={<span>this</span>.props.url} data-id={<span>this</span>.props.id}&gt;{<span>this</span>.props.text}&lt;/a&gt;;
+        }
+      }
+
+      <span class="hljs-type">Link</span>.propTypes = propTypes;
+      <span class="hljs-type">Link</span>.defaultProps = defaultProps;
+
+      export <span>default</span> <span class="hljs-type">Link</span>;
+      </code></pre>
+        </li>
+        <li>
+          <p>Ordering for <code>React.createClass</code>:</p>
+          <ol>
+            <li><code>displayName</code></li>
+            <li><code>propTypes</code></li>
+            <li><code>contextTypes</code></li>
+            <li><code>childContextTypes</code></li>
+            <li><code>mixins</code></li>
+            <li><code>statics</code></li>
+            <li><code>defaultProps</code></li>
+            <li><code>getDefaultProps</code></li>
+            <li><code>getInitialState</code></li>
+            <li><code>getChildContext</code></li>
+            <li><code>componentWillMount</code></li>
+            <li><code>componentDidMount</code></li>
+            <li><code>componentWillReceiveProps</code></li>
+            <li><code>shouldComponentUpdate</code></li>
+            <li><code>componentWillUpdate</code></li>
+            <li><code>componentDidUpdate</code></li>
+            <li><code>componentWillUnmount</code></li>
+            <li>
+              <em>clickHandlers or eventHandlers</em> like
+              <code>onClickSubmit()</code> or <code>onChangeDescription()</code>
+            </li>
+            <li>
+              <em>getter methods for <code>render</code></em> like
+              <code>getSelectReason()</code> or <code>getFooterContent()</code>
+            </li>
+            <li>
+              <em>optional render methods</em> like <code>renderNavigation()</code> or
+              <code>renderProfilePicture()</code>
+            </li>
+            <li><code>render</code></li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+      
+    <br>
+
+    <div class="section">
+      <h2 id="-ismounted-"><code>isMounted</code></h2>
+      <ul>
+        <li>Do not use <code>isMounted</code>.</li>
+      </ul>
+    </div>
+      <p>
+        <strong><a href="#table-of-contents">⬆️ back to top</a></strong>
+      </p>
+</div>
+</body>
+</html>
