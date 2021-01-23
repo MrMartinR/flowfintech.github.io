@@ -1,0 +1,400 @@
+<h1 id="flow-sass-style-guide">Flow Sass Style Guide</h1>
+<p>
+  <em
+    >Based on
+    <a href="https://github.com/airbnb/css">Airbnb CSS / Sass Styleguide</a></em
+  >
+</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+  <li>
+    <a href="#terminology">Terminology</a>
+    <ul>
+      <li><a href="#rule-declaration">Rule Declaration</a></li>
+      <li><a href="#selectors">Selectors</a></li>
+      <li><a href="#properties">Properties</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#css">CSS</a>
+    <ul>
+      <li><a href="#naming">Naming</a></li>
+      <li><a href="#formatting">Formatting</a></li>
+      <li><a href="#comments">Comments</a></li>
+      <li><a href="#oocss-and-bem">OOCSS and BEM</a></li>
+      <li><a href="#id-selectors">ID Selectors</a></li>
+      <li><a href="#javascript-hooks">JavaScript hooks</a></li>
+      <li><a href="#border">Border</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#sass">Sass</a>
+    <ul>
+      <li><a href="#syntax">Syntax</a></li>
+      <li><a href="#ordering-of-property-declarations">Ordering</a></li>
+      <li><a href="#variables">Variables</a></li>
+      <li><a href="#mixins">Mixins</a></li>
+      <li><a href="#extend-directive">Extend directive</a></li>
+      <li><a href="#nested-selectors">Nested selectors</a></li>
+    </ul>
+  </li>
+</ol>
+<h2 id="terminology">Terminology</h2>
+<h3 id="rule-declaration">Rule declaration</h3>
+<p>
+  A “rule declaration” is the name given to a selector (or a group of selectors)
+  with an accompanying group of properties. Here&#39;s an example:
+</p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.listing</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">18px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.2</span>;
+}
+</code></pre>
+<h3 id="selectors">Selectors</h3>
+<p>
+  In a rule declaration, “selectors” are the bits that determine which elements
+  in the DOM tree will be styled by the defined properties. Selectors can match
+  HTML elements, as well as an element&#39;s class, ID, or any of its
+  attributes. Here are some examples of selectors:
+</p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.my-element-class</span> {
+  <span class="hljs-comment">/* ... */</span>
+}
+
+<span class="hljs-selector-attr">[aria-hidden]</span> {
+  <span class="hljs-comment">/* ... */</span>
+}
+</code></pre>
+<h3 id="properties">Properties</h3>
+<p>
+  Finally, properties are what give the selected elements of a rule declaration
+  their style. Properties are key-value pairs, and a rule declaration can
+  contain one or more property declarations. Property declarations look like
+  this:
+</p>
+<pre><code class="lang-css"><span class="hljs-comment">/* some selector */</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#f1f1f1</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333</span>;
+}
+</code></pre>
+<p>
+  <strong><a href="#table-of-contents">⬆ back to top</a></strong>
+</p>
+<h2 id="css">CSS</h2>
+<h3 id="naming">Naming</h3>
+<ul>
+  <li>Use the extension scss.</li>
+  <li>Use the same name of the component in camelCase notation.</li>
+  <li>For partials use the underscore at the beginning of the name</li>
+</ul>
+<h4 id="partials">Partials</h4>
+<p>
+  The _ (underscore) means that is a partial for scss.
+  <strong>dart-sass</strong> is the only library which implements the @use rule,
+  which is strongly recommended over @import. Do not use @import.
+</p>
+<p>
+  The stylesheet its going to be imported (@use) to a main stylesheet i.e.
+  styles.scss.
+</p>
+<p>
+  The advantage on using partials is that you can use many files to organize
+  your code and everything will be compiled on a single file. You can create
+  partial Sass files that contain little snippets of CSS that you can include in
+  other Sass files. This is a great way to modularize your CSS and help keep
+  things easier to maintain.
+</p>
+<h3 id="formatting">Formatting</h3>
+<ul>
+  <li>Use soft tabs (2 spaces) for indentation.</li>
+  <li>Do not use ID selectors.</li>
+  <li>
+    When using multiple selectors in a rule declaration, give each selector its
+    own line.
+  </li>
+  <li>
+    Put a space before the opening brace <code>{</code> in rule declarations.
+  </li>
+  <li>
+    In properties, put a space after, but not before, the
+    <code>:</code> character.
+  </li>
+  <li>Put closing braces <code>}</code> of rule declarations on a new line.</li>
+  <li>Put blank lines between rule declarations.</li>
+</ul>
+<p><strong>Bad</strong></p>
+<pre><code class="lang-css">.avatar{
+    <span class="hljs-attribute">border-radius</span>:<span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">border</span>:<span class="hljs-number">2px</span> solid white; }
+<span class="hljs-selector-class">.no</span>, <span class="hljs-selector-class">.nope</span>, <span class="hljs-selector-class">.not_good</span> {
+    <span class="hljs-comment">// ...</span>
+}
+<span class="hljs-selector-id">#lol-no</span> {
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p><strong>Good</strong></p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.Avatar</span> {
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid white;
+}
+
+<span class="hljs-selector-class">.one</span>,
+<span class="hljs-selector-class">.selector</span>,
+<span class="hljs-selector-class">.per-line</span> {
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<h3 id="comments">Comments</h3>
+<ul>
+  <li>
+    Prefer line comments (<code>//</code> in Sass-land) to block comments.
+  </li>
+  <li>Prefer comments on their own line. Avoid end-of-line comments.</li>
+  <li>
+    Write detailed comments for code that isn&#39;t self-documenting:
+    <ul>
+      <li>Uses of z-index</li>
+      <li>Compatibility or browser-specific hacks</li>
+    </ul>
+  </li>
+</ul>
+<h3 id="oocss-and-bem">OOCSS and BEM</h3>
+<p>We encourage some combination of OOCSS and BEM for these reasons:</p>
+<ul>
+  <li>It helps create clear, strict relationships between CSS and HTML</li>
+  <li>It helps us create reusable, composable components</li>
+  <li>It allows for less nesting and lower specificity</li>
+  <li>It helps in building scalable stylesheets</li>
+</ul>
+<p>
+  <strong>OOCSS</strong>, or “Object Oriented CSS”, is an approach for writing
+  CSS that encourages you to think about your stylesheets as a collection of
+  “objects”: reusable, repeatable snippets that can be used independently
+  throughout a website.
+</p>
+<ul>
+  <li>
+    Nicole Sullivan&#39;s
+    <a href="https://github.com/stubbornella/oocss/wiki">OOCSS wiki</a>
+  </li>
+  <li>
+    Smashing Magazine&#39;s
+    <a
+      href="http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/"
+      >Introduction to OOCSS</a
+    >
+  </li>
+</ul>
+<h4 id="bem">BEM</h4>
+<p>
+  <strong>BEM</strong>, or “Block-Element-Modifier”, is a
+  <em>naming convention</em> for classes in HTML and CSS. Can serve as a solid
+  set of guidelines for implementing OOCSS.
+</p>
+<ul>
+  <li>Blocks: Use PascalCase for blocks. <em>Btn</em></li>
+  <li>
+    Child Items/Elements: Append two underscores and the name of the element in
+    lowercase to the name of the block. <em>Btn__phone</em>
+  </li>
+  <li>
+    Modifiers: Append two hyppens and the name of themodifier in lowercase to
+    the name of the block. <em>Btn--orange</em>
+  </li>
+</ul>
+<p><strong>Example</strong></p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// BusinessCard.jsx</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">BusinessCard</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"Btn Btn--big Btn--orange"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://app.flowfin.tech"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"Btn__phone"</span>&gt;</span>555-555557<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"Btn__text"</span>&gt;</span>Subscribe<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<pre><code class="lang-css"><span class="hljs-comment">/* BusinessCard.css */</span>
+
+<span class="hljs-comment">/* Block component that represents the higher-level component*/</span>
+<span class="hljs-selector-class">.Btn</span> { }
+
+<span class="hljs-comment">/* Element that represents a descendant of `.Btn` that helps compose the block as a whole.*/</span> 
+<span class="hljs-selector-class">.Btn__phone</span> {}
+
+<span class="hljs-comment">/* Modifier that changes the style of the block, it represents a different state or variation on the `.Btn` block. */</span>
+<span class="hljs-selector-class">.Btn--orange</span> {} 
+<span class="hljs-selector-class">.Btn--big</span> {}
+</code></pre>
+<h4 id="sass-and-bem">Sass and BEM</h4>
+<p>
+  Nesting as a way of scoping styles, you can still author in a nested format,
+  but get CSS that isn’t nested, with <em>@at-root:</em>
+</p>
+<pre><code class="lang-sass"><span class="hljs-selector-class">.Block</span> {
+  <span class="hljs-variable">@at-root</span> #{<span class="hljs-selector-tag">&amp;</span>}__element {
+  }
+  <span class="hljs-variable">@at-root</span> #{<span class="hljs-selector-tag">&amp;</span>}--modifier {
+  }
+}
+</code></pre>
+<p>Returns you:</p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.Block</span> {
+}
+<span class="hljs-selector-class">.Block__element</span> {
+}
+<span class="hljs-selector-class">.Block--modifier</span> {
+}
+</code></pre>
+<h3 id="id-selectors">ID selectors</h3>
+<p>Do Not use ID selectors.</p>
+<h3 id="javascript-hooks">JavaScript hooks</h3>
+<p>
+  Avoid binding to the same class in both your CSS and JavaScript. Conflating
+  the two often leads to, at a minimum, time wasted during refactoring when a
+  developer must cross-reference each class they are changing, and at its worst,
+  developers being afraid to make changes for fear of breaking functionality.
+</p>
+<p>
+  We recommend creating JavaScript-specific classes to bind to, prefixed with
+  <code>.js-</code>:
+</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"Btn Btn-primary js-request-to-book"</span>&gt;</span>Request to Book<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<h3 id="border">Border</h3>
+<p>
+  Use <code>0</code> instead of <code>none</code> to specify that a style has no
+  border.
+</p>
+<p><strong>Bad</strong></p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.Foo</span> {
+  <span class="hljs-attribute">border</span>: none;
+}
+</code></pre>
+<p><strong>Good</strong></p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.Foo</span> {
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>
+  <strong><a href="#table-of-contents">⬆ back to top</a></strong>
+</p>
+<h2 id="sass">Sass</h2>
+<h3 id="syntax">Syntax</h3>
+<ul>
+  <li>
+    Use the <code>.scss</code> syntax, never the original
+    <code>.sass</code> syntax
+  </li>
+  <li>
+    Order your regular CSS and <code>@include</code> declarations logically (see
+    below)
+  </li>
+</ul>
+<h3 id="ordering-of-property-declarations">
+  Ordering of property declarations
+</h3>
+<ol>
+  <li>
+    <p>Property declarations</p>
+    <p>
+      List all standard property declarations, anything that isn&#39;t an
+      <code>@include</code> or a nested selector.
+    </p>
+    <pre><code class="lang-scss"> <span class="hljs-selector-class">.Btn--green</span> {
+   <span class="hljs-attribute">background</span>: green;
+   <span class="hljs-attribute">font-weight</span>: bold;
+   <span class="hljs-comment">// ...</span>
+ }
+</code></pre>
+  </li>
+  <li>
+    <p><code>@include</code> declarations</p>
+    <p>
+      Grouping <code>@include</code>s at the end makes it easier to read the
+      entire selector.
+    </p>
+    <pre><code class="lang-scss"> <span class="hljs-selector-class">.Btn--green</span> {
+   <span class="hljs-attribute">background</span>: green;
+   <span class="hljs-attribute">font-weight</span>: bold;
+   @<span class="hljs-keyword">include</span> transition(background 0.5s ease);
+   <span class="hljs-comment">// ...</span>
+ }
+</code></pre>
+  </li>
+  <li>
+    <p>Nested selectors</p>
+    <p>
+      Nested selectors, <em>if necessary</em>, go last, and nothing goes after
+      them. Add whitespace between your rule declarations and nested selectors,
+      as well as between adjacent nested selectors. Apply the same guidelines as
+      above to your nested selectors.
+    </p>
+    <pre><code class="lang-scss"> <span class="hljs-selector-class">.Btn</span> {
+   <span class="hljs-attribute">background</span>: green;
+   <span class="hljs-attribute">font-weight</span>: bold;
+   @include <span class="hljs-attribute">transition</span>(background <span class="hljs-number">0.5s</span> ease);
+
+   <span class="hljs-selector-class">.Icon</span> {
+     <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">10px</span>;
+   }
+ }
+</code></pre>
+  </li>
+</ol>
+<h3 id="variables">Variables</h3>
+<p>
+  Variables declared at the top level of a stylesheet are global. This means
+  that they can be accessed anywhere in their module after they’ve been
+  declared. But that’s not true for all variables. Those declared in blocks
+  {curly braces} are usually local and start with underscore, and can only be
+  accessed within the block they were declared.
+</p>
+<ul>
+  <li>
+    Global Variables: Use lower-dash-cased variable names (e.g.
+    <code>$my-global-variable</code>).
+  </li>
+  <li>
+    Private/Local Variables: Use the prefix underscore before the
+    lower-dash-cased name. (e.g. <code>$_my-local-variable</code>)
+  </li>
+</ul>
+<h3 id="mixins">Mixins</h3>
+<p>
+  Mixins should be used to DRY up your code, add clarity, or abstract
+  complexity--in much the same way as well-named functions. Mixins that accept
+  no arguments can be useful for this, but note that if you are not compressing
+  your payload (e.g. gzip), this may contribute to unnecessary code duplication
+  in the resulting styles.
+</p>
+<h3 id="extend-directive">Extend directive</h3>
+<p>
+  <code>@extend</code> should be avoided because it has unintuitive and
+  potentially dangerous behavior, especially when used with nested selectors.
+  Even extending top-level placeholder selectors can cause problems if the order
+  of selectors ends up changing later (e.g. if they are in other files and the
+  order the files are loaded shifts). Gzipping should handle most of the savings
+  you would have gained by using <code>@extend</code>, and you can DRY up your
+  stylesheets nicely with mixins.
+</p>
+<h3 id="nested-selectors">Nested selectors</h3>
+<p><strong>Do not nest selectors more than three levels deep!</strong></p>
+<pre><code class="lang-scss"><span class="hljs-selector-class">.page-container</span> {
+  <span class="hljs-selector-class">.content</span> {
+    <span class="hljs-selector-class">.profile</span> {
+      <span class="hljs-comment">// STOP!</span>
+    }
+  }
+}
+</code></pre>
+<p>When selectors become this long, you&#39;re likely writing CSS that is:</p>
+<ul>
+  <li>Strongly coupled to the HTML (fragile) <em>—OR—</em></li>
+  <li>Overly specific (powerful) <em>—OR—</em></li>
+  <li>Not reusable</li>
+</ul>
+<p>Again: <strong>never nest ID selectors!</strong></p>
+<p>
+  <strong><a href="#table-of-contents">⬆ back to top</a></strong>
+</p>
