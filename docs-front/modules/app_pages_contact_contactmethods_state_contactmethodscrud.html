@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>app/pages/Contact/ContactMethods/state/contactMethodsCRUD | flow</title>
+	<title>app/pages/Contact/ContactMethods/state/contactMethodsCrud | flow</title>
 	<meta name="description" content="Documentation for flow">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">flow</a>
 				</li>
 				<li>
-					<a href="app_pages_contact_contactmethods_state_contactmethodscrud.html">app/pages/Contact/ContactMethods/state/contactMethodsCRUD</a>
+					<a href="app_pages_contact_contactmethods_state_contactmethodscrud.html">app/pages/Contact/ContactMethods/state/contactMethodsCrud</a>
 				</li>
 			</ul>
-			<h1>Module app/pages/Contact/ContactMethods/state/contactMethodsCRUD</h1>
+			<h1>Module app/pages/Contact/ContactMethods/state/contactMethodsCrud</h1>
 		</div>
 	</div>
 </header>
@@ -79,6 +79,7 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="app_pages_contact_contactmethods_state_contactmethodscrud.html#createcontactmethods" class="tsd-kind-icon">create<wbr>Contact<wbr>Methods</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="app_pages_contact_contactmethods_state_contactmethodscrud.html#deletecontactmethod" class="tsd-kind-icon">delete<wbr>Contact<wbr>Method</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="app_pages_contact_contactmethods_state_contactmethodscrud.html#getcontactmethods" class="tsd-kind-icon">get<wbr>Contact<wbr>Methods</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="app_pages_contact_contactmethods_state_contactmethodscrud.html#updatecontactmethods" class="tsd-kind-icon">update<wbr>Contact<wbr>Methods</a></li>
 							</ul>
@@ -94,7 +95,7 @@
 					<div class="tsd-signature tsd-kind-icon">CONTACT_<wbr>METHODS_<wbr>URL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FlowFintech/FlowFront/blob/7ba33e8/src/app/pages/Contact/ContactMethods/state/contactMethodsCRUD.ts#L15">src/app/pages/Contact/ContactMethods/state/contactMethodsCRUD.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/FlowFintech/FlowFront/blob/706a9c4/src/app/pages/Contact/ContactMethods/state/contactMethodsCrud.ts#L5">src/app/pages/Contact/ContactMethods/state/contactMethodsCrud.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -111,13 +112,36 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FlowFintech/FlowFront/blob/7ba33e8/src/app/pages/Contact/ContactMethods/state/contactMethodsCRUD.ts#L40">src/app/pages/Contact/ContactMethods/state/contactMethodsCRUD.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/FlowFintech/FlowFront/blob/706a9c4/src/app/pages/Contact/ContactMethods/state/contactMethodsCrud.ts#L30">src/app/pages/Contact/ContactMethods/state/contactMethodsCrud.ts:30</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>data: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="deletecontactmethod" class="tsd-anchor"></a>
+					<h3>delete<wbr>Contact<wbr>Method</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Contact<wbr>Method<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/FlowFintech/FlowFront/blob/706a9c4/src/app/pages/Contact/ContactMethods/state/contactMethodsCrud.ts#L75">src/app/pages/Contact/ContactMethods/state/contactMethodsCrud.ts:75</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -134,7 +158,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FlowFintech/FlowFront/blob/7ba33e8/src/app/pages/Contact/ContactMethods/state/contactMethodsCRUD.ts#L21">src/app/pages/Contact/ContactMethods/state/contactMethodsCRUD.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/FlowFintech/FlowFront/blob/706a9c4/src/app/pages/Contact/ContactMethods/state/contactMethodsCrud.ts#L11">src/app/pages/Contact/ContactMethods/state/contactMethodsCrud.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -157,7 +181,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FlowFintech/FlowFront/blob/7ba33e8/src/app/pages/Contact/ContactMethods/state/contactMethodsCRUD.ts#L63">src/app/pages/Contact/ContactMethods/state/contactMethodsCRUD.ts:63</a></li>
+									<li>Defined in <a href="https://github.com/FlowFintech/FlowFront/blob/706a9c4/src/app/pages/Contact/ContactMethods/state/contactMethodsCrud.ts#L53">src/app/pages/Contact/ContactMethods/state/contactMethodsCrud.ts:53</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -182,7 +206,7 @@
 						<a href="../modules.html">Modules</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="app_pages_contact_contactmethods_state_contactmethodscrud.html">app/pages/<wbr>Contact/<wbr>Contact<wbr>Methods/state/contact<wbr>MethodsCRUD</a>
+						<a href="app_pages_contact_contactmethods_state_contactmethodscrud.html">app/pages/<wbr>Contact/<wbr>Contact<wbr>Methods/state/contact<wbr>Methods<wbr>Crud</a>
 					</li>
 				</ul>
 			</nav>
@@ -193,6 +217,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="app_pages_contact_contactmethods_state_contactmethodscrud.html#createcontactmethods" class="tsd-kind-icon">create<wbr>Contact<wbr>Methods</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="app_pages_contact_contactmethods_state_contactmethodscrud.html#deletecontactmethod" class="tsd-kind-icon">delete<wbr>Contact<wbr>Method</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="app_pages_contact_contactmethods_state_contactmethodscrud.html#getcontactmethods" class="tsd-kind-icon">get<wbr>Contact<wbr>Methods</a>
