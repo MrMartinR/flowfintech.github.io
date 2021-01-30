@@ -62,144 +62,90 @@
 
 <p><a href="https://github.com/FlowFintech/FlowBack/graphs/contributors"><img src="https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge"></a></p>
 
-<p>&lt;br /&gt;</p>
-<p align="center">
-  <h1 align="center">FlowBack
- </h1>
-  <p align="center">
-    Rail API
-    <br />
-    <a href="https://github.com/FlowFintech/FlowBack.git"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    ·
-    <a href="https://github.com/FlowFintech/FlowBack/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/FlowFintech/FlowBack/issues/issues">Request Feature</a>
-  </p>
-</p>
-<h1 id="label-Ruby+StyleGuide"><a href="docs/StyleGuide-Ruby.adoc">Ruby StyleGuide</a></h1>
-<!-- TABLE OF CONTENTS -->
-<h2 id="label-Table+of+Contents">Table of Contents</h2>
-<ul><li>
-<p><a href="#about-the-project">About the Project</a></p>
-</li><li>
-<p><a href="#screenshots">Screenshots</a></p>
-</li><li>
-<p><a href="#prerequisites-installations">Prerequisites Installations</a></p>
-</li><li>
-<p><a href="#gems">Gems</a></p>
-</li><li>
-<p><a href="#technology-used">Technology used</a></p>
-</li><li>
-<p><a href="#how-to-Use">Usage/Getting Started</a></p>
-</li><li>
-<p><a href="#Roles-Claim">Roles Claim</a></p>
-</li><li>
-<p><a href="#API-Endpoints">API Endpoints</a></p>
-</li><li>
-<p><a href="#live-version">Live Version</a></p>
-</li><li>
-<p><a href="#roadmap">Roadmap</a></p>
-</li><li>
-<p><a href="#authors">Authors</a></p>
-</li></ul>
-<!-- ABOUT THE PROJECT -->
-<h2 id="label-About+The+Project">About The Project</h2>
+<p><br></p>
 
-<p>This project implements an investment management application to track investments, personal finance, budget, retirements, Financial Independence Retire Early movement FIRE, all stuff related to Personal Finance.</p>
+<p>&lt;img src=“<a href="https://dev.flowfin.tech/docs-back/docs/flow-header.svg">dev.flowfin.tech/docs-back/docs/flow-header.svg</a>”&gt;</p>
 
-<h3 id="label-Background+information">Background information</h3>
+<p><br></p>
 
-<p>When a business or an individual is in need of a loan, they reach out to loan originator. In most case, the loan originator does not have the money to give to this client. So, what the loan originator does is to float the loan and allow investors to fund it. The floating or display of a loan that need funding is done on a platform. Sometimes, the loan originator have their own platform. Now, the investor does not just invest in one platform but in multiple platforms and at times with different loan originator on the same platform (now referred to as a market place as it has more that one loan originator). These bring us to our application, <code>Flow</code>, an investment management application.</p>
+<p><br></p>
 
-<p>Using Flow, an investor is able to take the information <code>after</code> investing in a platform and add it to our application for easier management. In the past, the investor would have numerous excel files that stored this data which is messy, not easily accessible and does not have that good user experience with tools such as sort, classify by, just ready available to them; so Flow.</p>
+<h1 id="label-Ruby+StyleGuide+-28Read-29"><a href="https://dev.flowfin.tech/docs-back/style-guide-ruby.html">Ruby StyleGuide (Read)</a></h1>
 
-<p>Specification Summary:</p>
-<ul><li>
-<p>RESTful API.</p>
-</li><li>
-<p>API Versioning.</p>
-</li><li>
-<p>Financial Modules.</p>
-</li><li>
-<p>Patterns and Good Practices.</p>
-</li><li>
-<p>Users Management.</p>
-</li><li>
-<p>Secret/Token API Key.</p>
-</li><li>
-<p>Rspec Testing.</p>
-</li><li>
-<p>Setup Scripts.</p>
-</li><li>
-<p>Postgres Database.</p>
-</li><li>
-<p>JSON Serialization.</p>
-</li></ul>
+<p><br></p>
 
-<h2 id="label-Screenshots">Screenshots</h2>
+<h1 id="label-Getting+Started">Getting Started</h1>
 
-<h4 id="label-Home">Home</h4>
+<p>⚠️ First you must go to <a href="https://dev.flowfin.tech">Flow Developer Portal</a> for the general requirements and the project overview.</p>
+<hr>
+<p><br></p>
 
-<p>image goes here</p>
+<h2 id="label-3Cimg+src-3D-22.-2Fdocs-2Fruby.svg-22+width-3D-2230px-22+title-3D-22Ruby-22-3E+Ruby">&lt;img src=“https://dev.flowfin.tech/assets/ruby.svg” width=“30px” title=“Ruby”&gt; <a href="https://www.ruby-lang.org/en/documentation/installation/">Ruby</a></h2>
 
-<h2 id="label-Prerequisites+Installations">Prerequisites Installations</h2>
-<ul><li>
-<p>Install ruby version 2.6.5 and set it with your ruby environment manager  (<a href="https://www.ruby-lang.org/en/documentation/installation/">more info here</a>).</p>
-</li><li>
-<p>Install Postgres and start the PostgreSQL server in the foreground  (<a href="https://wiki.postgresql.org/wiki/Detailed_installation_guides">more info here</a>).</p>
-</li></ul>
-<p>If you want a copy of this project running on your machine you have to install:</p>
-<h2 id="label-Technology+used">Technology used</h2>
-<ul><li>
-<p>Ruby</p>
-</li><li>
-<p>Rails</p>
-</li><li>
-<p>GitHub</p>
-</li><li>
-<p>PostgreSQL</p>
-</li><li>
-<p>Devise_token_auth</p>
-</li></ul>
+<p>Is possible that you already have Ruby installed in your computer, you can check it typing the following comand in your terminal.</p>
 
-<h2 id="label-Gems">Gems</h2>
-
-<h2 id="label-Usage-2FGetting+Started">Usage/Getting Started</h2>
-
-<p>Once you have installed the required package shown on the <a href="#required-installations">Prerequisites Installations</a>, proceed with the following steps</p>
-
-<p>Clone the Repository,</p>
-
-<pre class="code ruby"><code class="ruby">your@pc:~$ git clone https://github.com/FlowFintech/FlowBack
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_ruby'>ruby</span> <span class='op'>-</span><span class='id identifier rubyid_v'>v</span>
 </code></pre>
 
+<p><br></p>
+
+<h3 id="label-Installing+Ruby">Installing Ruby</h3>
+
+<p><strong><em>macOS</em></strong> using <a href="http://brew.sh/"">Homebrew</a></p>
+
+<pre class="code ruby"><code class="ruby">brew install ruby@2.6.5
+</code></pre>
+
+<p><strong><em>Ubuntu</em></strong></p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_sudo'>sudo</span> <span class='id identifier rubyid_apt'>apt</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_ruby'>ruby</span><span class='op'>-</span><span class='id identifier rubyid_full'>full</span>
+</code></pre>
+
+<p>More info about Ruby instalation <a href="https://www.ruby-lang.org/en/documentation/installation/">here</a></p>
+
+<p>We are using ruby version <strong><em>2.6.5</em></strong>, is important to use this version. If you are using a diferent version of Ruby, upgrade or downgrade the version using the <a href="http://rvm.io">Ruby Version Manager</a> (RVM) that allows you to install and manage multiple installations of Ruby on your system. It can also manage different gemsets.</p>
+
+<p><br> &lt;hr&gt; <br></p>
+
+<h1 id="label-3Cimg+src-3D-22.-2Fdocs-2Foctocat.svg-22+width-3D-2230px-22+title-3D-22Cloning+the+Repository-22-3E+Cloning+the+Repository">&lt;img src=“https://dev.flowfin.tech/assets/octocat.svg” width=“30px” title=“Cloning the Repository”&gt; <a href="https://github.com/FlowFintech/FlowBack">Cloning the Repository</a></h1>
+
+<p><br></p>
+
+<p><strong><em>Ubuntu</em></strong></p>
+<ul><li>
+<p>Clone the repo</p>
+</li></ul>
+
+<p><code>terminal   your_username@pc:~$ git clone git@github.com:FlowFintech/FlowBack.git </code></p>
+<ul><li>
 <p>Move into the cloned folder</p>
+</li></ul>
 
-<pre class="code ruby"><code class="ruby">your@pc:~$ cd FlowBack
-</code></pre>
+<p><code>terminal   your_username@pc:~$ cd FlowBack </code></p>
 
-<p>Get the dependencies needed for the app</p>
-
-<pre class="code ruby"><code class="ruby">your@pc:~$ bundle install
-</code></pre>
-
-<p>Set environment variables</p>
-
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_export'>export</span> <span class='const'>USERNAME</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>change to your database_username</span><span class='tstring_end'>&quot;</span></span>
-<span class='id identifier rubyid_export'>export</span> <span class='const'>PASSWORD</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>change to your database_password</span><span class='tstring_end'>&quot;</span></span>
-<span class='id identifier rubyid_export'>export</span> <span class='const'>HOST</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>change to your host address</span><span class='tstring_end'>&quot;</span></span>
-</code></pre>
-
-<p>NB: Defaults</p>
-
-<pre class="code ruby"><code class="ruby">1. The default host is: &quot;localhost&quot; if you have not changed it
-2. Ensure that the USERNAME is a Superuser in psql
-</code></pre>
-
-<p>Help cookies</p>
+<h2 id="label-Normal+Install">Normal Install</h2>
 <ul><li>
+<p>Get the dependencies needed for the app</p>
+</li></ul>
+
+<p><code>terminal   FlowBack:~$ bundle install </code></p>
+<ul><li>
+<p>Set environment variables</p>
+</li></ul>
+
+<p><code>terminal   FlowBack:~$ export USERNAME=&quot;change to your database_username&quot; </code></p>
+
+<p><code>terminal   FlowBack:~$ export PASSWORD=&quot;change to your database_password&quot; </code></p>
+
+<p><code>terminal   FlowBack:~$ export HOST=&quot;change to your host address&quot; </code></p>
+<ul><li>
+<p>NB: Defaults</p>
+</li></ul>
+
+<p><code>terminal     1. The default host is: &quot;localhost&quot; if you have not changed it     2. Ensure that the USERNAME is a Superuser in psql </code></p>
+<ul><li>
+<p>Help cookies</p>
+</li><li>
 <p>Go to your terminal in ubuntu and type: <code>sudo su - postgres</code></p>
 </li><li>
 <p>Then <code>psql</code> to access - Postgres</p>
@@ -207,38 +153,164 @@
 <p><code>\du</code> to list all user and their attributes</p>
 </li><li>
 <p><code>ALTER ROLE username SUPERUSER</code> to alter the user.</p>
+</li><li>
+<p>Create a postgres role to let rails manage the db:</p>
 </li></ul>
 
-<p>Create a postgres role to let rails manage the db:</p>
-
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rake'>rake</span> <span class='label'>db:</span><span class='id identifier rubyid_create'>create</span>
-</code></pre>
-
+<p><code>terminal   rake db:create </code></p>
+<ul><li>
 <p>Setup databases migrations:</p>
+</li></ul>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rake'>rake</span> <span class='label'>db:</span><span class='id identifier rubyid_migrate'>migrate</span>
-</code></pre>
-
+<p><code>terminal   rake db:migrate </code></p>
+<ul><li>
 <p>Seed data for development</p>
+</li></ul>
 
-<pre class="code ruby"><code class="ruby">your@pc:~$ rake db:seed
-</code></pre>
-
+<p><code>terminal   your_username@pc:~$ rake db:seed </code></p>
+<ul><li>
 <p>Start the server and use the app</p>
+</li></ul>
 
-<pre class="code ruby"><code class="ruby">your@pc:~$ rails s
+<p><code>terminal   your_username@pc:~$ rails s </code></p>
+
+<h2 id="label-Docker+Install">Docker Install</h2>
+<ul><li>
+<p>Install Docker if you haven&#39;t done yet from <a href="https://www.docker.com/get-started">here</a>.</p>
+</li><li>
+<p>Make sure you have docker running before commencing with this installation.</p>
+</li><li>
+<p>You may also need to uncomment the 25th line of the <code>config/database.yml</code> file for some of the instructions below to work.</p>
+</li></ul>
+
+<p>⚠️<strong>Be sure NOT to commit and push the changes affecting this file though</strong>.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='comment'>#  host: &lt;%= ENV[&#39;HOST&#39;] || &#39;flowback_db_1&#39; %&gt;
+</span></code></pre>
+<ul><li>
+<p>Docker is already configured. Please DO NOT add anything to the following files when pushing changes:</p>
+</li><li>
+<p><code>config/database.yml</code></p>
+</li><li>
+<p><code>docker-compose.yml</code></p>
+</li><li>
+<p><code>dockerfile</code></p>
+</li></ul>
+
+<h3 id="label-After+you+have+started+docker-2C+in+your+root+directory+run+the+following+commands+in+the+order">After you have started docker, in your root directory run the following commands in the order</h3>
+
+<p><strong><em>Steps:</em></strong></p>
+<ol><li>
+<p>Go to backend folder</p>
+</li><li>
+<p>Run this one time only:</p>
+</li></ol>
+
+<p><code>terminal   your_username@pc:~$ docker-compose build </code></p>
+
+<p><strong><em>NOTE: Any change in the Gemfile or the Dockerfile, should be the only times you’ll need to rebuild (Run the above command).</em></strong></p>
+<ul><li>
+<p>Next run:</p>
+</li></ul>
+
+<pre class="code ruby"><code class="ruby">your_username@pc:~$ docker-compose up
+</code></pre>
+<ul><li>
+<p>Now open a new terminal, and inside the flow directory run the following to create the database, its relations by also running the migrations.</p>
+</li></ul>
+
+<pre class="code ruby"><code class="ruby">your_username@pc:~$ docker-compose run web rails db:create &amp;&amp; docker-compose run web rails db:migrate
+</code></pre>
+<ul><li>
+<p>If all’s well, you should see some PostgreSQL output (in the first terminal).</p>
+</li></ul>
+
+<pre class="code ruby"><code class="ruby">Starting flowback_db_1 ... done
+Starting flowback_web_1 ... done
+Attaching to flowback_db_1, flowback_web_1
+db_1   |
+db_1   | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1   |
+db_1   | 2021-01-26 22:59:35.013 UTC [1] LOG:  starting PostgreSQL 13.1 (Debian 13.1-1.pgdg100+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+db_1   | 2021-01-26 22:59:35.014 UTC [1] LOG:  listening on IPv4 address &quot;0.0.0.0&quot;, port 5432
+db_1   | 2021-01-26 22:59:35.014 UTC [1] LOG:  listening on IPv6 address &quot;::&quot;, port 5432
+db_1   | 2021-01-26 22:59:35.135 UTC [1] LOG:  listening on Unix socket &quot;/var/run/postgresql/.s.PGSQL.5432&quot;
+db_1   | 2021-01-26 22:59:35.154 UTC [27] LOG:  database system was shut down at 2021-01-26 22:59:29 UTC
+db_1   | 2021-01-26 22:59:35.174 UTC [1] LOG:  database system is ready to accept connections
+web_1  | =&gt; Booting Puma
+web_1  | =&gt; Rails 6.0.3.4 application starting in development
+web_1  | =&gt; Run `rails server --help` for more startup options
+web_1  | Puma starting in single mode...
+web_1  | * Version 4.3.7 (ruby 2.6.5-p114), codename: Mysterious Traveller
+web_1  | * Min threads: 5, max threads: 5
+web_1  | * Environment: development
+web_1  | * Listening on tcp://0.0.0.0:3001
+web_1  | Use Ctrl-C to stop
+</code></pre>
+<ul><li>
+<p>The app should now be up and running</p>
+</li></ul>
+
+<p>Head over to: <a href="http://localhost:3001">localhost:3001</a></p>
+
+<h4 id="label-Short+order+of+the+same+instructions">Short order of the same instructions</h4>
+
+<p><strong><em>Steps:</em></strong></p>
+<ul><li>
+<p>Go to backend folder.</p>
+</li><li>
+<p>Run this command to bundle up everything and start the server at one go:</p>
+</li></ul>
+
+<pre class="code ruby"><code class="ruby">your_username@pc:~$ docker-compose up --build
+</code></pre>
+<ul><li>
+<p>Open a new terminal, and inside the flow directory run the following to create and respective databases and run the migrations.</p>
+</li></ul>
+
+<pre class="code ruby"><code class="ruby">docker-compose run web rails db:create &amp;&amp; docker-compose run web rails db:migrate
+</code></pre>
+<ul><li>
+<p>Confirm if the server is running by heading over to: <a href="http://localhost:3001">localhost:3001</a></p>
+</li></ul>
+
+<h3 id="label-Note-3A+Instructions+to+seed+the+database+should+follow+soon"><strong>Note:</strong> Instructions to seed the database should follow soon</h3>
+<hr>
+<p><br></p>
+
+<h2 id="label-Contributing">Contributing</h2>
+
+<p>Depending on whether your implementing a <strong>feature</strong>, doing a <strong>chore</strong>, fixing <strong>bugs</strong> or a <strong>hotfix</strong>, you must use the following branches naming convention: type/short-description <em>Example</em></p>
+
+<pre class="code ruby"><code class="ruby">git checkout -b bug/fixing-layout
+git checkout -b feature/adding-loan-details
+git checkout -b chore/correct-typo
+git checkout -b hotfix/refactor-jb
 </code></pre>
 
-<h2 id="label-Roles+Claim">Roles Claim</h2>
+<blockquote>
+<p>Your feature/bug branch should be requested to merge into the <code>dev</code> branch and upon approval and merging of the PR, the branch should be deleted.</p>
+</blockquote>
 
-<p>The system has three type of users.</p>
-<ol><li>
-<p>Admin =&gt; This is the sole owner and add/remove a Contributor. Has full system access</p>
-</li><li>
-<p>User =&gt; This is the investors who comes with his/her data after investing on platforms to utilize our system to manage this data and be of value to them.</p>
-</li><li>
-<p>Contributor =&gt; This is a user(moderators) given privileges by the admin to add, edit, delete some for the information related to the core app functions eg add platforms data so when an investor come to use the system all they need to scroll from available options.</p>
-</li></ol>
+<p><br></p>
+
+<h3 id="label-Important-3A+Do+not+install+any+Gem-2C+if+you+feel+you+miss+some+Gem-2C+create+a+discussion+thread+in+-23backend+channel+in+Slack"><strong>Important</strong>: Do not install any Gem, if you feel you miss some Gem, create a discussion thread in #backend channel in Slack</h3>
+
+<p><br></p>
+
+<p>You can report &lt;a href=“<a href="https://github.com/FlowFintech/FlowBack/issues">Report”>github.com/FlowFintech/FlowBack/issues“>Report</a> Bugs here&lt;/a&gt; or open a discussion thread in Slack.</p>
+
+<p><br> &lt;hr&gt; <br></p>
+
+<h2 id="label-Roles">Roles</h2>
+
+<p>The project has three type of users.</p>
+
+<p><strong>Admin:</strong> This is the sole owner and add/remove a Contributor. Has full system access</p>
+
+<p><strong>User:</strong> This is the investors who comes with his/her data after investing on platforms to utilize our system to manage this data and be of value to them.</p>
+
+<p><strong>Contributor:</strong> This is a user(moderators) given privileges by the admin to add, edit, delete some for the information related to the core app functions eg add platforms data so when an investor come to use the system all they need to scroll from available options.</p>
 
 <h2 id="label-API+Endpoints">API Endpoints</h2>
 <ul><li>
@@ -257,37 +329,16 @@
 <ul><li>
 <p>Using Postman:</p>
 </li><li>
-<p>Create a new user with a POST request to your signup request, in this case is <a href="http://localhost:3000/api/v1/auth/sign_in">localhost:3000/api/v1/auth/sign_in</a> and in Body with RAW format set the params you need to create a new user (like in the example) and click send. or login  &lt;img src="./docs/screenshots/register.png" alt="screenshot1"/&gt;</p>
+<p>Create a new user with a POST request to your signup request, in this case is <a href="http://localhost:3000/api/v1/auth/sign_in">localhost:3000/api/v1/auth/sign_in</a> and in Body with RAW format set the params you need to create a new user (like in the example) and click send. or login  &lt;img src="<img src="https://dev.flowfin.tech/docs-back/docs/screenshots/register.png" />" alt="screenshot1"/&gt;</p>
 </li><li>
-<p>Now that you got the response of the request, the params you need are in the header of the request, click to Headers tab to see them.  &lt;img src="./docs/screenshots/header.png" alt="screenshot1"/&gt;</p>
+<p>Now that you got the response of the request, the params you need are in the header of the request, click to Headers tab to see them.  &lt;img src="<img src="https://dev.flowfin.tech/docs-back/docs/screenshots/header.png" />" alt="screenshot1"/&gt;</p>
 </li><li>
-<p>Then create a new request in Postman with the GET that requires the authorization and in Headers set the values access-token, client, uid from the header of the last request.  &lt;img src="./docs/screenshots/request.png" alt="screenshot1"/&gt;</p>
-</li></ul>
-
-<h3 id="label-Endpoints">Endpoints</h3>
-
-<p>Here you can find the API Documentation (<a href="https://app.swaggerhub.com/apis/Flow-Fintech/FlowAPI/1.0.0/">API Documentation </a>).</p>
-
-<p>| API Endpoint | Functionality | Status | User | | ————————————– | ——————————————– | —— | ————————– | | POST api/v1/auth/sign_in | Login a user | OK | ALL | | POST api/v1/auth/ | Register a user | OK | ALL | | GET api/v1/user_accounts | Returns a list of User Accounts | OK | User | | GET api/v1/accounts | Returns a list of accounts | OK | Admin or contrib | | POST api/v1/accounts | Create a new accounts | Ok | Admin or Contrib | | PUT api/v1/accounts/:id | Update an account bt nt currency &amp; country | Ok | Admin or Contrib | | DELETE api/v1/accounts/:id | Delete an account | Ok | Admin or Contrib | | PUT api/v1/modify_countries/:id | Update an account countries | Ok | Admin or Contrib | | DELETE api/v1/modify_countries/:id | Delete an account countries | Ok | Admin or Contrib | | PUT api/v1/modify_currencies/:id | Update an account currencies | Ok | Admin or Contrib | | DELETE api/v1/modify_currencies/:id | Delete an account currencies | Ok | Admin or Contrib | | GET api/v1/currencies | Returns a list of Currencies | | POST api/v1/currencies | Create a new Currency | | GET api/v1/countries | Returns a list of countries | | POST api/v1/countries | Create a new Currency | | POST api/v1/contacts | Create a new contact | OK | Admin, Contrib or User | | GET api/v1/contacts | Get all public contact | OK | Admin, Contrib or User-own | | GET api/v1/contacts/:id | Get a contact | OK | Admin, Contrib or User-own | | PUT api/v1/contacts/:id | Update a contact | OK | Admin, Contrib or User-own | | DELETE api/v1/contacts/:id | Delete a contact | OK | Admin, Contrib or User-own | | POST api/v1/originators | Create a new originators | OK | Admin, Contrib | | GET api/v1/originators | Get all originators | OK | ALL | | GET api/v1/originators/:id | Get an originators | OK | ALL | | PUT api/v1/originators/:id | Update originator | OK | Admin, Contrib | | DELETE api/v1/originators/:id | Delete originator | OK | Admin, Contrib | | POST api/v1/platforms | Create a new platform | OK | Admin, Contrib | | GET api/v1/platforms | Get all platforms | OK | ALL | | GET api/v1/platforms/:id | Get an platforms | OK | ALL | | PUT api/v1/platforms/:id | Update a platforms | OK | Admin, Contrib | | DELETE api/v1/platforms/:id | Delete a platforms | OK | Admin, Contrib | | POST api/v1/platform_originators | Create a new platform originator | OK | Admin, Contrib | | GET api/v1/platform_originators | Get all platform originators | OK | ALL | | GET api/v1/platform_originators/:id | Get a platform originator | OK | ALL | | PUT api/v1/platform_originators/:id | Update a platform_originator | OK | Admin, Contrib | | DELETE api/v1/platform_originators/:id | Delete a platform_originators | OK | Admin, Contrib | | POST api/v1/contact_methods | Create a new contact_method | OK | Admin, Contrib or User | | GET api/v1/contact_methods | Get all public and own contact_methods | OK | Admin, Contrib or User-own | | GET api/v1/contact_methods/:id | Get a contact_methods | OK | Admin, Contrib or User-own | | PUT api/v1/contact_methods/:id | Update a contact_methods | OK | Admin, Contrib or User-own | | DELETE api/v1/contact_methods/:id | Delete a contact_methods | OK | Admin, Contrib or User-own | | POST api/v1/loans | Create a new loan | OK | Admin, Contrib | | GET api/v1/loans | Get all loans | OK | ALL | | GET api/v1/loans/:id | Get a loan | OK | ALL | | PUT api/v1/loans/:id | Update a loan | OK | Admin, Contrib | | DELETE api/v1/loans/:id | Delete a loan | OK | Admin, Contrib | | POST api/v1/user_accounts | Create a new user_accounts | OK | Admin, Contrib or User own | | GET api/v1/user_accounts | Get all user user_accounts | OK | Admin, Contrib or User own | | GET api/v1/user_accounts/:id | Get a user user_accounts | OK | Admin, Contrib or User own | | PUT api/v1/user_accounts/:id | Update a user_accounts | OK | Admin, Contrib or User own | | DELETE api/v1/user_accounts/:id | Delete a user_accounts | OK | Admin, Contrib or User own | | POST api/v1/transactions | Create a new transactions under user_account | OK | Admin, Contrib or User own | | GET api/v1/transactions | Get all transactions under user_account | OK | Admin, Contrib or User own | | GET api/v1/transactions/:id | Get a transactions under user_account | OK | Admin, Contrib or User own | | PUT api/v1/transactions/:id | Update a transactions under user_account | OK | Admin, Contrib or User own | | DELETE api/v1/transactions/:id | Delete a transactions under user_account | OK | Admin, Contrib or User own | | POST api/v1/user_loans | Create a new user_loan | OK | User own | | GET api/v1/user_loans | Get all user_loans | OK | User own | | GET api/v1/user_loans/:id | Get a user_loan | OK | User own | | PUT api/v1/user_loans/:id | Update a user_loan | OK | User own | | DELETE api/v1/user_loans/:id | Delete a user_loan | OK | User own | | POST api/v1/user_platforms | Create a new user_platforms | OK | User own | | GET api/v1/user_platforms | Get all user_platforms | OK | User own | | GET api/v1/user_platforms/:id | Get a user_platforms | OK | User own | | PUT api/v1/user_platforms/:id | Update a user_platforms | OK | User own | | DELETE api/v1/user_platforms/:id | Delete a user_platforms | OK | User own | | GET api/v1/users | Get all users | OK | Admin | | GET api/v1/user_profile | Get logged in user profile | OK | Admin, Contrib or User | | POST api/v1/update_profile | Update the currency and country in profile | OK | Admin, Contrib or User | | PUT api/v1/users/:id | Update user profile | OK | Admin, Contrib or User |</p>
-
-<h2 id="label-Live+Version">Live Version</h2>
-
-<p>This is the link to the live preview. Feel free to visit.<br> FlowBack[https://app.flowfin.tech/]<br></p>
-<!-- ROADMAP -->
-<h2 id="label-Roadmap">Roadmap</h2>
-
-<p>See the <a href="https://github.com/FlowFintech/FlowBack/issues/issues">open issues</a> for a list of proposed features (and known issues).</p>
-<!-- CONTACT -->
-<h2 id="label-Authors">Authors</h2>
-
-<p>Martin</p>
-<ul><li>
-<p><a href="https://github.com/FlowFintech">GitHub profile</a></p>
+<p>Then create a new request in Postman with the GET that requires the authorization and in Headers set the values access-token, client, uid from the header of the last request. &lt;img src="<img src="https://dev.flowfin.tech/docs-back/docs/screenshots/request.png" />" alt="screenshot1"/&gt; <br> &lt;hr&gt; <br></p>
 </li></ul>
 <!-- MARKDOWN LINKS & IMAGES --><!-- https://www.markdownguide.org/basic-syntax/#reference-style-links --></div></div>
 
       <div id="footer">
-  Generated on Thu Jan 14 08:00:34 2021 by
+  Generated on Sat Jan 30 12:35:56 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.6.5).
 </div>
