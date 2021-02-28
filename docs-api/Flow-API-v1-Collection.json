@@ -1,0 +1,1899 @@
+{
+  "info": {
+    "_postman_id": "fd0ff5f2-86a5-4bad-b066-3d41609ee4f4",
+    "name": "[Flow APP] API V1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Accounts [Admin, Contributor]",
+      "item": [
+        {
+          "name": "accounts [ALL]",
+          "_postman_id": "f7a6f5b5-1900-4591-a05a-94587c3b85ea",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{hostname}}/api/v1/accounts?page=1&per_page=1",
+              "host": [
+                "{{hostname}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "accounts"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "per_page",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "account [SHOW]",
+          "_postman_id": "d89c32d3-d808-4096-88aa-d5f12833a04c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/accounts/5dba9c0b-0938-4882-a785-9e0c1d339c7a"
+          },
+          "response": []
+        },
+        {
+          "name": "account [Update]",
+          "_postman_id": "10c76f4a-825c-40ee-a41d-b9627cc32d80",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\t\n\t\"account\":{\n\t\t\"platform_id\": \"uuid\",\n\t\t\"currency_id\": \"67f1d878-5314-49d7-8510-0606d204b475\",\n\t\t\"country_id\": \"1311bf44-b096-4d23-9021-47e4e315da24\",\n\t\t\"name\": \"3CP-edited\",\n\t\t\"category\": \"Platform\"\n\t}\n\t\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/accounts/96247d34-95c4-45a5-bbe9-b366179cbed3"
+          },
+          "response": []
+        },
+        {
+          "name": "account [Delete]",
+          "_postman_id": "be252eb4-c8ac-42d0-9fda-1a678d6d465a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\t\n\t\"account\":{\n\t\t\"platform_id\": \"uuid\",\n\t\t\"currency_id\": \"67f1d878-5314-49d7-8510-0606d204b475\",\n\t\t\"country_id\": \"1311bf44-b096-4d23-9021-47e4e315da24\",\n\t\t\"name\": \"3CP-edited\",\n\t\t\"category\": \"Platform\"\n\t}\n\t\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/accounts/96247d34-95c4-45a5-bbe9-b366179cbed3"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "bc361944-4ece-4e49-9843-d89987a5ade5"
+    },
+    {
+      "name": "User Accounts",
+      "item": [
+        {
+          "name": "user_accounts [ALL]",
+          "_postman_id": "2cccadda-4276-4f61-97f0-8a9c6abc7956",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/user_accounts"
+          },
+          "response": []
+        },
+        {
+          "name": "user_accounts [SHOW]",
+          "_postman_id": "5b5a2303-8d5a-4bf0-bdb1-a60f1b1eeb67",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/user_accounts/f5d777df-63bd-422c-8f50-2602f3edf119"
+          },
+          "response": []
+        },
+        {
+          "name": "user_accounts [CREATE]",
+          "_postman_id": "e97ed848-e657-4d9d-93e0-f21581e7c24d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"user_account\":{\n\t \"country_id\": \"5476b9c8-42ab-49ac-9ee1-f57140fed531\",\n      \"account_id\": \"5dba9c0b-0938-4882-a785-9e0c1d339c7a\",\n      \"platform_id\": \"bcb3caf1-a0de-4c19-b139-adc940765fc3\",\n      \"currency_id\": \"a624bd79-b87e-4688-8535-a5e8f55e21c4\",\n\t  \"category\": \"1\",\n\t  \"name\": \"1\",\n\t  \"total_fee\": \"1\", \n\t  \"total_loss\": \"1\",\n\t  \"total_tax\": \"1\",\n\t  \"active\": \"1\",\n\t  \"total_invest\": \"1\",\n\t  \"total_profit\": \"1\",\n\t  \"total_referral\":\"1\",\n\t  \"total_interest\":\"1\",\n\t  \"total_bonus\": \"1\"\n\t}\n\t \n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/user_accounts"
+          },
+          "response": []
+        },
+        {
+          "name": "user_accounts [UPDATE]",
+          "_postman_id": "49ed4a6a-6da6-4608-afa9-9ebf760f7ae0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"user_account\":{\n\t  \"country_id\": \"5476b9c8-42ab-49ac-9ee1-f57140fed531\",\n      \"account_id\": \"5dba9c0b-0938-4882-a785-9e0c1d339c7a\",\n      \"platform_id\": \"bcb3caf1-a0de-4c19-b139-adc940765fc3\",\n      \"currency_id\": \"a624bd79-b87e-4688-8535-a5e8f55e21c4\",\n\t  \"category\": \"123\",\n\t  \"name\": \"1\",\n\t  \"total_fee\": \"1\", \n\t  \"total_loss\": \"1\",\n\t  \"total_tax\": \"1\",\n\t  \"active\": \"1\",\n\t  \"total_invest\": \"1\",\n\t  \"total_profit\": \"1\",\n\t  \"total_referral\":\"1\",\n\t  \"total_interest\":\"1\",\n\t  \"total_bonus\": \"1\"\n\t}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/user_accounts/f5d777df-63bd-422c-8f50-2602f3edf119"
+          },
+          "response": []
+        },
+        {
+          "name": "user_accounts [DELETE]",
+          "_postman_id": "c9c34187-61d1-4855-b822-46e7ad2e004b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"user_account\":{\n\t  \"country_id\": \"1\",\n\t  \"account_id\": \"1\",\n\t  \"platform_id\": \"1\",\n\t  \"currency_id\": \"1\",\n\t  \"user_id\": \"1\",\n\t  \"category\": \"1\",\n\t  \"name\": \"1\",\n\t  \"total_fee\": \"1\", \n\t  \"total_loss\": \"1\",\n\t  \"total_tax\": \"1\",\n\t  \"active\": \"1\",\n\t  \"total_invest\": \"1\",\n\t  \"total_profit\": \"1\",\n\t  \"total_referral\":\"1\",\n\t  \"total_interest\":\"1\",\n\t  \"total_bonus\": \"1\"\n\t}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/user_accounts/9e0e1643-8d78-476f-8631-190249422893"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "4d65cf08-e3aa-4116-a8ae-0efc791e6092"
+    },
+    {
+      "name": "Platform",
+      "item": [
+        {
+          "name": "platforms [ALL]",
+          "_postman_id": "69b110d4-b64c-49b6-9b15-8ea1eb442e33",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/platforms"
+          },
+          "response": []
+        },
+        {
+          "name": "platforms [SEARCH]",
+          "_postman_id": "ca3532e1-c3e5-4edd-a21f-8a6dc90377b3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{hostname}}/api/v1/platforms/search?q=category",
+              "host": [
+                "{{hostname}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "platforms",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "category"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "platforms [CREATE]",
+          "_postman_id": "844c213c-0abb-49e7-b819-08412f796d54",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\n\"platform\": {\n\t\t\t\"contact_id\": null,\n            \"category\": \"category 4\",\n            \"status\": \"1\",\n            \"liquidity\": \"1\",\n            \"term\": \"1\",\n            \"invest_mode\": \"1\",\n            \"min_investment\": \"1\",\n            \"secondary_market\": \"1\",\n            \"taxes\": \"1\",\n            \"cashflow_options\": \"1\",\n            \"protection_scheme\": \"1\",\n            \"cost\": \"1\",\n            \"profitable\": true,\n            \"ifisa\": true,\n            \"structure\": \"structure 1\",\n            \"account_category\": \"contact_id\",\n            \"welcome_bonus\": \"welcome_bonus 1\",\n            \"promo\": \"promo 1\",\n            \"promo_end\": \"2020-07-08\",\n            \"icon\": \"contact_id\",\n            \"logo\": \"contact_id\"\n}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/platforms"
+          },
+          "response": []
+        },
+        {
+          "name": "platforms [UPDATE]",
+          "_postman_id": "7decbcb8-d0e4-4444-8887-3b6178ecd9f5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\n\"platform\": {\n\t\t\t\"contact_id\": null,\n            \"category\": \"category 1 edited1\",\n            \"status\": \"1\",\n            \"liquidity\": \"1\",\n            \"term\": \"1\",\n            \"invest_mode\": \"1\",\n            \"min_investment\": \"1\",\n            \"secondary_market\": \"1\",\n            \"taxes\": \"1\",\n            \"cashflow_options\": \"1\",\n            \"protection_scheme\": \"1\",\n            \"cost\": \"1\",\n            \"profitable\": true,\n            \"ifisa\": true,\n            \"structure\": \"structure 1\",\n            \"account_category\": \"contact_id\",\n            \"welcome_bonus\": \"welcome_bonus 1\",\n            \"promo\": \"promo 1\",\n            \"promo_end\": \"2020-07-08\",\n            \"icon\": \"contact_id\",\n            \"logo\": \"contact_id\"\n}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/platforms/2e63a062-6f60-4cd1-9af0-3e51441d2d6d"
+          },
+          "response": []
+        },
+        {
+          "name": "platforms [SHOW]",
+          "_postman_id": "8e7dd7f7-1d65-4ae6-805d-054fface1cf6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/platforms/2e63a062-6f60-4cd1-9af0-3e51441d2d6d"
+          },
+          "response": []
+        },
+        {
+          "name": "platforms [DELETE]",
+          "_postman_id": "cee56a99-dca9-451c-ac78-25be85535e58",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "{{hostname}}/api/v1/platforms/2e63a062-6f60-4cd1-9af0-3e51441d2d6d"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "8a5b9a7d-604a-4767-922c-645427d83486"
+    },
+    {
+      "name": "Users API",
+      "item": [
+        {
+          "name": "Get user setting",
+          "_postman_id": "195d1657-4433-4bfa-ae4d-b3e8caad2847",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "value": "{{access-token}}",
+                "type": "text"
+              },
+              {
+                "key": "client",
+                "value": "{{client}}",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "{{uid}}",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/settings"
+          },
+          "response": []
+        },
+        {
+          "name": "Users [Admin]",
+          "_postman_id": "f697c9cc-ec4f-439b-ae77-3a1eec0efe4e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/users/"
+          },
+          "response": []
+        },
+        {
+          "name": "Get User Profile",
+          "_postman_id": "9f4d94b9-eb45-4d63-8be3-ee943d56860b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/user_profile"
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "_postman_id": "a9a0c276-3e60-4b6f-bf7d-372c5b66ad21",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "access-token",
+                "value": "{{access-token}}",
+                "type": "text"
+              },
+              {
+                "key": "client",
+                "value": "{{client}}",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "{{uid}}",
+                "type": "text"
+              },
+              {
+                "warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+                "key": "Content-Type",
+                "value": "multipart/form-data",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "user[username]",
+                  "value": "bainuredit2",
+                  "contentType": "application/json",
+                  "type": "text"
+                },
+                {
+                  "key": "user[email]",
+                  "value": "user9@example.com",
+                  "contentType": "application/json",
+                  "type": "text"
+                },
+                {
+                  "key": "user[password]",
+                  "value": "123456",
+                  "contentType": "application/json",
+                  "type": "text"
+                },
+                {
+                  "key": "user[currency_id]",
+                  "value": "351590c6-c358-4976-abf3-d3b15513668b",
+                  "contentType": "application/json",
+                  "type": "text"
+                },
+                {
+                  "key": "user[country_id]",
+                  "value": "63a46441-aaaa-44d8-9ec4-da98be874dc5",
+                  "contentType": "application/json",
+                  "type": "text"
+                },
+                {
+                  "key": "user[avatar]",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "user[dob]",
+                  "value": "23-02-1999",
+                  "type": "text"
+                },
+                {
+                  "key": "user[name]",
+                  "value": "inuname2",
+                  "type": "text"
+                },
+                {
+                  "key": "user[surname]",
+                  "value": "inusurname",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": "{{hostname}}/api/v1/update_profile"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "9b527bde-d56f-495b-8ada-c8df8e36044e"
+    },
+    {
+      "name": "currencies",
+      "item": [
+        {
+          "name": "currencies [ALL]",
+          "_postman_id": "1c46fd87-d5b6-4ce9-9a18-11310177b037",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "value": "{{access-token}}",
+                "type": "text"
+              },
+              {
+                "key": "client",
+                "value": "{{client}}",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "{{uid}}",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{hostname}}/api/v1/currencies?page=1",
+              "host": [
+                "{{hostname}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "currencies"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "currency [SHOW]",
+          "_postman_id": "8b3d97b4-58de-4a90-8f21-c60ba12f4922",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/currencies/cc9fce2b-e032-4a96-8a3d-416b881f89cf"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "8599f485-85e9-4015-95e1-e97aed1c0bd0"
+    },
+    {
+      "name": "countries",
+      "item": [
+        {
+          "name": "country [SHOW]",
+          "_postman_id": "56d74d2b-107e-49de-a25e-29be4a7039d9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/countries/a8891cb3-dca8-4d0e-a3bf-463f9ecce594"
+          },
+          "response": []
+        },
+        {
+          "name": "countries [ALL]",
+          "_postman_id": "f8061d96-d67c-4a50-902f-4a11e0a0180c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "value": "{{access-token}}",
+                "type": "text"
+              },
+              {
+                "key": "client",
+                "value": "{{client}}",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "{{uid}}",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/countries"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "d0c21ef9-b554-4f40-a722-c3534e0eef88"
+    },
+    {
+      "name": "User Platform",
+      "item": [
+        {
+          "name": "user_platforms [ALL]",
+          "_postman_id": "a9cea67e-1f15-4e63-b385-4800d01f2e4e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/user_platforms"
+          },
+          "response": []
+        },
+        {
+          "name": "user_accounts [SHOW]",
+          "_postman_id": "6bfe2647-ffb8-4fae-a21b-47976f0a0df7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/user_accounts/219143f2-e354-426e-a553-4207c0c068a4"
+          },
+          "response": []
+        },
+        {
+          "name": "user_accounts [CREATE]",
+          "_postman_id": "a98e3402-e4fd-4093-8e3d-b6c9bdd6726e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"user_account\":{\n\t \"country_id\": \"5476b9c8-42ab-49ac-9ee1-f57140fed531\",\n      \"account_id\": \"5dba9c0b-0938-4882-a785-9e0c1d339c7a\",\n      \"platform_id\": \"bcb3caf1-a0de-4c19-b139-adc940765fc3\",\n      \"currency_id\": \"a624bd79-b87e-4688-8535-a5e8f55e21c4\",\n\t  \"category\": \"1\",\n\t  \"name\": \"1\",\n\t  \"total_fee\": \"1\", \n\t  \"total_loss\": \"1\",\n\t  \"total_tax\": \"1\",\n\t  \"active\": \"1\",\n\t  \"total_invest\": \"1\",\n\t  \"total_profit\": \"1\",\n\t  \"total_referral\":\"1\",\n\t  \"total_interest\":\"1\",\n\t  \"total_bonus\": \"1\"\n\t}\n\t \n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/user_accounts"
+          },
+          "response": []
+        },
+        {
+          "name": "user_accounts [UPDATE]",
+          "_postman_id": "e7dcd4ac-d049-4dad-8e00-f5cd887df69b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"user_account\":{\n\t  \"country_id\": \"5476b9c8-42ab-49ac-9ee1-f57140fed531\",\n      \"account_id\": \"5dba9c0b-0938-4882-a785-9e0c1d339c7a\",\n      \"platform_id\": \"bcb3caf1-a0de-4c19-b139-adc940765fc3\",\n      \"currency_id\": \"a624bd79-b87e-4688-8535-a5e8f55e21c4\",\n\t  \"category\": \"123\",\n\t  \"name\": \"1\",\n\t  \"total_fee\": \"1\", \n\t  \"total_loss\": \"1\",\n\t  \"total_tax\": \"1\",\n\t  \"active\": \"1\",\n\t  \"total_invest\": \"1\",\n\t  \"total_profit\": \"1\",\n\t  \"total_referral\":\"1\",\n\t  \"total_interest\":\"1\",\n\t  \"total_bonus\": \"1\"\n\t}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/user_accounts/219143f2-e354-426e-a553-4207c0c068a4"
+          },
+          "response": []
+        },
+        {
+          "name": "user_accounts [DELETE]",
+          "_postman_id": "8bb4f86e-3453-4e20-b137-43644ac44bb7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/user_accounts/9e0e1643-8d78-476f-8631-190249422893"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "90bb9b4e-f48f-4cce-8445-1ee1d93c3a2d"
+    },
+    {
+      "name": "Originators [ADMIN, CONTRIBUTOR]",
+      "item": [
+        {
+          "name": "Originators [ALL]",
+          "_postman_id": "ed3eb6b6-7a42-402c-b913-fe5b13e5a6f9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "localhost:3000/api/v1/originators?page=1&per_page=2",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "originators"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "per_page",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Originators [SHOW]",
+          "_postman_id": "f59bc576-4d0a-4bba-9ade-71add889d647",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "InrrKdCb2m1X1mVJxN4j8g"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "10EDhTSwdxVbNc1pp_Mmhg"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "user9@example.com"
+              }
+            ],
+            "url": "localhost:3000/api/v1/originators/b694c696-b077-4c61-850a-e5fb6c504557"
+          },
+          "response": []
+        },
+        {
+          "name": "Originators [Create]",
+          "_postman_id": "10eba3bf-c84d-495f-9043-16a0592e09b9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "InrrKdCb2m1X1mVJxN4j8g"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "10EDhTSwdxVbNc1pp_Mmhg"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "user9@example.com"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \n\t\"originator\":{\n\t\t\t\t\t\"name\":\"Originator #{i}\",\n                    \"product_type_individuals\": \"Product Type individual \" ,\n                    \"product_type_companies\": \"product_type_companies #{i}\",\n                    \"length\": \"length #{i}\",\n                    \"default_rate\": 1,\n                    \"air\": 1,\n                    \"xirr\": 1,\n                    \"rating\": 1,\n                    \"apr\": 1,\n                    \"logo\": \"img #{i}\",\n                    \"icon\": \"icon #{i}\",\n                    \"website\": \"web #{i}\"\n\t}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "localhost:3000/api/v1/originators/"
+          },
+          "response": []
+        },
+        {
+          "name": "Originators [UPDATE]",
+          "_postman_id": "db1fae89-4e94-4ff1-be3f-2a49195bc7c8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "InrrKdCb2m1X1mVJxN4j8g"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "10EDhTSwdxVbNc1pp_Mmhg"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "user9@example.com"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \n\t\"originator\":{\n\t\t\t\t\t\"name\":\"Originator #{i}\",\n                    \"product_type_individuals\": \"Product Type individual edited \" ,\n                    \"product_type_companies\": \"product_type_companies #{i}\",\n                    \"length\": \"length #{i}\",\n                    \"default_rate\": 1,\n                    \"air\": 1,\n                    \"xirr\": 1,\n                    \"rating\": 1,\n                    \"apr\": 1,\n                    \"logo\": \"img #{i}\",\n                    \"icon\": \"icon #{i}\",\n                    \"website\": \"web #{i}\"\n\t}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "localhost:3000/api/v1/originators/b694c696-b077-4c61-850a-e5fb6c504557"
+          },
+          "response": []
+        },
+        {
+          "name": "Originators [DELETE]",
+          "_postman_id": "05625742-6e30-4c32-ab64-a013b9c446ca",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "DdusUMjgwjSMFGqncKX53Q"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "xhx3NYjIMhgPt4W8QJEMag"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "user9@example.com"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "localhost:3000/api/v1/originators/2e63a062-6f60-4cd1-9af0-3e51441d2d6de"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "b7c11464-2a11-4b2d-bef7-4d641b5a3a1f"
+    },
+    {
+      "name": "Platform originators [ADMIN, CONTRIBUTOR]",
+      "item": [
+        {
+          "name": "Platform Originators [ALL]",
+          "_postman_id": "955920ae-e06f-4510-8464-71deda7f4df4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "InrrKdCb2m1X1mVJxN4j8g"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "10EDhTSwdxVbNc1pp_Mmhg"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "user9@example.com"
+              }
+            ],
+            "url": "localhost:3000/api/v1/platform_originators"
+          },
+          "response": []
+        },
+        {
+          "name": "Platform Originators [SHOW]",
+          "_postman_id": "bc354ed2-c505-49dd-804e-e43db2bd7e18",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "InrrKdCb2m1X1mVJxN4j8g"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "10EDhTSwdxVbNc1pp_Mmhg"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "user9@example.com"
+              }
+            ],
+            "url": "localhost:3000/api/v1/platform_originators/49241e87-aaab-4d68-8f1a-1b8234a016fb"
+          },
+          "response": []
+        },
+        {
+          "name": "Platform Originators [CREATE]",
+          "_postman_id": "5f748719-9588-4a25-b00f-4d0287833bcb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "InrrKdCb2m1X1mVJxN4j8g"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "10EDhTSwdxVbNc1pp_Mmhg"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "user9@example.com"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\t\n\t\"platform_originator\":{\n            \"originator_id\": \"188ac0eb-f513-493f-8d39-b70b8f929995\",\n            \"platform_id\": \"ea17b87a-c366-446b-82a4-a88e313e812e\",\n            \"status\": \"Acvite\",\n            \"skin_game\": 17.0,\n            \"grace_period\": 10,\n            \"rating\": \"78\",\n            \"length\": \"Length\",\n            \"apr\": 16.0,\n            \"structure\": \"structure 2\",\n            \"notes\": \"notes for Platform originator 2\",\n            \"buyback\": \"buyback89\",\n            \"buyback_principal\": false,\n            \"buyback_interest\": false,\n            \"buyback_activation\": 76\n\t}\t\t\n}\t\t",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "localhost:3000/api/v1/platform_originators"
+          },
+          "response": []
+        },
+        {
+          "name": "Platform Originators [UPDATE]",
+          "_postman_id": "a0c87473-768f-4e98-a52b-0df28f5e0677",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "InrrKdCb2m1X1mVJxN4j8g"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "10EDhTSwdxVbNc1pp_Mmhg"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "user9@example.com"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\t\n\t\"platform_originator\":{\n            \"originator_id\": \"188ac0eb-f513-493f-8d39-b70b8f929995\",\n            \"platform_id\": \"ea17b87a-c366-446b-82a4-a88e313e812e\",\n            \"status\": \"Acvite\",\n            \"skin_game\": 17.0,\n            \"grace_period\": 10,\n            \"rating\": \"78\",\n            \"length\": \"Length\",\n            \"apr\": 16.0,\n            \"structure\": \"structure 2 edited\",\n            \"notes\": \"notes for Platform originator 2\",\n            \"buyback\": \"buyback89\",\n            \"buyback_principal\": false,\n            \"buyback_interest\": false,\n            \"buyback_activation\": 76\n\t}\t\t\n}\t\t",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "localhost:3000/api/v1/platform_originators/3128eacb-7a51-4f0c-9e0b-315f43a1cbcd"
+          },
+          "response": []
+        },
+        {
+          "name": "Platform Originators [DELETE]",
+          "_postman_id": "7143c5d0-4078-4794-ae43-fc3c8a8c860d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "InrrKdCb2m1X1mVJxN4j8g"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "10EDhTSwdxVbNc1pp_Mmhg"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "user9@example.com"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\t\n\t\"platform_originator\":{\n            \"originator_id\": \"188ac0eb-f513-493f-8d39-b70b8f929995\",\n            \"platform_id\": \"ea17b87a-c366-446b-82a4-a88e313e812e\",\n            \"status\": \"Acvite\",\n            \"skin_game\": 17.0,\n            \"grace_period\": 10,\n            \"rating\": \"78\",\n            \"length\": \"Length\",\n            \"apr\": 16.0,\n            \"structure\": \"structure 2 edited\",\n            \"notes\": \"notes for Platform originator 2\",\n            \"buyback\": \"buyback89\",\n            \"buyback_principal\": false,\n            \"buyback_interest\": false,\n            \"buyback_activation\": 76\n\t}\t\t\n}\t\t",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "localhost:3000/api/v1/platform_originators/3128eacb-7a51-4f0c-9e0b-315f43a1cbcd"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "5bb42668-02a2-4f7d-bd5a-4c03e154710f"
+    },
+    {
+      "name": "Contacts",
+      "item": [
+        {
+          "name": "contacts [ALL]",
+          "_postman_id": "6e798a79-ca38-424f-a6e8-872690333929",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "type": "text",
+                "value": "{{expiry}}"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/contacts"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "7fc0d089-c2b1-4a6c-aced-eb1c123a8a80"
+    },
+    {
+      "name": "Login API",
+      "_postman_id": "f4b6e8ba-f3f7-4b34-a6d9-5134defc0ddd",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"user\": {\n        \"email\": \"chichospit@me.com\",\n        \"password\": \"Rujpyt-9zosqe-juggeq\"\n    }\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "{{hostname}}/api/v1/auth/sign_in"
+      },
+      "response": []
+    },
+    {
+      "name": "Register API",
+      "_postman_id": "65a151f6-6882-4e66-8398-96b1c2e04a68",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"user\": {\n        \"email\": \"user1@example.com\",\n        \"password\": \"samurai1\",\n        \"username\": \"bainur1\"\n    }\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "{{hostname}}/api/v1/auth"
+      },
+      "response": []
+    },
+    {
+      "name": "Password Reset Email API",
+      "_postman_id": "7e1f319f-dcf3-40ba-a9d6-d1f1bbb2b761",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n \"email\": \"mbainurb@gmail.com\",\n \"redirect_url\": \"http://thisisthereacturl\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "{{hostname}}/api/v1/auth/password",
+        "description": "Sending EMAIL contains url to change pwd"
+      },
+      "response": []
+    },
+    {
+      "name": "Password Update API",
+      "_postman_id": "1b8ca259-684f-4825-844b-69338397be4b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "access-token",
+            "value": "VehXjx91BfZg6W_zQxzKvg",
+            "type": "text"
+          },
+          {
+            "key": "client",
+            "value": "gk8osc_b-noD8Dgi6_FMoQ",
+            "type": "text"
+          },
+          {
+            "key": "uid",
+            "value": "mbainurb@gmail.com",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"password\": 12345,\n\t\"password_confirmation\": 12345\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "{{hostname}}/api/v1/auth/password"
+      },
+      "response": []
+    },
+    {
+      "name": "Sign out API",
+      "_postman_id": "e6b9d8d7-8d4d-4508-9e45-c7a33ef78be3",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "access-token",
+            "value": "{{access-token}}",
+            "type": "text"
+          },
+          {
+            "key": "client",
+            "value": "{{client}}",
+            "type": "text"
+          },
+          {
+            "key": "uid",
+            "value": "{{uid}}",
+            "type": "text"
+          },
+          {
+            "key": "expiry",
+            "value": "{{expiry}}",
+            "type": "text"
+          },
+          {
+            "key": "token-type",
+            "value": "Bearer",
+            "type": "text"
+          }
+        ],
+        "url": "{{hostname}}/api/v1/auth/sign_out"
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "ef583352-dcf7-4888-9df7-e25fc5f25000",
+        "type": "text/javascript",
+        "exec": [
+          "//var url = pm.environment.get(\"hostname\");",
+          "",
+          "const echoPostRequest = {",
+          "    url: pm.environment.get(\"hostname\") + '/api/v1/auth/sign_in',",
+          "    method: 'POST',",
+          "    header: 'Content-Type:application/json',",
+          "    body: {",
+          "        mode: 'application/json',",
+          "        // admin user:",
+          "        // admin@flowapp.com",
+          "        // flowapp12345678",
+          "",
+          "        // normal user: ",
+          "        // test1@example.com",
+          "        // 1234567",
+          "        raw: JSON.stringify(",
+          "            {",
+          "                user: {",
+          "                    email: 'admin@flowapp.com',",
+          "                    password: 'flowapp12345678'",
+          "                }",
+          "            })",
+          "    }",
+          "};",
+          "",
+          "var getToken = true;",
+          "",
+          "if (!pm.environment.get('access-token') ||",
+          "    !pm.environment.get('client') ||",
+          "    !pm.environment.get('uid') ||",
+          "    !pm.environment.get('expiry')",
+          ") {",
+          "    console.log('Token or client or uid  are missing')",
+          "} else if (pm.environment.get('expiry') <= (new Date()).getTime()) {",
+          "    console.log('Token is expired')",
+          "} else {",
+          "    getToken = false;",
+          "    console.log('Token and expiry date are all good');",
+          "}",
+          "",
+          "if (getToken === true) {",
+          "    pm.sendRequest(echoPostRequest, function (err, res) {",
+          "        console.log(err ? err : res.json());",
+          "        console.log(res.headers.get('access-token'));",
+          "",
+          "        if (err === null) {",
+          "            console.log('Saving the token and expiry date')",
+          "            var responseJson = res.json();",
+          "            var access_token = res.headers.get('access-token');",
+          "            var client = res.headers.get('client');",
+          "            var uid = res.headers.get('uid');",
+          "            var expiry = res.headers.get('expiry');",
+          "            console.log('access-token =' + access_token);",
+          "            console.log('client =' + client);",
+          "            console.log('uid =' + uid);",
+          "            console.log('expiry =' + expiry);",
+          "",
+          "            console.log(pm.environment.set('access-token', access_token));",
+          "            pm.environment.set('client', client);",
+          "            pm.environment.set('uid', uid);",
+          "            pm.environment.set('expiry', expiry);",
+          "        }",
+          "    });",
+          "}",
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "53dfede7-31f8-4e4d-885b-8d4f4bc3148f",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "37226d8d-59a5-44cd-bc0a-dfdb54e9b59e",
+      "key": "access-token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "id": "7fdbabc0-c7ef-4233-8742-29d885174272",
+      "key": "client",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "id": "0dc45803-66b4-4943-a99b-432bb541940f",
+      "key": "expiry",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "id": "5b6fc94a-4f42-44ce-8db9-cc157e4362af",
+      "key": "uid",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}
