@@ -181,6 +181,19 @@
             "url": "{{hostname}}/api/v1/accounts/96247d34-95c4-45a5-bbe9-b366179cbed3"
           },
           "response": []
+        },
+        {
+          "name": "account[Create]",
+          "id": "8c712f09-2f77-40a1-b773-954d1d05cd14",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "id": "bc361944-4ece-4e49-9843-d89987a5ade5"
@@ -1638,22 +1651,22 @@
             "header": [
               {
                 "key": "client",
-                "value": "LRGk4H5qqn3QINNmytB9GA",
+                "value": "{{client}}",
                 "type": "text"
               },
               {
                 "key": "access-token",
-                "value": "zebCX_KSpacvT0D94TGw0Q",
+                "value": "{{access-token}}",
                 "type": "text"
               },
               {
                 "key": "expiry",
-                "value": "1615826260",
+                "value": "{{expiry}}",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "kishorekce124@gmail.com",
+                "value": "{{uid}}",
                 "type": "text"
               }
             ],
