@@ -2198,6 +2198,19 @@
               "body": "{\n    \"data\": {\n        \"id\": \"fa4f482d-b26c-4ee5-b482-4199c85df25e\",\n        \"type\": \"country\",\n        \"attributes\": {\n            \"name\": \"India\",\n            \"iso_code\": \"IND\",\n            \"continent\": \"Africa\",\n            \"currency\": {\n                \"id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\n                \"name\": \"Rupees\",\n                \"code\": null,\n                \"symbol\": \"Rupees\",\n                \"decimal_places\": 2,\n                \"created_at\": \"2021-01-30T09:31:45.439Z\",\n                \"updated_at\": \"2021-01-30T09:31:45.439Z\",\n                \"kind\": \"India\",\n                \"fx_eur\": null\n            },\n            \"flag\": null\n        }\n    }\n}"
             }
           ]
+        },
+        {
+          "name": "countries[Delete]",
+          "id": "5cae4d5d-4015-4885-b923-c4169ada8790",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "id": "d0c21ef9-b554-4f40-a722-c3534e0eef88"
