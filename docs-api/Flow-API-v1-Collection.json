@@ -223,7 +223,127 @@
             },
             "url": "{{hostname}}/api/v1/accounts"
           },
-          "response": []
+          "response": [
+            {
+              "id": "dcdf2d05-00d5-435d-b9ed-00d010429a1c",
+              "name": "account[Create]",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "LRGk4H5qqn3QINNmytB9GA",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "zebCX_KSpacvT0D94TGw0Q",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "kishorekce124@gmail.com",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "1615826260",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"account\":\r\n    {\r\n        \"platform_id\": \"4270d73c-f41e-4a2a-834a-e67860fd693e\",\r\n        \"contact_id\": \"ccd324b7-d986-4a43-b81e-af359dc5f7b7\",\r\n        \"category\": \"test category\"\r\n    }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/accounts"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "zebCX_KSpacvT0D94TGw0Q"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "LRGk4H5qqn3QINNmytB9GA"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1615826260"
+                },
+                {
+                  "key": "uid",
+                  "value": "kishorekce124@gmail.com"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"f903796a5c6cdaa738c0edcff8708d70\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "bffa9bfc-30be-49f7-bcb0-2d94b87cb9e9"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.421443"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": [\n        {\n            \"id\": \"a17b482b-b7a0-4135-a9fc-dbbd48bc78b7\",\n            \"type\": \"account\",\n            \"attributes\": {\n                \"category\": \"test category\",\n                \"platform_status\": \"done\"\n            }\n        }\n    ]\n}"
+            }
+          ]
         }
       ],
       "id": "bc361944-4ece-4e49-9843-d89987a5ade5"
