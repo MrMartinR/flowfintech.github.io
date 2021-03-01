@@ -2047,22 +2047,22 @@
             "header": [
               {
                 "key": "client",
-                "value": "LRGk4H5qqn3QINNmytB9GA",
+                "value": "{{client}}",
                 "type": "text"
               },
               {
                 "key": "access-token",
-                "value": "zebCX_KSpacvT0D94TGw0Q",
+                "value": "{{access-token}}",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "kishorekce124@gmail.com",
+                "value": "{{uid}}",
                 "type": "text"
               },
               {
                 "key": "expiry",
-                "value": "1615826260",
+                "value": "{{expiry}}",
                 "type": "text"
               }
             ],
@@ -2077,7 +2077,127 @@
             },
             "url": "{{hostname}}/api/v1/countries/fa4f482d-b26c-4ee5-b482-4199c85df25e"
           },
-          "response": []
+          "response": [
+            {
+              "id": "3cd5cdaa-ab97-4177-ba83-5c17664a5a3b",
+              "name": "countries[Update]",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "LRGk4H5qqn3QINNmytB9GA",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "zebCX_KSpacvT0D94TGw0Q",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "kishorekce124@gmail.com",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "1615826260",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"country\":\r\n    {\r\n        \"continent\": \"Africa\"\r\n    }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/countries/fa4f482d-b26c-4ee5-b482-4199c85df25e"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "zebCX_KSpacvT0D94TGw0Q"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "LRGk4H5qqn3QINNmytB9GA"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1615826260"
+                },
+                {
+                  "key": "uid",
+                  "value": "kishorekce124@gmail.com"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"0e34651edafdab154e78bf973a412f85\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "b2cbdd84-7dfa-4adb-9663-5bd7c5490a5e"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.149001"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"id\": \"fa4f482d-b26c-4ee5-b482-4199c85df25e\",\n        \"type\": \"country\",\n        \"attributes\": {\n            \"name\": \"India\",\n            \"iso_code\": \"IND\",\n            \"continent\": \"Africa\",\n            \"currency\": {\n                \"id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\n                \"name\": \"Rupees\",\n                \"code\": null,\n                \"symbol\": \"Rupees\",\n                \"decimal_places\": 2,\n                \"created_at\": \"2021-01-30T09:31:45.439Z\",\n                \"updated_at\": \"2021-01-30T09:31:45.439Z\",\n                \"kind\": \"India\",\n                \"fx_eur\": null\n            },\n            \"flag\": null\n        }\n    }\n}"
+            }
+          ]
         }
       ],
       "id": "d0c21ef9-b554-4f40-a722-c3534e0eef88"
