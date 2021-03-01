@@ -1626,7 +1626,42 @@
     },
     {
       "name": "Loans",
-      "item": [],
+      "item": [
+        {
+          "name": "loans[All]",
+          "id": "250537a5-5503-442f-9f6a-0acc8860b50c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "client",
+                "value": "LRGk4H5qqn3QINNmytB9GA",
+                "type": "text"
+              },
+              {
+                "key": "access-token",
+                "value": "zebCX_KSpacvT0D94TGw0Q",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "1615826260",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "kishorekce124@gmail.com",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/loans"
+          },
+          "response": []
+        }
+      ],
       "id": "05d7d1a7-6548-4106-b1b7-8e026b84f509"
     },
     {
