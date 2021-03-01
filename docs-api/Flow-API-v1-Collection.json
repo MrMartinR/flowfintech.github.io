@@ -1260,9 +1260,39 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
-            "header": [],
-            "url": ""
+            "method": "PUT",
+            "header": [
+              {
+                "key": "client",
+                "value": "LRGk4H5qqn3QINNmytB9GA",
+                "type": "text"
+              },
+              {
+                "key": "access-token",
+                "value": "zebCX_KSpacvT0D94TGw0Q",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "kishorekce124@gmail.com",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "1615826260",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"currency\":\r\n    {\r\n        \"name\": \"test two\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/currencies/fb13b2f6-0910-4754-ad2c-d733ef3f48a2"
           },
           "response": []
         }
