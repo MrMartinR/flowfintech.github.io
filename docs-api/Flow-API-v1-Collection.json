@@ -1131,6 +1131,139 @@
             },
             "url": "{{hostname}}/api/v1/currencies"
           },
+          "response": [
+            {
+              "id": "bb2e46e7-32f3-47a2-bc25-733839cfe5bb",
+              "name": "currency[Create]",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "{{client}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "{{access-token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "{{uid}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "{{expiry}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"currency\":\r\n    {\r\n        \"name\": \"Us currency\",\r\n        \"code\": \"002\",\r\n        \"symbol\": \"dollar\",\r\n        \"kind\": \"IND\",\r\n        \"decimal_places\": \"02\",\r\n        \"fx_eur\": \"test\"\r\n    }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/currencies"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "zebCX_KSpacvT0D94TGw0Q"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "LRGk4H5qqn3QINNmytB9GA"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1615826260"
+                },
+                {
+                  "key": "uid",
+                  "value": "kishorekce124@gmail.com"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"cdfd8bd96297d4eb6268024aef86dfb5\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "bb3a5f91-0c14-4d76-9cce-005fdbcbb6bc"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.768533"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"id\": \"fb13b2f6-0910-4754-ad2c-d733ef3f48a2\",\n        \"type\": \"currency\",\n        \"attributes\": {\n            \"name\": \"Us currency\",\n            \"symbol\": \"dollar\",\n            \"code\": \"002\",\n            \"kind\": \"IND\",\n            \"fx_eur\": 0,\n            \"decimal_places\": 2\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "currency[Update]",
+          "id": "0c27cb1a-6a33-4cc4-9f37-32415fe9b0be",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
           "response": []
         }
       ],
