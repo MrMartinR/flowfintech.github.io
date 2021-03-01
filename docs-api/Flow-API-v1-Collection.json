@@ -1089,6 +1089,19 @@
             "url": "{{hostname}}/api/v1/currencies/cc9fce2b-e032-4a96-8a3d-416b881f89cf"
           },
           "response": []
+        },
+        {
+          "name": "currency[Create]",
+          "id": "4a76bbe5-e7c5-4384-a2f2-b9c0cb350e7c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "id": "8599f485-85e9-4015-95e1-e97aed1c0bd0"
