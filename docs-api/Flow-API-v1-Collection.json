@@ -2043,9 +2043,39 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
-            "header": [],
-            "url": ""
+            "method": "PUT",
+            "header": [
+              {
+                "key": "client",
+                "value": "LRGk4H5qqn3QINNmytB9GA",
+                "type": "text"
+              },
+              {
+                "key": "access-token",
+                "value": "zebCX_KSpacvT0D94TGw0Q",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "kishorekce124@gmail.com",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "1615826260",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"country\":\r\n    {\r\n        \"continent\": \"Africa\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/countries/fa4f482d-b26c-4ee5-b482-4199c85df25e"
           },
           "response": []
         }
