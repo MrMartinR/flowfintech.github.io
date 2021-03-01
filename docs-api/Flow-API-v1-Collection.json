@@ -1097,9 +1097,39 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
-            "header": [],
-            "url": ""
+            "method": "POST",
+            "header": [
+              {
+                "key": "client",
+                "value": "LRGk4H5qqn3QINNmytB9GA",
+                "type": "text"
+              },
+              {
+                "key": "access-token",
+                "value": "zebCX_KSpacvT0D94TGw0Q",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "kishorekce124@gmail.com",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "1615826260",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"currency\":\r\n    {\r\n        \"name\": \"Us currency\",\r\n        \"code\": \"002\",\r\n        \"symbol\": \"dollar\",\r\n        \"kind\": \"IND\",\r\n        \"decimal_places\": \"02\",\r\n        \"fx_eur\": \"test\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/currencies"
           },
           "response": []
         }
