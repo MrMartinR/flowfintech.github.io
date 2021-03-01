@@ -1761,7 +1761,7 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
+            "method": "POST",
             "header": [
               {
                 "key": "client",
@@ -1795,7 +1795,127 @@
             },
             "url": "{{hostname}}/api/v1/countries"
           },
-          "response": []
+          "response": [
+            {
+              "id": "0fe38897-5dc8-42fd-bc68-5ef6d2759ac9",
+              "name": "countries[Create]",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "LRGk4H5qqn3QINNmytB9GA",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "zebCX_KSpacvT0D94TGw0Q",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "kishorekce124@gmail.com",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "1615826260",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"country\":\r\n    {\r\n        \"currency_id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\r\n        \"name\": \"India\",\r\n        \"iso_code\": \"IND\",\r\n        \"continent\": \"Asia\"\r\n    }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/countries"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "zebCX_KSpacvT0D94TGw0Q"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "LRGk4H5qqn3QINNmytB9GA"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1615826260"
+                },
+                {
+                  "key": "uid",
+                  "value": "kishorekce124@gmail.com"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"605ede65717f68774b82dd514bea6ac2\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "f0175141-0dc8-46f2-99c1-510985187f86"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.930487"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": [\n        {\n            \"id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n            \"type\": \"country\",\n            \"attributes\": {\n                \"name\": \"India\",\n                \"iso_code\": \"IND\",\n                \"continent\": \"Asia\",\n                \"currency\": {\n                    \"id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\n                    \"name\": \"Rupees\",\n                    \"code\": null,\n                    \"symbol\": \"Rupees\",\n                    \"decimal_places\": 2,\n                    \"created_at\": \"2021-01-30T09:31:45.439Z\",\n                    \"updated_at\": \"2021-01-30T09:31:45.439Z\",\n                    \"kind\": \"India\",\n                    \"fx_eur\": null\n                },\n                \"flag\": \"/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--42d084079334656c442f2dd71e3aa3b5002665e8/download%20(1).jpg\"\n            }\n        }\n    ]\n}"
+            }
+          ]
         }
       ],
       "id": "d0c21ef9-b554-4f40-a722-c3534e0eef88"
