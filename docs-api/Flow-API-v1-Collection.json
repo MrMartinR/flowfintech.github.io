@@ -1101,22 +1101,22 @@
             "header": [
               {
                 "key": "client",
-                "value": "LRGk4H5qqn3QINNmytB9GA",
+                "value": "{{client}}",
                 "type": "text"
               },
               {
                 "key": "access-token",
-                "value": "zebCX_KSpacvT0D94TGw0Q",
+                "value": "{{access-token}}",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "kishorekce124@gmail.com",
+                "value": "{{uid}}",
                 "type": "text"
               },
               {
                 "key": "expiry",
-                "value": "1615826260",
+                "value": "{{expiry}}",
                 "type": "text"
               }
             ],
