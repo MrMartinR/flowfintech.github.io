@@ -7175,22 +7175,22 @@
             "header": [
               {
                 "key": "client",
-                "value": "EsnObQ_swys-3TfEzAadDA",
+                "value": "{{client}}",
                 "type": "text"
               },
               {
                 "key": "access-token",
-                "value": "L1Kqrznc-L9zhTw05ES29A",
+                "value": "{{access-token}}",
                 "type": "text"
               },
               {
                 "key": "expiry",
-                "value": "1615869670",
+                "value": "{{expiry}}",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "kishorekce130@gmail.com",
+                "value": "{{uid}}",
                 "type": "text"
               }
             ],
@@ -7205,7 +7205,127 @@
             },
             "url": "{{hostname}}/api/v1/contact_methods"
           },
-          "response": []
+          "response": [
+            {
+              "id": "4e3ea69b-56fd-4baf-9dbc-e67ef7a5bccd",
+              "name": "contact_methods[Create]",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "EsnObQ_swys-3TfEzAadDA",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "L1Kqrznc-L9zhTw05ES29A",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "1615869670",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "kishorekce130@gmail.com",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"contact_method\":\r\n    {\r\n        \"contact_id\": \"ccd324b7-d986-4a43-b81e-af359dc5f7b7\",\r\n        \"created_by\": \"fc29bbd4-6dd7-4f2c-aa10-b7c9a661614b\",\r\n        \"kind\": \"test\",\r\n        \"visibility\": \"public\",\r\n        \"notes\": \"test notes\",\r\n        \"data\": \"test data\"\r\n    }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/contact_methods"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "L1Kqrznc-L9zhTw05ES29A"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "EsnObQ_swys-3TfEzAadDA"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1615869670"
+                },
+                {
+                  "key": "uid",
+                  "value": "kishorekce130@gmail.com"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"074277627e55270e99008497046179f3\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "a88d0abe-7601-4c73-ac5f-871cd83a0eca"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.119314"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"id\": \"ccd9351b-8ba2-4362-b1d1-da8dc66e710f\",\n        \"type\": \"contact_method\",\n        \"attributes\": {\n            \"user_id\": null,\n            \"contact\": {\n                \"id\": \"ccd324b7-d986-4a43-b81e-af359dc5f7b7\",\n                \"country_id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n                \"user_id\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                \"created_by\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                \"updated_by\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                \"kind\": \"INDIVIDUAL\",\n                \"visibility\": \"PUBLIC\",\n                \"company_name\": \"test\",\n                \"name\": \"testname\",\n                \"surname\": \"testsurname\",\n                \"trade_name\": \"test_trade_name\",\n                \"description\": \"test categoy\",\n                \"legal_form\": null,\n                \"id_number\": null,\n                \"created_at\": \"2021-01-30T09:39:36.780Z\",\n                \"updated_at\": \"2021-02-24T15:50:47.772Z\",\n                \"tags\": \"smae\",\n                \"nick\": null,\n                \"founded\": null,\n                \"dob\": \"2021-01-30\"\n            },\n            \"kind\": \"test\",\n            \"visibility\": \"PUBLIC\",\n            \"notes\": \"test notes\",\n            \"data\": \"test data\"\n        }\n    }\n}"
+            }
+          ]
         }
       ],
       "id": "9b380692-ed31-44c3-840e-b3a45807d024"
