@@ -6419,6 +6419,11 @@
       "id": "d9325cf4-16f8-4361-b280-b7bc61a65a22"
     },
     {
+      "name": "Modify Currencies",
+      "item": [],
+      "id": "5c88af3d-0ae8-4989-b463-754a9c5753aa"
+    },
+    {
       "name": "Login API",
       "id": "f4b6e8ba-f3f7-4b34-a6d9-5134defc0ddd",
       "protocolProfileBehavior": {
