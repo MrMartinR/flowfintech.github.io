@@ -7639,6 +7639,11 @@
       "id": "9b380692-ed31-44c3-840e-b3a45807d024"
     },
     {
+      "name": "Image Assets",
+      "item": [],
+      "id": "d3b6fdfe-acba-4bdd-b843-2bd41c1fe6f1"
+    },
+    {
       "name": "Login API",
       "id": "f4b6e8ba-f3f7-4b34-a6d9-5134defc0ddd",
       "protocolProfileBehavior": {
