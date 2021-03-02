@@ -3108,6 +3108,19 @@
             "url": "{{hostname}}/api/v1/contacts/ccd324b7-d986-4a43-b81e-af359dc5f7b7"
           },
           "response": []
+        },
+        {
+          "name": "contacts[Create]",
+          "id": "2231777d-0a8b-4c19-934b-97f9b870fe56",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "id": "7fc0d089-c2b1-4a6c-aced-eb1c123a8a80"
