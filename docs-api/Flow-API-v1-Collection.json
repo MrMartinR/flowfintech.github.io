@@ -6380,6 +6380,19 @@
               "body": "{\n    \"status\": true,\n    \"messages\": \"Countrys added\"\n}"
             }
           ]
+        },
+        {
+          "name": "modify_countries[Delete]",
+          "id": "aab685ce-4ceb-49bf-963c-93b15cf6c021",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "id": "d9325cf4-16f8-4361-b280-b7bc61a65a22"
