@@ -3991,31 +3991,147 @@
             "header": [
               {
                 "key": "client",
-                "value": "5klfkivPdRImnIxBAVS5sw",
+                "value": "{{client}}",
                 "type": "text"
               },
               {
                 "key": "access-token",
-                "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                "value": "{{access-token}}",
                 "type": "text"
               },
               {
                 "key": "expiry",
-                "value": "1615856879",
+                "value": "{{expiry}}",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "kishorekce124@gmail.com",
+                "value": "{{uid}}",
                 "type": "text"
               }
             ],
             "url": "{{hostname}}/api/v1/loans/72b91349-e9d4-43d6-bcc4-a525beddf428"
           },
-          "response": []
+          "response": [
+            {
+              "id": "59fd0b77-8df1-4e73-92f4-d11fedf70ba9",
+              "name": "loans[Delete]",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "5klfkivPdRImnIxBAVS5sw",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "1615856879",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "kishorekce124@gmail.com",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{hostname}}/api/v1/loans/72b91349-e9d4-43d6-bcc4-a525beddf428"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "m0dxqLkL5NW2SjdxOtJCaQ"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "5klfkivPdRImnIxBAVS5sw"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1615856879"
+                },
+                {
+                  "key": "uid",
+                  "value": "kishorekce124@gmail.com"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4f07efb2f9af10b901f8d81ebdd18c77\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "6e10e8bd-3edc-42be-a76e-5cdffc2e90bb"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.192309"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"success\": true,\n    \"message\": \"Loan  deleted\"\n}"
+            }
+          ]
         }
       ],
       "id": "05d7d1a7-6548-4106-b1b7-8e026b84f509"
+    },
+    {
+      "name": "User Loans",
+      "item": [],
+      "id": "d9ecb84d-f2e3-4c31-908c-6f405f2fc05d"
     },
     {
       "name": "Login API",
