@@ -3083,8 +3083,29 @@
           },
           "request": {
             "method": "GET",
-            "header": [],
-            "url": ""
+            "header": [
+              {
+                "key": "client",
+                "value": "5klfkivPdRImnIxBAVS5sw",
+                "type": "text"
+              },
+              {
+                "key": "access-token",
+                "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "1615856879",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "kishorekce124@gmail.com",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/contacts/ccd324b7-d986-4a43-b81e-af359dc5f7b7"
           },
           "response": []
         }
