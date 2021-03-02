@@ -5442,7 +5442,21 @@
     },
     {
       "name": "Transactions",
-      "item": [],
+      "item": [
+        {
+          "name": "transactions[List]",
+          "id": "b061d37d-92ca-4640-8110-3bd86f5364c5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
+        }
+      ],
       "id": "c86d06f7-9dc6-410b-81c9-5895f279b74c"
     },
     {
