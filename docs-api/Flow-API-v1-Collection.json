@@ -3076,7 +3076,7 @@
           ]
         },
         {
-          "name": "contact[Show]",
+          "name": "contacts[Show]",
           "id": "8a9c5501-270c-4932-af31-b59709cc81c4",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
