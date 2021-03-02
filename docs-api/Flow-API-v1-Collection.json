@@ -3271,6 +3271,19 @@
               "body": "{\n    \"data\": {\n        \"id\": \"57bb71be-a827-4bb2-977e-fe5da5c9981d\",\n        \"type\": \"contact\",\n        \"attributes\": {\n            \"name\": \"daniel\",\n            \"created_by\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n            \"updated_by\": null,\n            \"kind\": \"COMPANY\",\n            \"visibility\": \"PUBLIC\",\n            \"company_name\": null,\n            \"surname\": \"sam\",\n            \"founded\": null,\n            \"description\": \"test description\",\n            \"tags\": \"test\",\n            \"legal_form\": \"test form\",\n            \"id_number\": \"25\",\n            \"platform\": null,\n            \"country\": {\n                \"id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n                \"name\": \"India\",\n                \"iso_code\": \"IND\",\n                \"continent\": \"Asia\",\n                \"currency_id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\n                \"flag\": \"three colour\",\n                \"created_at\": \"2021-01-30T09:29:25.537Z\",\n                \"updated_at\": \"2021-02-05T09:56:58.619Z\",\n                \"fiscal_year_start\": \"2021-01-30\"\n            },\n            \"dob\": \"2021-02-05\",\n            \"nick\": \"dan sam\",\n            \"account\": null,\n            \"user\": {\n                \"id\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                \"provider\": \"email\",\n                \"uid\": \"kishorekce124@gmail.com\",\n                \"allow_password_change\": true,\n                \"username\": \"test\",\n                \"email\": \"kishorekce124@gmail.com\",\n                \"currency_id\": null,\n                \"country_id\": null,\n                \"created_at\": \"2021-01-30T03:49:51.982Z\",\n                \"updated_at\": \"2021-03-02T01:07:59.361Z\",\n                \"dob\": \"1998-10-03\",\n                \"name\": \"kishore12\",\n                \"surname\": \"kishore123\",\n                \"contact_id\": null\n            },\n            \"originator\": null,\n            \"trade_name\": \"some trade\"\n        }\n    }\n}"
             }
           ]
+        },
+        {
+          "name": "contacts[Update]",
+          "id": "a380f647-d757-47fd-bc5e-dbdfacfa3552",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "id": "7fc0d089-c2b1-4a6c-aced-eb1c123a8a80"
