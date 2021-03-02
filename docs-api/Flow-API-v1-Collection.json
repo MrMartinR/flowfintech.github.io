@@ -7760,19 +7760,6 @@
             "url": "{{hostname}}/api/v1/icons/d6c33646-ccd2-450e-ba2b-dafe80e29950"
           },
           "response": []
-        },
-        {
-          "name": "image_assets[Delete]",
-          "id": "b8d87020-97b3-4080-a378-504596d8e335",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": ""
-          },
-          "response": []
         }
       ],
       "id": "d3b6fdfe-acba-4bdd-b843-2bd41c1fe6f1"
