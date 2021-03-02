@@ -7171,9 +7171,39 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
-            "header": [],
-            "url": ""
+            "method": "POST",
+            "header": [
+              {
+                "key": "client",
+                "value": "EsnObQ_swys-3TfEzAadDA",
+                "type": "text"
+              },
+              {
+                "key": "access-token",
+                "value": "L1Kqrznc-L9zhTw05ES29A",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "1615869670",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "kishorekce130@gmail.com",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"contact_method\":\r\n    {\r\n        \"contact_id\": \"ccd324b7-d986-4a43-b81e-af359dc5f7b7\",\r\n        \"created_by\": \"fc29bbd4-6dd7-4f2c-aa10-b7c9a661614b\",\r\n        \"kind\": \"test\",\r\n        \"visibility\": \"public\",\r\n        \"notes\": \"test notes\",\r\n        \"data\": \"test data\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/contact_methods"
           },
           "response": []
         }
