@@ -6420,7 +6420,21 @@
     },
     {
       "name": "Modify Currencies",
-      "item": [],
+      "item": [
+        {
+          "name": "modify_currencies[Update]",
+          "id": "eff33535-418c-417d-910c-a44a1648e821",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
+        }
+      ],
       "id": "5c88af3d-0ae8-4989-b463-754a9c5753aa"
     },
     {
