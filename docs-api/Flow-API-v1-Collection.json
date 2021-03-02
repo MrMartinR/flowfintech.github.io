@@ -4130,7 +4130,21 @@
     },
     {
       "name": "User Loans",
-      "item": [],
+      "item": [
+        {
+          "name": "user_loans[List]",
+          "id": "c399efb9-06f2-47d2-aa84-f9fb390e2fbf",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
+        }
+      ],
       "id": "d9ecb84d-f2e3-4c31-908c-6f405f2fc05d"
     },
     {
