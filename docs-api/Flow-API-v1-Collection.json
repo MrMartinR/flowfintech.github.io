@@ -6225,9 +6225,39 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
-            "header": [],
-            "url": ""
+            "method": "PUT",
+            "header": [
+              {
+                "key": "client",
+                "value": "5klfkivPdRImnIxBAVS5sw",
+                "type": "text"
+              },
+              {
+                "key": "access-token",
+                "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "1615856879",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "kishorekce124@gmail.com",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"account\":\r\n    {\r\n        \"country_id\": [ \"9b6c0179-6322-429b-8e09-df919d0305c2\" ]\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/modify_countries/a17b482b-b7a0-4135-a9fc-dbbd48bc78b7"
           },
           "response": []
         }
