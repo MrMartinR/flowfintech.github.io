@@ -5303,22 +5303,22 @@
             "header": [
               {
                 "key": "client",
-                "value": "5klfkivPdRImnIxBAVS5sw",
+                "value": "{{client}}",
                 "type": "text"
               },
               {
                 "key": "access-token",
-                "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                "value": "{{access-token}}",
                 "type": "text"
               },
               {
                 "key": "expiry",
-                "value": "1615856879",
+                "value": "{{expiry}}",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "kishorekce124@gmail.com",
+                "value": "{{uid}}",
                 "type": "text"
               }
             ],
