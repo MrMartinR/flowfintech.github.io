@@ -4798,28 +4798,139 @@
             "header": [
               {
                 "key": "client",
-                "value": "5klfkivPdRImnIxBAVS5sw",
+                "value": "{{client}}",
                 "type": "text"
               },
               {
                 "key": "access-token",
-                "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                "value": "{{access-token}}",
                 "type": "text"
               },
               {
                 "key": "expiry",
-                "value": "1615856879",
+                "value": "{{expiry}}",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "kishorekce124@gmail.com",
+                "value": "{{uid}}",
                 "type": "text"
               }
             ],
             "url": "{{hostname}}/api/v1/user_platforms"
           },
-          "response": []
+          "response": [
+            {
+              "id": "f114295b-b0b9-4ef3-927f-ea0e95aa3a57",
+              "name": "user_platforms[List]",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "5klfkivPdRImnIxBAVS5sw",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "1615856879",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "kishorekce124@gmail.com",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{hostname}}/api/v1/user_platforms"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "m0dxqLkL5NW2SjdxOtJCaQ"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "5klfkivPdRImnIxBAVS5sw"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1615856879"
+                },
+                {
+                  "key": "uid",
+                  "value": "kishorekce124@gmail.com"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"7434e6f81712b73f60246fe1e1b3480a\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "9bbd4715-31f9-4fa6-8703-6813a1b96f68"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.588746"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": [\n        {\n            \"id\": \"2f423676-89c6-4bd2-b0ed-4815ce0788c8\",\n            \"type\": \"user_platform\",\n            \"attributes\": {\n                \"user\": {\n                    \"id\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                    \"provider\": \"email\",\n                    \"uid\": \"kishorekce124@gmail.com\",\n                    \"allow_password_change\": true,\n                    \"username\": \"test\",\n                    \"email\": \"kishorekce124@gmail.com\",\n                    \"currency_id\": null,\n                    \"country_id\": null,\n                    \"created_at\": \"2021-01-30T03:49:51.982Z\",\n                    \"updated_at\": \"2021-03-02T01:07:59.361Z\",\n                    \"dob\": \"1998-10-03\",\n                    \"name\": \"kishore12\",\n                    \"surname\": \"kishore123\",\n                    \"contact_id\": null\n                },\n                \"strategy\": \"test\",\n                \"login_user\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                \"login_pass\": \"test\",\n                \"internal_id\": \"200\",\n                \"rating\": 5,\n                \"notes\": null,\n                \"platform\": {\n                    \"id\": \"4270d73c-f41e-4a2a-834a-e67860fd693e\",\n                    \"contact_id\": \"ccd324b7-d986-4a43-b81e-af359dc5f7b7\",\n                    \"status\": \"done\",\n                    \"liquidity\": \"test\",\n                    \"term\": \"long\",\n                    \"min_investment\": \"200\",\n                    \"secondary_market\": null,\n                    \"taxes\": \"test\",\n                    \"cost\": \"200\",\n                    \"profitable\": null,\n                    \"ifisa\": null,\n                    \"welcome_bonus\": \"200\",\n                    \"promo\": \"test\",\n                    \"promo_end\": null,\n                    \"created_at\": \"2021-02-05T07:29:29.757Z\",\n                    \"updated_at\": \"2021-02-05T07:29:29.757Z\",\n                    \"created_by\": null,\n                    \"updated_by\": null,\n                    \"category\": \"test\",\n                    \"invest_mode\": null,\n                    \"protection_scheme\": null,\n                    \"account_category\": null,\n                    \"structure\": null,\n                    \"sm_notes\": null,\n                    \"cashflow_options\": null\n                }\n            }\n        }\n    ]\n}"
+            }
+          ]
         }
       ],
       "id": "36559ff5-0249-45ad-b811-aeac68b28ae0"
