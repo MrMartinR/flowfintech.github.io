@@ -6669,22 +6669,22 @@
             "header": [
               {
                 "key": "client",
-                "value": "5klfkivPdRImnIxBAVS5sw",
+                "value": "{{client}}",
                 "type": "text"
               },
               {
                 "key": "access-token",
-                "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                "value": "{{access-token}}",
                 "type": "text"
               },
               {
                 "key": "expiry",
-                "value": "1615856879",
+                "value": "{{expiry}}",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "kishorekce124@gmail.com",
+                "value": "{{uid}}",
                 "type": "text"
               }
             ],
@@ -6699,7 +6699,127 @@
             },
             "url": "{{hostname}}/api/v1/settings"
           },
-          "response": []
+          "response": [
+            {
+              "id": "5f821adb-82bd-4b50-bccd-dfb7751a0b90",
+              "name": "settings[Create]",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "5klfkivPdRImnIxBAVS5sw",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "1615856879",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "kishorekce124@gmail.com",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"user\":\r\n    {\r\n        \"uid\": \"kishorekce130@gmail.com\",\r\n        \"username\": \"kishorekcename\",\r\n        \"email\": \"kishorekce130@gmail.com\",\r\n        \"password\": \"password\",\r\n        \"password_confirmation\": \"password\",\r\n        \"currency_id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\r\n        \"country_id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\"\r\n    }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/settings"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "m0dxqLkL5NW2SjdxOtJCaQ"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "5klfkivPdRImnIxBAVS5sw"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1615856879"
+                },
+                {
+                  "key": "uid",
+                  "value": "kishorekce130@gmail.com"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"eac9cbc4068ec6018638b1d9c0935abe\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "890d8879-4bcd-4402-b8c3-4bda633a58ae"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.678556"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"id\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n        \"type\": \"user\",\n        \"attributes\": {\n            \"username\": \"kishorekcename\",\n            \"email\": \"kishorekce130@gmail.com\"\n        }\n    }\n}"
+            }
+          ]
         }
       ],
       "id": "1ac5d927-5d3c-40f1-9599-0eb89e4dd930"
