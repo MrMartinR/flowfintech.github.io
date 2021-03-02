@@ -5782,8 +5782,140 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n    \"data\": {\n        \"id\": \"e411253b-afc9-4a7b-a057-e5219e0ea690\",\n        \"type\": \"transaction\",\n        \"attributes\": {\n            \"user_account\": {\n                \"id\": \"3966355c-6b6c-4a26-afc2-72e397a52109\",\n                \"country_id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n                \"account_id\": \"dde5a6d2-f9cc-403e-b24b-2eaa866ac21d\",\n                \"currency_id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\n                \"user_id\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                \"category\": \"sometest\",\n                \"name\": \"test\",\n                \"active\": true,\n                \"created_at\": \"2021-02-02T15:23:33.497Z\",\n                \"updated_at\": \"2021-02-02T15:23:33.497Z\"\n            },\n            \"loan\": {\n                \"id\": \"13446680-0d80-44df-adec-9e9ab87bfceb\",\n                \"country_id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n                \"currency_id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\n                \"code\": null,\n                \"internal_code\": null,\n                \"name\": \"test\",\n                \"borrower\": \"test\",\n                \"gender\": \"male\",\n                \"air\": null,\n                \"status\": null,\n                \"xirr\": null,\n                \"rating\": \"5 start\",\n                \"dti_rating\": null,\n                \"borrower_type\": \"test\",\n                \"category\": null,\n                \"amount\": 200,\n                \"description\": null,\n                \"link\": \"test\",\n                \"date_listed\": null,\n                \"date_issued\": null,\n                \"date_maturity\": null,\n                \"amortization\": null,\n                \"installment\": null,\n                \"notes\": \"test\",\n                \"created_at\": \"2021-02-05T07:50:00.217Z\",\n                \"updated_at\": \"2021-02-05T07:50:00.217Z\",\n                \"created_by\": null,\n                \"updated_by\": null,\n                \"platform_originator_id\": \"57924e08-2184-4eb3-8d8a-c9407a71903c\",\n                \"security_details\": \"myself\",\n                \"protection_scheme\": null\n            },\n            \"kind\": \"test kind\",\n            \"ref\": \"company\",\n            \"date\": \"2020-09-20\",\n            \"time\": \"2000-01-01T08:30:00.000Z\",\n            \"category\": \"test category\",\n            \"description\": \"test description\",\n            \"amount\": 2000,\n            \"notes\": \"test description\",\n            \"shares\": 2,\n            \"share_price\": 20\n        }\n    }\n}"
+            },
+            {
+              "id": "abd04876-3e6f-4b97-ad58-f886958885bc",
+              "name": "transactions[Create]",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "{{client}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "{{access-token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "{{expiry}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "{{uid}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"transaction\":\r\n    {\r\n        \"user_account_id\": \"3966355c-6b6c-4a26-afc2-72e397a52109\",\r\n        \"loan_id\": \"13446680-0d80-44df-adec-9e9ab87bfceb\",\r\n        \"property_id\": \"234\",\r\n        \"kind\": \"test kind\",\r\n        \"ref\": \"company\",\r\n        \"date\": \"2020-09-20\",\r\n        \"time\": \"8:30\",\r\n        \"category\": \"test category\",\r\n        \"description\": \"test description\",\r\n        \"amount\": \"2000\",\r\n        \"notes\": \"test description\",\r\n        \"shares\": \"2%\",\r\n        \"share_price\": \"20\"\r\n    }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/transactions"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "m0dxqLkL5NW2SjdxOtJCaQ"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "5klfkivPdRImnIxBAVS5sw"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1615856879"
+                },
+                {
+                  "key": "uid",
+                  "value": "kishorekce124@gmail.com"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"549381da90cb6c0155ee42afdb700336\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "918f3366-91e3-4c2e-aeb0-13407f884415"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.309712"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"id\": \"e411253b-afc9-4a7b-a057-e5219e0ea690\",\n        \"type\": \"transaction\",\n        \"attributes\": {\n            \"user_account\": {\n                \"id\": \"3966355c-6b6c-4a26-afc2-72e397a52109\",\n                \"country_id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n                \"account_id\": \"dde5a6d2-f9cc-403e-b24b-2eaa866ac21d\",\n                \"currency_id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\n                \"user_id\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                \"category\": \"sometest\",\n                \"name\": \"test\",\n                \"active\": true,\n                \"created_at\": \"2021-02-02T15:23:33.497Z\",\n                \"updated_at\": \"2021-02-02T15:23:33.497Z\"\n            },\n            \"loan\": {\n                \"id\": \"13446680-0d80-44df-adec-9e9ab87bfceb\",\n                \"country_id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n                \"currency_id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\n                \"code\": null,\n                \"internal_code\": null,\n                \"name\": \"test\",\n                \"borrower\": \"test\",\n                \"gender\": \"male\",\n                \"air\": null,\n                \"status\": null,\n                \"xirr\": null,\n                \"rating\": \"5 start\",\n                \"dti_rating\": null,\n                \"borrower_type\": \"test\",\n                \"category\": null,\n                \"amount\": 200,\n                \"description\": null,\n                \"link\": \"test\",\n                \"date_listed\": null,\n                \"date_issued\": null,\n                \"date_maturity\": null,\n                \"amortization\": null,\n                \"installment\": null,\n                \"notes\": \"test\",\n                \"created_at\": \"2021-02-05T07:50:00.217Z\",\n                \"updated_at\": \"2021-02-05T07:50:00.217Z\",\n                \"created_by\": null,\n                \"updated_by\": null,\n                \"platform_originator_id\": \"57924e08-2184-4eb3-8d8a-c9407a71903c\",\n                \"security_details\": \"myself\",\n                \"protection_scheme\": null\n            },\n            \"kind\": \"test kind\",\n            \"ref\": \"company\",\n            \"date\": \"2020-09-20\",\n            \"time\": \"2000-01-01T08:30:00.000Z\",\n            \"category\": \"test category\",\n            \"description\": \"test description\",\n            \"amount\": 2000,\n            \"notes\": \"test description\",\n            \"shares\": 2,\n            \"share_price\": 20\n        }\n    }\n}"
             }
           ]
+        },
+        {
+          "name": "transaction[Update]",
+          "id": "30d662fc-cf46-430c-98e1-135b041a79b4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "id": "c86d06f7-9dc6-410b-81c9-5895f279b74c"
