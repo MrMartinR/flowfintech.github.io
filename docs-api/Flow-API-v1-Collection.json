@@ -7674,6 +7674,19 @@
             "url": "{{hostname}}/api/v1/icons"
           },
           "response": []
+        },
+        {
+          "name": "image_assets[Create]",
+          "id": "bf1bd25d-7ade-4c0b-b363-64e7800ee038",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "id": "d3b6fdfe-acba-4bdd-b843-2bd41c1fe6f1"
