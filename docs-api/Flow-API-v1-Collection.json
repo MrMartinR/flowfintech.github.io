@@ -4965,6 +4965,19 @@
             "url": "{{hostname}}/api/v1/user_platforms/2f423676-89c6-4bd2-b0ed-4815ce0788c8"
           },
           "response": []
+        },
+        {
+          "name": "user_platforms[Create]",
+          "id": "17c2cfb0-97b4-436f-a819-ff07b209b072",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "id": "36559ff5-0249-45ad-b811-aeac68b28ae0"
