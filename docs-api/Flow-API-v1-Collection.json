@@ -7640,7 +7640,21 @@
     },
     {
       "name": "Image Assets",
-      "item": [],
+      "item": [
+        {
+          "name": "image_assets[List]",
+          "id": "fc67786d-5a15-4ae6-92ea-74fe482e9b83",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
+        }
+      ],
       "id": "d3b6fdfe-acba-4bdd-b843-2bd41c1fe6f1"
     },
     {
