@@ -6591,14 +6591,40 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
-            "header": [],
-            "url": ""
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "client",
+                "value": "{{client}}",
+                "type": "text"
+              },
+              {
+                "key": "access-token",
+                "value": "{{access-token}}",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "{{uid}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/modify_currencies/a17b482b-b7a0-4135-a9fc-dbbd48bc78b7"
           },
           "response": []
         }
       ],
       "id": "5c88af3d-0ae8-4989-b463-754a9c5753aa"
+    },
+    {
+      "name": "Settings",
+      "item": [],
+      "id": "1ac5d927-5d3c-40f1-9599-0eb89e4dd930"
     },
     {
       "name": "Login API",
