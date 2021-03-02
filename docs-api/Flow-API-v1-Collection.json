@@ -5629,9 +5629,39 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
-            "header": [],
-            "url": ""
+            "method": "POST",
+            "header": [
+              {
+                "key": "client",
+                "value": "5klfkivPdRImnIxBAVS5sw",
+                "type": "text"
+              },
+              {
+                "key": "access-token",
+                "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "1615856879",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "kishorekce124@gmail.com",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"transaction\":\r\n    {\r\n        \"user_account_id\": \"3966355c-6b6c-4a26-afc2-72e397a52109\",\r\n        \"loan_id\": \"13446680-0d80-44df-adec-9e9ab87bfceb\",\r\n        \"property_id\": \"234\",\r\n        \"kind\": \"test kind\",\r\n        \"ref\": \"company\",\r\n        \"date\": \"2020-09-20\",\r\n        \"time\": \"8:30\",\r\n        \"category\": \"test category\",\r\n        \"description\": \"test description\",\r\n        \"amount\": \"2000\",\r\n        \"notes\": \"test description\",\r\n        \"shares\": \"2%\",\r\n        \"share_price\": \"20\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/transactions"
           },
           "response": []
         }
