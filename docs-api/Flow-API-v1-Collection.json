@@ -3619,6 +3619,19 @@
             "url": "{{hostname}}/api/v1/loans"
           },
           "response": []
+        },
+        {
+          "name": "loans[Show]",
+          "id": "1e0ebac7-6118-45d6-8c57-5dacdb3da854",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "id": "05d7d1a7-6548-4106-b1b7-8e026b84f509"
