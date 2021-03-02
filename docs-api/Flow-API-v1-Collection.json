@@ -7719,7 +7719,7 @@
           "response": []
         },
         {
-          "name": "image_assets[Delete]",
+          "name": "image_assets[Update]",
           "id": "b4c92416-0155-4d12-a5f8-9ea14af2aef1",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -7729,22 +7729,22 @@
             "header": [
               {
                 "key": "client",
-                "value": "EsnObQ_swys-3TfEzAadDA",
+                "value": "{{client}}",
                 "type": "text"
               },
               {
                 "key": "access-token",
-                "value": "L1Kqrznc-L9zhTw05ES29A",
+                "value": "{{access-token}}",
                 "type": "text"
               },
               {
                 "key": "expiry",
-                "value": "1615869670",
+                "value": "{{expiry}}",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "kishorekce130@gmail.com",
+                "value": "{{uid}}",
                 "type": "text"
               }
             ],
@@ -7758,6 +7758,19 @@
               }
             },
             "url": "{{hostname}}/api/v1/icons/d6c33646-ccd2-450e-ba2b-dafe80e29950"
+          },
+          "response": []
+        },
+        {
+          "name": "image_assets[Delete]",
+          "id": "b8d87020-97b3-4080-a378-504596d8e335",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
           },
           "response": []
         }
