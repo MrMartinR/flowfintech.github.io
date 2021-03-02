@@ -3283,22 +3283,22 @@
             "header": [
               {
                 "key": "client",
-                "value": "5klfkivPdRImnIxBAVS5sw",
+                "value": "{{client}}",
                 "type": "text"
               },
               {
                 "key": "access-token",
-                "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                "value": "{{access-token}}",
                 "type": "text"
               },
               {
                 "key": "expiry",
-                "value": "1615856879",
+                "value": "{{expiry}}",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "kishorekce124@gmail.com",
+                "value": "{{uid}}",
                 "type": "text"
               }
             ],
@@ -3312,6 +3312,139 @@
               }
             },
             "url": "{{hostname}}/api/v1/contacts/57bb71be-a827-4bb2-977e-fe5da5c9981d"
+          },
+          "response": [
+            {
+              "id": "a977accd-d5d5-4844-8766-18485e4d72f2",
+              "name": "contacts[Update]",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "5klfkivPdRImnIxBAVS5sw",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "1615856879",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "kishorekce124@gmail.com",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"contact\":\r\n    {\r\n        \"name\": \"Billing\"\r\n    }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/contacts/57bb71be-a827-4bb2-977e-fe5da5c9981d"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "m0dxqLkL5NW2SjdxOtJCaQ"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "5klfkivPdRImnIxBAVS5sw"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1615856879"
+                },
+                {
+                  "key": "uid",
+                  "value": "kishorekce124@gmail.com"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"f7bb2753616054d8c9070c69021ec73f\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "64292505-8c9f-418c-874c-957941686bac"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.295967"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"id\": \"57bb71be-a827-4bb2-977e-fe5da5c9981d\",\n        \"type\": \"contact\",\n        \"attributes\": {\n            \"name\": \"Billing\",\n            \"created_by\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n            \"updated_by\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n            \"kind\": \"COMPANY\",\n            \"visibility\": \"PUBLIC\",\n            \"company_name\": null,\n            \"surname\": \"sam\",\n            \"founded\": null,\n            \"description\": \"test description\",\n            \"tags\": \"test\",\n            \"legal_form\": \"test form\",\n            \"id_number\": \"25\",\n            \"platform\": null,\n            \"country\": {\n                \"id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n                \"name\": \"India\",\n                \"iso_code\": \"IND\",\n                \"continent\": \"Asia\",\n                \"currency_id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\n                \"flag\": \"three colour\",\n                \"created_at\": \"2021-01-30T09:29:25.537Z\",\n                \"updated_at\": \"2021-02-05T09:56:58.619Z\",\n                \"fiscal_year_start\": \"2021-01-30\"\n            },\n            \"dob\": \"2021-02-05\",\n            \"nick\": \"dan sam\",\n            \"account\": null,\n            \"user\": {\n                \"id\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                \"provider\": \"email\",\n                \"uid\": \"kishorekce124@gmail.com\",\n                \"allow_password_change\": true,\n                \"username\": \"test\",\n                \"email\": \"kishorekce124@gmail.com\",\n                \"currency_id\": null,\n                \"country_id\": null,\n                \"created_at\": \"2021-01-30T03:49:51.982Z\",\n                \"updated_at\": \"2021-03-02T01:07:59.361Z\",\n                \"dob\": \"1998-10-03\",\n                \"name\": \"kishore12\",\n                \"surname\": \"kishore123\",\n                \"contact_id\": null\n            },\n            \"originator\": null,\n            \"trade_name\": \"some trade\"\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "contacts[Delete]",
+          "id": "cfa3ccf7-3f95-44bd-b6a0-db64ad2a758f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
           },
           "response": []
         }
