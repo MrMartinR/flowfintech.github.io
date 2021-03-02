@@ -6623,7 +6623,21 @@
     },
     {
       "name": "Settings",
-      "item": [],
+      "item": [
+        {
+          "name": "settings[List]",
+          "id": "ca1999b4-8888-41d8-b5a9-b4766b09346e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
+        }
+      ],
       "id": "1ac5d927-5d3c-40f1-9599-0eb89e4dd930"
     },
     {
