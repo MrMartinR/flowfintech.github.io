@@ -7501,28 +7501,139 @@
             "header": [
               {
                 "key": "client",
-                "value": "EsnObQ_swys-3TfEzAadDA",
+                "value": "{{client}}",
                 "type": "text"
               },
               {
                 "key": "access-token",
-                "value": "L1Kqrznc-L9zhTw05ES29A",
+                "value": "{{access-token}}",
                 "type": "text"
               },
               {
                 "key": "expiry",
-                "value": "1615869670",
+                "value": "{{expiry}}",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "kishorekce130@gmail.com",
+                "value": "{{uid}}",
                 "type": "text"
               }
             ],
             "url": "{{hostname}}/api/v1/contact_methods/ccd9351b-8ba2-4362-b1d1-da8dc66e710f"
           },
-          "response": []
+          "response": [
+            {
+              "id": "5d3e8d1f-a99b-4016-9992-97a54b6cc7ea",
+              "name": "contact_methods[Delete]",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "EsnObQ_swys-3TfEzAadDA",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "L1Kqrznc-L9zhTw05ES29A",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "1615869670",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "kishorekce130@gmail.com",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{hostname}}/api/v1/contact_methods/ccd9351b-8ba2-4362-b1d1-da8dc66e710f"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "L1Kqrznc-L9zhTw05ES29A"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "EsnObQ_swys-3TfEzAadDA"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1615869670"
+                },
+                {
+                  "key": "uid",
+                  "value": "kishorekce130@gmail.com"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"45e4c12b0b0e9889b25771a4c16d3273\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "e8bbc359-8b6a-42e1-82db-07195e84b853"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.107847"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"success\": true,\n    \"message\": \"Contact method deleted\"\n}"
+            }
+          ]
         }
       ],
       "id": "9b380692-ed31-44c3-840e-b3a45807d024"
