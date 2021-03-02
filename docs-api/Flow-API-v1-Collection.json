@@ -5324,10 +5324,126 @@
             ],
             "url": "{{hostname}}/api/v1/user_platforms/d5e15064-48d7-4484-9749-8717d7baeb6a"
           },
-          "response": []
+          "response": [
+            {
+              "id": "ec48354a-871e-42a8-aa41-2a161249b5ee",
+              "name": "user_platforms[Delete]",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "{{client}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "{{access-token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "{{expiry}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "{{uid}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{hostname}}/api/v1/user_platforms/d5e15064-48d7-4484-9749-8717d7baeb6a"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "m0dxqLkL5NW2SjdxOtJCaQ"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "5klfkivPdRImnIxBAVS5sw"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1615856879"
+                },
+                {
+                  "key": "uid",
+                  "value": "kishorekce124@gmail.com"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"b5103bb6b0bcfef196b2c15cba630ab2\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "a7145feb-5211-4f53-8ca2-9dc60977062e"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.110764"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"success\": true,\n    \"message\": \"User platform  deleted\"\n}"
+            }
+          ]
         }
       ],
       "id": "36559ff5-0249-45ad-b811-aeac68b28ae0"
+    },
+    {
+      "name": "Transactions",
+      "item": [],
+      "id": "c86d06f7-9dc6-410b-81c9-5895f279b74c"
     },
     {
       "name": "Login API",
