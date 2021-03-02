@@ -7138,8 +7138,29 @@
           },
           "request": {
             "method": "GET",
-            "header": [],
-            "url": ""
+            "header": [
+              {
+                "key": "client",
+                "value": "{{client}}",
+                "type": "text"
+              },
+              {
+                "key": "access-token",
+                "value": "{{access-token}}",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "{{uid}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/contact_methods/0b22d5fe-3594-4b9a-b9e2-c51d6a7aa57a"
           },
           "response": []
         }
