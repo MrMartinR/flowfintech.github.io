@@ -7163,6 +7163,19 @@
             "url": "{{hostname}}/api/v1/contact_methods/0b22d5fe-3594-4b9a-b9e2-c51d6a7aa57a"
           },
           "response": []
+        },
+        {
+          "name": "contact_methods[Create]",
+          "id": "fde72371-9bce-41e8-ac60-4fe1f4c132a5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "id": "9b380692-ed31-44c3-840e-b3a45807d024"
