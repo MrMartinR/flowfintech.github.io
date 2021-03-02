@@ -4786,7 +4786,21 @@
     },
     {
       "name": "User Platforms",
-      "item": [],
+      "item": [
+        {
+          "name": "user_platforms[List]",
+          "id": "cad1ad7b-ce16-4caa-b00d-e582ceea3543",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
+        }
+      ],
       "id": "36559ff5-0249-45ad-b811-aeac68b28ae0"
     },
     {
