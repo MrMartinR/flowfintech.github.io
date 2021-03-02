@@ -7652,22 +7652,22 @@
             "header": [
               {
                 "key": "client",
-                "value": "EsnObQ_swys-3TfEzAadDA",
+                "value": "{{client}}",
                 "type": "text"
               },
               {
                 "key": "access-token",
-                "value": "L1Kqrznc-L9zhTw05ES29A",
+                "value": "{{access-token}}",
                 "type": "text"
               },
               {
                 "key": "expiry",
-                "value": "1615869670",
+                "value": "{{expiry}}",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "kishorekce130@gmail.com",
+                "value": "{{uid}}",
                 "type": "text"
               }
             ],
