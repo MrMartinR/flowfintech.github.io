@@ -3828,22 +3828,22 @@
             "header": [
               {
                 "key": "client",
-                "value": "5klfkivPdRImnIxBAVS5sw",
+                "value": "{{client}}",
                 "type": "text"
               },
               {
                 "key": "access-token",
-                "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                "value": "{{access-token}}",
                 "type": "text"
               },
               {
                 "key": "expiry",
-                "value": "1615856879",
+                "value": "{{expiry}}",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "kishorekce124@gmail.com",
+                "value": "{{uid}}",
                 "type": "text"
               }
             ],
@@ -3857,6 +3857,139 @@
               }
             },
             "url": "{{hostname}}/api/v1/loans/72b91349-e9d4-43d6-bcc4-a525beddf428"
+          },
+          "response": [
+            {
+              "id": "1fd42f70-67b1-41e2-933f-1947a78738f3",
+              "name": "loans[Update]",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "5klfkivPdRImnIxBAVS5sw",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "1615856879",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "kishorekce124@gmail.com",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"loan\":\r\n    {\r\n        \"name\": \"test loan\"\r\n    }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/loans/72b91349-e9d4-43d6-bcc4-a525beddf428"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "m0dxqLkL5NW2SjdxOtJCaQ"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "5klfkivPdRImnIxBAVS5sw"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1615856879"
+                },
+                {
+                  "key": "uid",
+                  "value": "kishorekce124@gmail.com"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"a4fcc4d2fbab6e31030e8e6d78579674\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "6be556ec-4016-4ead-b013-2b5e7ab77dfe"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.657716"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"id\": \"72b91349-e9d4-43d6-bcc4-a525beddf428\",\n        \"type\": \"loan\",\n        \"attributes\": {\n            \"code\": \"test code 002\",\n            \"internal_code\": \"code 007\",\n            \"name\": \"test loan\",\n            \"borrower\": \"alex\",\n            \"gender\": \"male\",\n            \"air\": 0,\n            \"status\": \"active\",\n            \"xirr\": 0,\n            \"protection_scheme\": null,\n            \"rating\": \"5 start\",\n            \"dti_rating\": 2,\n            \"borrower_type\": \"company\",\n            \"category\": \"test category\",\n            \"amount\": 20000,\n            \"description\": \"test description\",\n            \"link\": \"test link\",\n            \"security_details\": \"test security_details\",\n            \"amortization\": \"test amortization\",\n            \"date_maturity\": \"2020-03-04\",\n            \"date_listed\": \"2020-02-20\",\n            \"date_issued\": \"2020-02-25\",\n            \"installment\": \"200\",\n            \"notes\": \"test notes\",\n            \"country\": {\n                \"id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n                \"name\": \"India\",\n                \"iso_code\": \"IND\",\n                \"continent\": \"Asia\",\n                \"currency_id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\n                \"flag\": \"three colour\",\n                \"created_at\": \"2021-01-30T09:29:25.537Z\",\n                \"updated_at\": \"2021-02-05T09:56:58.619Z\",\n                \"fiscal_year_start\": \"2021-01-30\"\n            },\n            \"currency\": {\n                \"id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\n                \"name\": \"Rupees\",\n                \"code\": null,\n                \"symbol\": \"Rupees\",\n                \"decimal_places\": 2,\n                \"created_at\": \"2021-01-30T09:31:45.439Z\",\n                \"updated_at\": \"2021-01-30T09:31:45.439Z\",\n                \"kind\": \"India\",\n                \"fx_eur\": null\n            },\n            \"platform\": {\n                \"id\": \"4270d73c-f41e-4a2a-834a-e67860fd693e\",\n                \"contact_id\": \"ccd324b7-d986-4a43-b81e-af359dc5f7b7\",\n                \"status\": \"done\",\n                \"liquidity\": \"test\",\n                \"term\": \"long\",\n                \"min_investment\": \"200\",\n                \"secondary_market\": null,\n                \"taxes\": \"test\",\n                \"cost\": \"200\",\n                \"profitable\": null,\n                \"ifisa\": null,\n                \"welcome_bonus\": \"200\",\n                \"promo\": \"test\",\n                \"promo_end\": null,\n                \"created_at\": \"2021-02-05T07:29:29.757Z\",\n                \"updated_at\": \"2021-02-05T07:29:29.757Z\",\n                \"created_by\": null,\n                \"updated_by\": null,\n                \"category\": \"test\",\n                \"invest_mode\": null,\n                \"protection_scheme\": null,\n                \"account_category\": null,\n                \"structure\": null,\n                \"sm_notes\": null,\n                \"cashflow_options\": null\n            },\n            \"originator\": {\n                \"id\": \"d740c5c2-ecb5-4278-bf99-9b99886c9776\",\n                \"apr\": 0,\n                \"created_at\": \"2021-02-05T06:57:54.761Z\",\n                \"updated_at\": \"2021-02-05T06:57:54.761Z\",\n                \"customer_category\": \"Consumer\",\n                \"created_by\": null,\n                \"updated_by\": null,\n                \"contact_id\": \"ccd324b7-d986-4a43-b81e-af359dc5f7b7\",\n                \"product_category_consumer\": \"[\\\"Personal\\\", \\\"Debt Consolidation\\\", \\\"Short Term\\\", \\\"Vehicle\\\", \\\"Pawnbroking\\\", \\\"Mortage\\\", \\\"Bridge\\\"]\",\n                \"product_category_business\": null\n            }\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "loans[Delete]",
+          "id": "2a0acbe1-743d-4991-b4b8-eb7da9865deb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
           },
           "response": []
         }
