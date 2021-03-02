@@ -7497,9 +7497,30 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
-            "header": [],
-            "url": ""
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "client",
+                "value": "EsnObQ_swys-3TfEzAadDA",
+                "type": "text"
+              },
+              {
+                "key": "access-token",
+                "value": "L1Kqrznc-L9zhTw05ES29A",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "1615869670",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "kishorekce130@gmail.com",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/contact_methods/ccd9351b-8ba2-4362-b1d1-da8dc66e710f"
           },
           "response": []
         }
