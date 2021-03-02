@@ -4309,6 +4309,19 @@
             "url": "{{hostname}}/api/v1/user_loans/ce70a57c-516a-43f2-a354-694e422f3b5e"
           },
           "response": []
+        },
+        {
+          "name": "user_loans[Create]",
+          "id": "a2b0e329-8e52-48a5-8fb8-cb5ea756237e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "id": "d9ecb84d-f2e3-4c31-908c-6f405f2fc05d"
