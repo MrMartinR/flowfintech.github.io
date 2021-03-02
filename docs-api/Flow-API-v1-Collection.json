@@ -4940,8 +4940,29 @@
           },
           "request": {
             "method": "GET",
-            "header": [],
-            "url": ""
+            "header": [
+              {
+                "key": "client",
+                "value": "5klfkivPdRImnIxBAVS5sw",
+                "type": "text"
+              },
+              {
+                "key": "access-token",
+                "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "1615856879",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "kishorekce124@gmail.com",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/user_platforms/2f423676-89c6-4bd2-b0ed-4815ce0788c8"
           },
           "response": []
         }
