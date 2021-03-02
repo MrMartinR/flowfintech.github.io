@@ -3279,9 +3279,39 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
-            "header": [],
-            "url": ""
+            "method": "PUT",
+            "header": [
+              {
+                "key": "client",
+                "value": "5klfkivPdRImnIxBAVS5sw",
+                "type": "text"
+              },
+              {
+                "key": "access-token",
+                "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "1615856879",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "kishorekce124@gmail.com",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"contact\":\r\n    {\r\n        \"name\": \"Billing\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/contacts/57bb71be-a827-4bb2-977e-fe5da5c9981d"
           },
           "response": []
         }
