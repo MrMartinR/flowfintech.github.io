@@ -6826,7 +6826,21 @@
     },
     {
       "name": "Contact Methods",
-      "item": [],
+      "item": [
+        {
+          "name": "contacts_methods[List]",
+          "id": "871f3fac-0ee5-476d-8b5f-0ecc800ba847",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
+        }
+      ],
       "id": "9b380692-ed31-44c3-840e-b3a45807d024"
     },
     {
