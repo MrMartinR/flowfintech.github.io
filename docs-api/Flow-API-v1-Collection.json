@@ -6825,6 +6825,11 @@
       "id": "1ac5d927-5d3c-40f1-9599-0eb89e4dd930"
     },
     {
+      "name": "Contact Methods",
+      "item": [],
+      "id": "9b380692-ed31-44c3-840e-b3a45807d024"
+    },
+    {
       "name": "Login API",
       "id": "f4b6e8ba-f3f7-4b34-a6d9-5134defc0ddd",
       "protocolProfileBehavior": {
