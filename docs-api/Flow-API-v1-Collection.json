@@ -4142,28 +4142,139 @@
             "header": [
               {
                 "key": "client",
-                "value": "5klfkivPdRImnIxBAVS5sw",
+                "value": "{{client}}",
                 "type": "text"
               },
               {
                 "key": "access-token",
-                "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                "value": "{{access-token}}",
                 "type": "text"
               },
               {
                 "key": "expiry",
-                "value": "1615856879",
+                "value": "{{expiry}}",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "kishorekce124@gmail.com",
+                "value": "{{uid}}",
                 "type": "text"
               }
             ],
             "url": "{{hostname}}/api/v1/user_loans"
           },
-          "response": []
+          "response": [
+            {
+              "id": "a14cb8d8-e7ce-4170-a921-42779bc671b7",
+              "name": "user_loans[List]",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "5klfkivPdRImnIxBAVS5sw",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "m0dxqLkL5NW2SjdxOtJCaQ",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "1615856879",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "kishorekce124@gmail.com",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{hostname}}/api/v1/user_loans"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "m0dxqLkL5NW2SjdxOtJCaQ"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "5klfkivPdRImnIxBAVS5sw"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1615856879"
+                },
+                {
+                  "key": "uid",
+                  "value": "kishorekce124@gmail.com"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"487aecde93ab786c6e22016b62f28903\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "3587e9a3-ec83-4058-ae27-0ef4ae9a39b8"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "1.203126"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": [\n        {\n            \"id\": \"e07fd89b-e190-42b9-a6b4-4ac3a332728a\",\n            \"type\": \"user_loan\",\n            \"attributes\": {\n                \"loan\": {\n                    \"id\": \"13446680-0d80-44df-adec-9e9ab87bfceb\",\n                    \"country_id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n                    \"currency_id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\n                    \"code\": null,\n                    \"internal_code\": null,\n                    \"name\": \"test\",\n                    \"borrower\": \"test\",\n                    \"gender\": \"male\",\n                    \"air\": null,\n                    \"status\": null,\n                    \"xirr\": null,\n                    \"rating\": \"5 start\",\n                    \"dti_rating\": null,\n                    \"borrower_type\": \"test\",\n                    \"category\": null,\n                    \"amount\": 200,\n                    \"description\": null,\n                    \"link\": \"test\",\n                    \"date_listed\": null,\n                    \"date_issued\": null,\n                    \"date_maturity\": null,\n                    \"amortization\": null,\n                    \"installment\": null,\n                    \"notes\": \"test\",\n                    \"created_at\": \"2021-02-05T07:50:00.217Z\",\n                    \"updated_at\": \"2021-02-05T07:50:00.217Z\",\n                    \"created_by\": null,\n                    \"updated_by\": null,\n                    \"platform_originator_id\": \"57924e08-2184-4eb3-8d8a-c9407a71903c\",\n                    \"security_details\": \"myself\",\n                    \"protection_scheme\": null\n                },\n                \"user_account\": {\n                    \"id\": \"3966355c-6b6c-4a26-afc2-72e397a52109\",\n                    \"country_id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n                    \"account_id\": \"dde5a6d2-f9cc-403e-b24b-2eaa866ac21d\",\n                    \"currency_id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\n                    \"user_id\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                    \"category\": \"sometest\",\n                    \"name\": \"test\",\n                    \"active\": true,\n                    \"created_at\": \"2021-02-02T15:23:33.497Z\",\n                    \"updated_at\": \"2021-02-02T15:23:33.497Z\"\n                },\n                \"slice_name\": \"test\",\n                \"market\": \"primary\",\n                \"xirr\": 99,\n                \"investment_amount\": 200,\n                \"invest_mode\": \"manual\",\n                \"position\": \"in\",\n                \"date_in\": \"2021-02-05\",\n                \"date_out\": \"2021-02-10\"\n            }\n        },\n        {\n            \"id\": \"ce70a57c-516a-43f2-a354-694e422f3b5e\",\n            \"type\": \"user_loan\",\n            \"attributes\": {\n                \"loan\": null,\n                \"user_account\": {\n                    \"id\": \"3966355c-6b6c-4a26-afc2-72e397a52109\",\n                    \"country_id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n                    \"account_id\": \"dde5a6d2-f9cc-403e-b24b-2eaa866ac21d\",\n                    \"currency_id\": \"0ac01d1f-a208-49c3-abaa-1cf5f138fefd\",\n                    \"user_id\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                    \"category\": \"sometest\",\n                    \"name\": \"test\",\n                    \"active\": true,\n                    \"created_at\": \"2021-02-02T15:23:33.497Z\",\n                    \"updated_at\": \"2021-02-02T15:23:33.497Z\"\n                },\n                \"slice_name\": \"test\",\n                \"market\": \"primary\",\n                \"xirr\": 89,\n                \"investment_amount\": 2000,\n                \"invest_mode\": \"manual\",\n                \"position\": \"in\",\n                \"date_in\": \"2021-02-05\",\n                \"date_out\": \"2021-02-10\"\n            }\n        }\n    ]\n}"
+            }
+          ]
         }
       ],
       "id": "d9ecb84d-f2e3-4c31-908c-6f405f2fc05d"
