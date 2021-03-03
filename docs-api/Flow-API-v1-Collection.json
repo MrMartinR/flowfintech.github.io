@@ -7767,52 +7767,53 @@
     },
     {
       "name": "Autentication",
-      "item": [],
+      "item": [
+        {
+          "name": "Login API",
+          "id": "f4b6e8ba-f3f7-4b34-a6d9-5134defc0ddd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"user\": {\n        \"email\": \"chichospit@me.com\",\n        \"password\": \"Rujpyt-9zosqe-juggeq\"\n    }\n}"
+            },
+            "url": "{{hostname}}/api/v1/auth/sign_in"
+          },
+          "response": []
+        },
+        {
+          "name": "Register API",
+          "id": "65a151f6-6882-4e66-8398-96b1c2e04a68",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"user\": {\n        \"email\": \"user1@example.com\",\n        \"password\": \"samurai1\",\n        \"username\": \"bainur1\"\n    }\n}"
+            },
+            "url": "{{hostname}}/api/v1/auth"
+          },
+          "response": []
+        }
+      ],
       "id": "ecdcbee4-889f-4c83-9aa2-0b051b46962e"
-    },
-    {
-      "name": "Login API",
-      "id": "f4b6e8ba-f3f7-4b34-a6d9-5134defc0ddd",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"user\": {\n        \"email\": \"chichospit@me.com\",\n        \"password\": \"Rujpyt-9zosqe-juggeq\"\n    }\n}"
-        },
-        "url": "{{hostname}}/api/v1/auth/sign_in"
-      },
-      "response": []
-    },
-    {
-      "name": "Register API",
-      "id": "65a151f6-6882-4e66-8398-96b1c2e04a68",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"user\": {\n        \"email\": \"user1@example.com\",\n        \"password\": \"samurai1\",\n        \"username\": \"bainur1\"\n    }\n}"
-        },
-        "url": "{{hostname}}/api/v1/auth"
-      },
-      "response": []
     },
     {
       "name": "Password Reset Email API",
