@@ -7849,71 +7849,71 @@
             "url": "{{hostname}}/api/v1/auth/password"
           },
           "response": []
+        },
+        {
+          "name": "Password Reset Email API",
+          "id": "7e1f319f-dcf3-40ba-a9d6-d1f1bbb2b761",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n \"email\": \"mbainurb@gmail.com\",\n \"redirect_url\": \"http://thisisthereacturl\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/auth/password",
+            "description": "Sending EMAIL contains url to change pwd"
+          },
+          "response": []
+        },
+        {
+          "name": "Sign out API",
+          "id": "e6b9d8d7-8d4d-4508-9e45-c7a33ef78be3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "access-token",
+                "value": "{{access-token}}",
+                "type": "text"
+              },
+              {
+                "key": "client",
+                "value": "{{client}}",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "{{uid}}",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              },
+              {
+                "key": "token-type",
+                "value": "Bearer",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/auth/sign_out"
+          },
+          "response": []
         }
       ],
       "id": "ecdcbee4-889f-4c83-9aa2-0b051b46962e"
-    },
-    {
-      "name": "Password Reset Email API",
-      "id": "7e1f319f-dcf3-40ba-a9d6-d1f1bbb2b761",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n \"email\": \"mbainurb@gmail.com\",\n \"redirect_url\": \"http://thisisthereacturl\"\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": "{{hostname}}/api/v1/auth/password",
-        "description": "Sending EMAIL contains url to change pwd"
-      },
-      "response": []
-    },
-    {
-      "name": "Sign out API",
-      "id": "e6b9d8d7-8d4d-4508-9e45-c7a33ef78be3",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "DELETE",
-        "header": [
-          {
-            "key": "access-token",
-            "value": "{{access-token}}",
-            "type": "text"
-          },
-          {
-            "key": "client",
-            "value": "{{client}}",
-            "type": "text"
-          },
-          {
-            "key": "uid",
-            "value": "{{uid}}",
-            "type": "text"
-          },
-          {
-            "key": "expiry",
-            "value": "{{expiry}}",
-            "type": "text"
-          },
-          {
-            "key": "token-type",
-            "value": "Bearer",
-            "type": "text"
-          }
-        ],
-        "url": "{{hostname}}/api/v1/auth/sign_out"
-      },
-      "response": []
     }
   ],
   "event": [
