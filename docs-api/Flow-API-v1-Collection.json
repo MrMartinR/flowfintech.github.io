@@ -32,7 +32,7 @@
           "response": []
         },
         {
-          "name": "Register API",
+          "name": "Sign Up",
           "id": "65a151f6-6882-4e66-8398-96b1c2e04a68",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -50,6 +50,45 @@
               "raw": "{\n    \"user\": {\n        \"email\": \"user1@example.com\",\n        \"password\": \"samurai1\",\n        \"username\": \"bainur1\"\n    }\n}"
             },
             "url": "{{hostname}}/api/v1/auth"
+          },
+          "response": []
+        },
+        {
+          "name": "Sign Out",
+          "id": "e6b9d8d7-8d4d-4508-9e45-c7a33ef78be3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "access-token",
+                "value": "{{access-token}}",
+                "type": "text"
+              },
+              {
+                "key": "client",
+                "value": "{{client}}",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "{{uid}}",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              },
+              {
+                "key": "token-type",
+                "value": "Bearer",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/auth/sign_out"
           },
           "response": []
         },
@@ -111,45 +150,6 @@
             },
             "url": "{{hostname}}/api/v1/auth/password",
             "description": "Sending EMAIL contains url to change pwd"
-          },
-          "response": []
-        },
-        {
-          "name": "Sign out API",
-          "id": "e6b9d8d7-8d4d-4508-9e45-c7a33ef78be3",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "access-token",
-                "value": "{{access-token}}",
-                "type": "text"
-              },
-              {
-                "key": "client",
-                "value": "{{client}}",
-                "type": "text"
-              },
-              {
-                "key": "uid",
-                "value": "{{uid}}",
-                "type": "text"
-              },
-              {
-                "key": "expiry",
-                "value": "{{expiry}}",
-                "type": "text"
-              },
-              {
-                "key": "token-type",
-                "value": "Bearer",
-                "type": "text"
-              }
-            ],
-            "url": "{{hostname}}/api/v1/auth/sign_out"
           },
           "response": []
         }
