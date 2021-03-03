@@ -7811,6 +7811,44 @@
             "url": "{{hostname}}/api/v1/auth"
           },
           "response": []
+        },
+        {
+          "name": "Password Update API",
+          "id": "1b8ca259-684f-4825-844b-69338397be4b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "access-token",
+                "value": "VehXjx91BfZg6W_zQxzKvg",
+                "type": "text"
+              },
+              {
+                "key": "client",
+                "value": "gk8osc_b-noD8Dgi6_FMoQ",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "mbainurb@gmail.com",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"password\": 12345,\n\t\"password_confirmation\": 12345\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/auth/password"
+          },
+          "response": []
         }
       ],
       "id": "ecdcbee4-889f-4c83-9aa2-0b051b46962e"
@@ -7835,44 +7873,6 @@
         },
         "url": "{{hostname}}/api/v1/auth/password",
         "description": "Sending EMAIL contains url to change pwd"
-      },
-      "response": []
-    },
-    {
-      "name": "Password Update API",
-      "id": "1b8ca259-684f-4825-844b-69338397be4b",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "PUT",
-        "header": [
-          {
-            "key": "access-token",
-            "value": "VehXjx91BfZg6W_zQxzKvg",
-            "type": "text"
-          },
-          {
-            "key": "client",
-            "value": "gk8osc_b-noD8Dgi6_FMoQ",
-            "type": "text"
-          },
-          {
-            "key": "uid",
-            "value": "mbainurb@gmail.com",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n\t\"password\": 12345,\n\t\"password_confirmation\": 12345\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": "{{hostname}}/api/v1/auth/password"
       },
       "response": []
     },
