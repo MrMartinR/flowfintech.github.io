@@ -7,6 +7,156 @@
   },
   "item": [
     {
+      "name": "Autentication",
+      "item": [
+        {
+          "name": "Login API",
+          "id": "f4b6e8ba-f3f7-4b34-a6d9-5134defc0ddd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"user\": {\n        \"email\": \"chichospit@me.com\",\n        \"password\": \"Rujpyt-9zosqe-juggeq\"\n    }\n}"
+            },
+            "url": "{{hostname}}/api/v1/auth/sign_in"
+          },
+          "response": []
+        },
+        {
+          "name": "Register API",
+          "id": "65a151f6-6882-4e66-8398-96b1c2e04a68",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"user\": {\n        \"email\": \"user1@example.com\",\n        \"password\": \"samurai1\",\n        \"username\": \"bainur1\"\n    }\n}"
+            },
+            "url": "{{hostname}}/api/v1/auth"
+          },
+          "response": []
+        },
+        {
+          "name": "Password Update API",
+          "id": "1b8ca259-684f-4825-844b-69338397be4b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "access-token",
+                "value": "VehXjx91BfZg6W_zQxzKvg",
+                "type": "text"
+              },
+              {
+                "key": "client",
+                "value": "gk8osc_b-noD8Dgi6_FMoQ",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "mbainurb@gmail.com",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"password\": 12345,\n\t\"password_confirmation\": 12345\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/auth/password"
+          },
+          "response": []
+        },
+        {
+          "name": "Password Reset Email API",
+          "id": "7e1f319f-dcf3-40ba-a9d6-d1f1bbb2b761",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n \"email\": \"mbainurb@gmail.com\",\n \"redirect_url\": \"http://thisisthereacturl\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/auth/password",
+            "description": "Sending EMAIL contains url to change pwd"
+          },
+          "response": []
+        },
+        {
+          "name": "Sign out API",
+          "id": "e6b9d8d7-8d4d-4508-9e45-c7a33ef78be3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "access-token",
+                "value": "{{access-token}}",
+                "type": "text"
+              },
+              {
+                "key": "client",
+                "value": "{{client}}",
+                "type": "text"
+              },
+              {
+                "key": "uid",
+                "value": "{{uid}}",
+                "type": "text"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              },
+              {
+                "key": "token-type",
+                "value": "Bearer",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/auth/sign_out"
+          },
+          "response": []
+        }
+      ],
+      "id": "ecdcbee4-889f-4c83-9aa2-0b051b46962e"
+    },
+    {
       "name": "Accounts [Admin, Contributor]",
       "item": [
         {
@@ -7764,156 +7914,6 @@
         }
       ],
       "id": "d3b6fdfe-acba-4bdd-b843-2bd41c1fe6f1"
-    },
-    {
-      "name": "Autentication",
-      "item": [
-        {
-          "name": "Login API",
-          "id": "f4b6e8ba-f3f7-4b34-a6d9-5134defc0ddd",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"user\": {\n        \"email\": \"chichospit@me.com\",\n        \"password\": \"Rujpyt-9zosqe-juggeq\"\n    }\n}"
-            },
-            "url": "{{hostname}}/api/v1/auth/sign_in"
-          },
-          "response": []
-        },
-        {
-          "name": "Register API",
-          "id": "65a151f6-6882-4e66-8398-96b1c2e04a68",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"user\": {\n        \"email\": \"user1@example.com\",\n        \"password\": \"samurai1\",\n        \"username\": \"bainur1\"\n    }\n}"
-            },
-            "url": "{{hostname}}/api/v1/auth"
-          },
-          "response": []
-        },
-        {
-          "name": "Password Update API",
-          "id": "1b8ca259-684f-4825-844b-69338397be4b",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "access-token",
-                "value": "VehXjx91BfZg6W_zQxzKvg",
-                "type": "text"
-              },
-              {
-                "key": "client",
-                "value": "gk8osc_b-noD8Dgi6_FMoQ",
-                "type": "text"
-              },
-              {
-                "key": "uid",
-                "value": "mbainurb@gmail.com",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n\t\"password\": 12345,\n\t\"password_confirmation\": 12345\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{hostname}}/api/v1/auth/password"
-          },
-          "response": []
-        },
-        {
-          "name": "Password Reset Email API",
-          "id": "7e1f319f-dcf3-40ba-a9d6-d1f1bbb2b761",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n \"email\": \"mbainurb@gmail.com\",\n \"redirect_url\": \"http://thisisthereacturl\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{hostname}}/api/v1/auth/password",
-            "description": "Sending EMAIL contains url to change pwd"
-          },
-          "response": []
-        }
-      ],
-      "id": "ecdcbee4-889f-4c83-9aa2-0b051b46962e"
-    },
-    {
-      "name": "Sign out API",
-      "id": "e6b9d8d7-8d4d-4508-9e45-c7a33ef78be3",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "DELETE",
-        "header": [
-          {
-            "key": "access-token",
-            "value": "{{access-token}}",
-            "type": "text"
-          },
-          {
-            "key": "client",
-            "value": "{{client}}",
-            "type": "text"
-          },
-          {
-            "key": "uid",
-            "value": "{{uid}}",
-            "type": "text"
-          },
-          {
-            "key": "expiry",
-            "value": "{{expiry}}",
-            "type": "text"
-          },
-          {
-            "key": "token-type",
-            "value": "Bearer",
-            "type": "text"
-          }
-        ],
-        "url": "{{hostname}}/api/v1/auth/sign_out"
-      },
-      "response": []
     }
   ],
   "event": [
