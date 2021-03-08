@@ -25,7 +25,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"user\": {\n        \"email\": \"kishorekce124@gmail.com\",\n        \"password\": \"9047446861\"\n    }\n}",
+              "raw": "{\n    \"user\": {\n        \"email\": \"admin@flowfin.tech\",\n        \"password\": \"admin1234\"\n    }\n}",
               "options": {
                 "raw": {}
               }
@@ -8020,25 +8020,25 @@
   ],
   "variable": [
     {
-      "id": "8869c81d-7b08-4eb0-aa4f-c22858b57b71",
+      "id": "7b0c7cbb-6fe9-4178-adf7-47eb75b0f4b2",
       "key": "access-token",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1354b7c7-ebb1-41dd-a0c3-230d2a88e497",
+      "id": "fdd0fa0a-4108-4d58-ba82-afca8e87ea6f",
       "key": "client",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a5ba3a79-2f9b-4e53-bde8-26a8919218a7",
+      "id": "e98dc5b6-122c-4f61-8be7-f1145f5106f3",
       "key": "expiry",
       "value": "",
       "type": "string"
     },
     {
-      "id": "22bc820a-4ace-4ffb-a78e-a72cf9e54f60",
+      "id": "2d0e1b6d-a194-4824-8204-4d5fd206e6d1",
       "key": "uid",
       "value": "",
       "type": "string"
