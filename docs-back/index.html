@@ -3,9 +3,11 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>File: README — Documentation by YARD 0.9.26</title>
+    <title>Backend Documentation</title>
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="stylesheet" href="css/common.css" type="text/css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+
     <script type="text/javascript">
       pathId = 'README'
       relpath = ''
@@ -31,217 +33,66 @@
         </div>
         <div class="clear"></div>
       </div>
-      <div id="content">
+      <div id="content" class="content">
         <div id="filecontents">
-          <p>
-            <a href="https://gitmoji.dev"
-              ><img src="https://img.shields.io/badge/gitmoji-%20%F0%9F%98%9C%20%F0%9F%98%8D-FFDD67.svg"
-            /></a>
-            <a href="https://github.com/rubocop-hq/rubocop"
-              ><img src="https://img.shields.io/badge/code_style-rubocop-brightgreen.svg"
-            /></a>
-          </p>
-          <p>
-            <a href="https://github.com/FlowFintech/FlowBack/graphs/contributors"
-              ><img
-                src="https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge"
-            /></a>
-          </p>
-          <p><br /></p>
-          <p><img src="https://dev.flowfin.tech/assets/backend-bg.svg" /></p>
-          <p><br /></p>
-          <h1 id="label-Getting+Started">Getting Started</h1>
           <br />
-          <h2 id="label-Ruby">
-            <img src="https://dev.flowfin.tech/assets/ruby.svg" width="30px" title="Ruby" />
-            <a href="https://www.ruby-lang.org/en/documentation/installation/" target="_blank">Ruby</a>
-          </h2>
-          <p>
-            Is possible that you already have Ruby installed in your computer, you can check it typing the following
-            command in your terminal.
-          </p>
-          <pre class="code ruby"><code>ruby -v</code></pre>
-
-          <h3>Installing Ruby</h3>
-          <p>
-            <strong><em>macOS</em></strong> using <a href="http://brew.sh/">Homebrew</a>
-          </p>
-          <pre class="code ruby"><code>brew install ruby@2.6.5
-</code></pre>
-          <p>
-            <strong><em>Ubuntu</em></strong>
-          </p>
-          <pre class="code ruby"><code>sudo apt install ruby-full</code></pre>
-          <p>
-            More info about Ruby installation
-            <a href="https://www.ruby-lang.org/en/documentation/installation/">here</a>
-          </p>
-          <p>
-            We are using ruby version <strong><em>2.6.5</em></strong
-            >, is important to use this version. If you are using a different version of Ruby, upgrade or downgrade the
-            version using the <a href="http://rvm.io">Ruby Version Manager</a> (RVM) that allows you to install and
-            manage multiple installations of Ruby on your system. It can also manage different gemsets.
-          </p>
-
-          <h1 id="label-Cloning+the+Repository">
-            <img src="https://dev.flowfin.tech/assets/octocat.svg" width="30px" title="Cloning the Repository" />
-            <a href="https://github.com/FlowFintech/FlowBack" target="_blank">Cloning the Repository</a>
+          <p><img src="https://dev.flowfin.tech/assets/backend-bg.svg" /></p>
+          <br />
+          <div>
+          <h1>Getting Started</h1>
+          <br />
+          <div> 
+          <h1>
+            <img src="https://dev.flowfin.tech/assets/octocat.svg" width="30px" title="Cloning the Project" />
+            <a href="https://github.com/FlowFintech/FlowBack" target="_blank">Cloning the Project</a>
           </h1>
           <p>
             <strong><em>Ubuntu</em></strong>
           </p>
-          <ul>
-            <li>
-              <p>Clone the repository using the terminal</p>
-            </li>
-          </ul>
-          <p><code>your_username@pc:~$ git clone git@github.com:FlowFintech/FlowBack.git </code></p>
-          <ul>
-            <li>
+              <p>Clone the Project using the terminal</p>
+          <p><pre><code>your_username@pc:~$ git clone git@github.com:FlowFintech/FlowBack.git </code></pre></p>
               <p>Move into the cloned folder</p>
-            </li>
-          </ul>
-          <p><code>your_username@pc:~$ cd FlowBack </code></p>
-          <h2 id="label-Docker+Install">Docker Install</h2>
-          <ul>
-            <li>
-              <p>NOTE: this Docker guide is under revision, not sure if this is correct or not...</p>
-              <br />
-              <p>Install Docker if you haven't done yet from <a href="https://www.docker.com/get-started">here</a>.</p>
-            </li>
-            <li>
+          <p><pre><code>your_username@pc:~$ cd FlowBack </code></pre></p>
+        </div>
+<br />
+
+          <div>
+            <h1>
+              <img src="https://dev.flowfin.tech/assets/docker.svg" width="30" alt="Docker Installation" />
+              <a href="https://www.docker.com/get-started" target="_blank">Docker Installation</a>
+            </h1>
+  
+              <p>Install Docker if you haven't done yet from <a href="https://www.docker.com/get-started">here.</a></p>
+              <p>NOTE: If you are using Windows, you will probably have to update to WSL2.<br/> Windows Home edition, requires extra installations</p>
               <p>Make sure you have docker running before commencing with this installation.</p>
-            </li>
-          </ul>
-          <ul>
-            <li>
               <p>
-                Docker is already configured. Please DO NOT add anything to the following files when pushing changes:
+                Docker is already configured. DO NOT add anything to the following files when pushing changes:
               </p>
-            </li>
-            <li>
-              <p><code>config/database.yml</code></p>
-            </li>
-            <li>
-              <p><code>docker-compose.yml</code></p>
-            </li>
-            <li>
-              <p><code>dockerfile</code></p>
-            </li>
-          </ul>
-          <h3>After you have started docker, in your root directory run the following commands in the order</h3>
+            <ul>
+              <li>config/database.yml</li>
+              <li>docker-compose.yml</li>
+              <li>dockerfile</li>
+            </ul>
+          <h3>After you have started docker, in your root directory run the following commands</h3>
+          <p><pre><code>your_username@pc:~$ docker-compose build</code></pre></p>
           <p>
-            <strong><em>Steps:</em></strong>
+            <strong><em>NOTE: You only have to run this command the first time you set the backend and in the future if there is any change in the Gemfile or the Dockerfile.</em></strong>
           </p>
-          <ol>
-            <li>
-              <p>Go to backend folder</p>
-            </li>
-            <li>
-              <p>Run this one time only on your terminal:</p>
-            </li>
-          </ol>
-          <p><code>your_username@pc:~$ docker-compose build</code></p>
+          <pre><code class="ruby">your_username@pc:~$ docker-compose up</code></pre>
           <p>
-            <strong
-              ><em
-                >NOTE: Any change in the Gemfile or the Dockerfile, should be the only times you’ll need to rebuild (Run
-                the above command).</em
-              ></strong
-            >
+            Confirm if the server is running by heading over to: <a href="http://localhost:3001">localhost:3001</a>
           </p>
-          <ul>
-            <li>
-              <p>Next run:</p>
-            </li>
-          </ul>
-          <pre class="code ruby"><code class="ruby">your_username@pc:~$ docker-compose up
-</code></pre>
-          <ul>
-            <li>
-              <p>
-                Now open a new terminal, and inside the flow directory run the following to create the database, its
-                relations by also running the migrations.
-              </p>
-            </li>
-          </ul>
-          <pre
-            class="code ruby"
-          ><code class="ruby">your_username@pc:~$ docker-compose run web rails db:create &amp;&amp; docker-compose run web rails db:migrate
-</code></pre>
-          <ul>
-            <li>
-              <p>If all’s well, you should see some PostgreSQL output (in the first terminal).</p>
-            </li>
-          </ul>
-          <pre class="code ruby"><code class="ruby">Starting flowback_db_1 ... done
-Starting flowback_web_1 ... done
-Attaching to flowback_db_1, flowback_web_1
-db_1   |
-db_1   | PostgreSQL Database directory appears to contain a database; Skipping initialization
-db_1   |
-db_1   | 2021-01-26 22:59:35.013 UTC [1] LOG:  starting PostgreSQL 13.1 (Debian 13.1-1.pgdg100+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
-db_1   | 2021-01-26 22:59:35.014 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-db_1   | 2021-01-26 22:59:35.014 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-db_1   | 2021-01-26 22:59:35.135 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-db_1   | 2021-01-26 22:59:35.154 UTC [27] LOG:  database system was shut down at 2021-01-26 22:59:29 UTC
-db_1   | 2021-01-26 22:59:35.174 UTC [1] LOG:  database system is ready to accept connections
-web_1  | => Booting Puma
-web_1  | => Rails 6.0.3.4 application starting in development
-web_1  | => Run `rails server --help` for more startup options
-web_1  | Puma starting in single mode...
-web_1  | * Version 4.3.7 (ruby 2.6.5-p114), codename: Mysterious Traveller
-web_1  | * Min threads: 5, max threads: 5
-web_1  | * Environment: development
-web_1  | * Listening on tcp://0.0.0.0:3001
-web_1  | Use Ctrl-C to stop
-</code></pre>
-          <ul>
-            <li>
-              <p>The app should now be up and running</p>
-            </li>
-          </ul>
-          <p>Head over to: <a href="http://localhost:3001">localhost:3001</a></p>
-          <h4 id="label-Short+order+of+the+same+instructions">Short order of the same instructions</h4>
           <p>
-            <strong><em>Steps:</em></strong>
+            You should see a blank page with the text <em>"Yep, this is the API"</em>
           </p>
-          <ul>
-            <li>
-              <p>Go to backend folder.</p>
-            </li>
-            <li>
-              <p>Run this command to bundle up everything and start the server at one go:</p>
-            </li>
-          </ul>
-          <pre class="code ruby"><code class="ruby">your_username@pc:~$ docker-compose up --build
-</code></pre>
-          <ul>
-            <li>
-              <p>
-                Open a new terminal, and inside the flow directory run the following to create and respective databases
-                and run the migrations.
-              </p>
-            </li>
-          </ul>
-          <pre
-            class="code ruby"
-          ><code class="ruby">docker-compose run web rails db:create &amp;&amp; docker-compose run web rails db:migrate
-</code></pre>
-          <ul>
-            <li>
-              <p>
-                Confirm if the server is running by heading over to: <a href="http://localhost:3001">localhost:3001</a>
-              </p>
-            </li>
-          </ul>
+        </div>
           <h2 id="label-Contributing">Contributing</h2>
           <p>
             Depending on whether your implementing a <strong>feature</strong>, doing a <strong>chore</strong>, fixing
             <strong>bugs</strong> or a <strong>hotfix</strong>, you must use the following branches naming convention:
             type/short-description <em>Example</em>
           </p>
-          <pre class="code ruby"><code class="ruby">git checkout -b bug/fixing-layout
+          <pre><code class="ruby">git checkout -b bug/fixing-layout
 git checkout -b feature/adding-loan-details
 git checkout -b chore/correct-typo
 git checkout -b hotfix/refactor-jb
@@ -280,11 +131,11 @@ git checkout -b hotfix/refactor-jb
           <h2>API Endpoints</h2>
           <p>Use Postman to view and run the endpoints</p>
 
-          <img src="https://dev.flowfin.tech/assets/postman.svg" width="30px" title="Postman" />
+          <img src="https://dev.flowfin.tech/assets/postman.svg" width="30" title="Postman" />
           <a href="https://apidoc.flowfin.tech" target="_blank">API Documentation</a>
 
-          <h1 id="label-Ruby">
-            <img src="https://dev.flowfin.tech/assets/ruby.svg" width="30px" title="Ruby" />
+          <h1>
+            <img src="https://dev.flowfin.tech/assets/ruby.svg" width="30" title="Ruby" />
             <a href="https://dev.flowfin.tech/docs-back/docs/style-guide-ruby.html" target="_blank">Style Guide</a>
           </h1>
 
