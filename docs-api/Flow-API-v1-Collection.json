@@ -1209,7 +1209,7 @@
           "response": []
         },
         {
-          "name": "currency [SHOW]",
+          "name": "Currency [SHOW]",
           "id": "8b3d97b4-58de-4a90-8f21-c60ba12f4922",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -2027,7 +2027,7 @@
           "response": [
             {
               "id": "3380f3e7-5858-4f9f-9fea-017bed2c12a6",
-              "name": "Country [SHOW]",
+              "name": "Country [404]",
               "originalRequest": {
                 "method": "GET",
                 "header": [
@@ -2052,7 +2052,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{hostname}}/api/v1/countries/a8891cb3-dca8-4d0e-a3bf-463f9ecce59"
+                "url": "{{hostname}}/api/v1/countries/banana"
               },
               "status": "Not Found",
               "code": 404,
@@ -2109,7 +2109,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"success\": false,\n    \"message\": \"Couldn't find Country with 'id'=a8891cb3-dca8-4d0e-a3bf-463f9ecce59\"\n}"
+              "body": "{\n    \"success\": false,\n    \"message\": \"Couldn't find Country with 'id'=banana\"\n}"
             }
           ]
         },
@@ -8287,22 +8287,22 @@
   ],
   "variable": [
     {
-      "id": "d8f99a52-6a24-47bb-9beb-f4fbff094c6a",
+      "id": "259743cc-8856-4f13-b343-c0559d42a30c",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "338b88a1-6409-4e73-a2a2-6497732757f0",
+      "id": "fb9f6755-8f5c-4943-93a5-9f54dca81bd3",
       "key": "client",
       "value": ""
     },
     {
-      "id": "96d09977-1501-4415-8f63-90faf216b4e6",
+      "id": "e8bb7d17-2dea-4a94-bdbf-f06c03c61c50",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "8c616b9d-d88a-4ad2-a24c-6b36c4827ca3",
+      "id": "4d0d7af5-93aa-414c-a104-e7fc129ece27",
       "key": "uid",
       "value": ""
     }
