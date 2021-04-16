@@ -416,7 +416,7 @@
           "response": [
             {
               "id": "14484109-e798-4fc1-a0e9-a1506c5daea9",
-              "name": "Password Update API",
+              "name": "Password Update API [401]",
               "originalRequest": {
                 "method": "PUT",
                 "header": [
@@ -503,6 +503,120 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n    \"success\": false,\n    \"errors\": [\n        \"Unauthorized\"\n    ]\n}"
+            },
+            {
+              "id": "53fec9f4-12fa-461d-8009-d2271b55f73c",
+              "name": "Password Update API [200]",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "access-token",
+                    "value": "GzLQKqJXWfIL66DfuIXlFg",
+                    "type": "text"
+                  },
+                  {
+                    "key": "client",
+                    "value": "UUVTuTPdne8pkHH0OBFjyg",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "admin@flowfin.tech",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"password\": \"admin12345\",\n\t\"password_confirmation\": \"admin12345\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/auth/password"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "GzLQKqJXWfIL66DfuIXlFg"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "UUVTuTPdne8pkHH0OBFjyg"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1619799640"
+                },
+                {
+                  "key": "uid",
+                  "value": "admin@flowfin.tech"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"14444efd5e96084588055ba699c3a6cb\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "5d150e09-51ce-44ff-9c57-918b19519257"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.655928"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"provider\": \"email\",\n        \"allow_password_change\": false,\n        \"id\": \"90d8b89a-5b49-47c3-80b0-3038d67f7791\",\n        \"email\": \"admin@flowfin.tech\",\n        \"username\": \"SuperFlower\",\n        \"uid\": \"admin@flowfin.tech\",\n        \"currency_id\": null,\n        \"country_id\": null,\n        \"created_at\": \"2021-01-17T17:39:42.663Z\",\n        \"updated_at\": \"2021-04-16T16:21:17.150Z\",\n        \"dob\": null,\n        \"name\": null,\n        \"surname\": null,\n        \"contact_id\": null\n    },\n    \"message\": \"Your password has been successfully updated.\"\n}"
             }
           ]
         },
@@ -8663,22 +8777,22 @@
   ],
   "variable": [
     {
-      "id": "69f06c9e-0cc1-4be0-9896-1f101f28302c",
+      "id": "83b69dd0-513e-4ad7-a301-dd0da40ccacd",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "7d889200-e878-4927-a58a-f3541d3d079f",
+      "id": "b5abacef-691c-4776-af45-25e5be1d85a5",
       "key": "client",
       "value": ""
     },
     {
-      "id": "1e4891a3-dbc8-4bfa-a4e2-76cdc2a1141d",
+      "id": "b805afd4-e736-4937-a55a-ec53c2c0571a",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "6f234836-0283-44ac-a0d8-fd84bc2785f9",
+      "id": "76e0619f-a9ff-4e4e-88a2-6bfb4b65bcf5",
       "key": "uid",
       "value": ""
     }
