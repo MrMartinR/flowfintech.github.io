@@ -418,7 +418,7 @@
               }
             },
             "url": "{{hostname}}/api/v1/auth/password",
-            "description": "**Headers** \n- access-token\n- ddd\n- uid"
+            "description": "**Headers** \n- access-token\n- client\n- uid\n\n**Body** \nJSON Format\n- password\n- password_confirmation"
           },
           "response": [
             {
@@ -8796,25 +8796,25 @@
   ],
   "variable": [
     {
-      "id": "a8066584-447f-4752-9089-dae2e02df57e",
+      "id": "0d7ce734-a00e-4477-9dde-2d054e8e8136",
       "key": "access-token",
       "value": "",
       "type": "string"
     },
     {
-      "id": "65bc8d62-6746-4051-ad8b-81b058ff9c67",
+      "id": "a908c5e4-b4f3-4608-bf34-91dc2ea4d234",
       "key": "client",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e78e881b-9fd6-4868-ad74-5e8a1a8b5063",
+      "id": "3091246a-1f15-4493-b24e-b2f0d2ef75d8",
       "key": "expiry",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d3453614-3c45-47d2-b9b4-440868790dc6",
+      "id": "4312816f-29fd-4869-a993-c77983abe216",
       "key": "uid",
       "value": "",
       "type": "string"
