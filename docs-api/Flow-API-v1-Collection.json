@@ -632,7 +632,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n \"email\": \"mbainurb@gmail.com\",\n \"redirect_url\": \"http://thisisthereacturl\"\n}",
+              "raw": "{\n \"email\": \"admin@flowfin.tech\",\n \"redirect_url\": \"https://app.flowfin.tech\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -719,7 +719,7 @@
             },
             {
               "id": "a80a76de-4e8f-46af-88a9-df0a96307c4a",
-              "name": "Password Reset Email API",
+              "name": "Password Reset Email [200]",
               "originalRequest": {
                 "method": "POST",
                 "header": [],
@@ -8931,22 +8931,22 @@
   ],
   "variable": [
     {
-      "id": "5f02dcb5-1dce-403b-a030-5698312dac63",
+      "id": "4007bc61-6dfa-4210-b46a-9da08752f57b",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "de034353-50cc-4872-88c3-c71c53e59c3f",
+      "id": "ada97f84-c351-4b75-bef9-2e3c6c91cb0f",
       "key": "client",
       "value": ""
     },
     {
-      "id": "17d93c32-77f4-4616-874b-0e6cb710fdef",
+      "id": "92848632-1bfe-42ce-858f-6f334b9f0df3",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "6d33490e-d41d-4521-a6d6-417fc0898a23",
+      "id": "a56b10fd-9f86-4e46-995f-6c368fb967b5",
       "key": "uid",
       "value": ""
     }
