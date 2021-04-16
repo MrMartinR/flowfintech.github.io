@@ -404,7 +404,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"password\": \"admin12345\",\n\t\"password_confirmation\": \"admin12345\"\n}",
+              "raw": "{\n\t\"password\": \"admin1234\",\n\t\"password_confirmation\": \"admin1234\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -8931,22 +8931,22 @@
   ],
   "variable": [
     {
-      "id": "4007bc61-6dfa-4210-b46a-9da08752f57b",
+      "id": "cfa92614-4e5c-4410-b46e-8e22d7ee99ee",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "ada97f84-c351-4b75-bef9-2e3c6c91cb0f",
+      "id": "4e218d13-b450-4433-9f56-5324560b0870",
       "key": "client",
       "value": ""
     },
     {
-      "id": "92848632-1bfe-42ce-858f-6f334b9f0df3",
+      "id": "f139f279-59c1-4616-bc48-d1163c1104fa",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "a56b10fd-9f86-4e46-995f-6c368fb967b5",
+      "id": "ec28f8b7-6dad-4923-a66e-1a6358b58464",
       "key": "uid",
       "value": ""
     }
