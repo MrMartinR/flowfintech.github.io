@@ -279,7 +279,103 @@
             "url": "{{hostname}}/api/v1/auth/sign_out",
             "description": "Endpoint for Sign Out from the App"
           },
-          "response": []
+          "response": [
+            {
+              "id": "cf126648-3d7b-46be-b383-554ee162a4c1",
+              "name": "Sign Out [200]",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "access-token",
+                    "value": "{{access-token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "client",
+                    "value": "{{client}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "{{uid}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "{{expiry}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "token-type",
+                    "value": "Bearer",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{hostname}}/api/v1/auth/sign_out"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"c955e57777ec0d73639dca6748560d00\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "0e559b8c-8b29-4de0-b9d3-c6b73c979181"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.362333"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"success\": true\n}"
+            }
+          ]
         },
         {
           "name": "Password Update API",
@@ -292,32 +388,238 @@
             "header": [
               {
                 "key": "access-token",
-                "value": "VehXjx91BfZg6W_zQxzKvg",
+                "value": "GzLQKqJXWfIL66DfuIXlFg",
                 "type": "text"
               },
               {
                 "key": "client",
-                "value": "gk8osc_b-noD8Dgi6_FMoQ",
+                "value": "UUVTuTPdne8pkHH0OBFjyg",
                 "type": "text"
               },
               {
                 "key": "uid",
-                "value": "mbainurb@gmail.com",
+                "value": "admin@flowfin.tech",
                 "type": "text"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"password\": 12345,\n\t\"password_confirmation\": 12345\n}",
+              "raw": "{\n\t\"password\": \"admin12345\",\n\t\"password_confirmation\": \"admin12345\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
                 }
               }
             },
-            "url": "{{hostname}}/api/v1/auth/password"
+            "url": "{{hostname}}/api/v1/auth/password",
+            "description": "**Headers**"
           },
-          "response": []
+          "response": [
+            {
+              "id": "14484109-e798-4fc1-a0e9-a1506c5daea9",
+              "name": "Password Update API [401]",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "access-token",
+                    "value": "VehXjx91BfZg6W_zQxzKvg",
+                    "type": "text"
+                  },
+                  {
+                    "key": "client",
+                    "value": "gk8osc_b-noD8Dgi6_FMoQ",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "mbainurb@gmail.com",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"password\": 12345,\n\t\"password_confirmation\": 12345\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/auth/password"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "14ab4010-abb1-4099-a0b5-f4724e60844c"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.345136"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"success\": false,\n    \"errors\": [\n        \"Unauthorized\"\n    ]\n}"
+            },
+            {
+              "id": "53fec9f4-12fa-461d-8009-d2271b55f73c",
+              "name": "Password Update API [200]",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "access-token",
+                    "value": "GzLQKqJXWfIL66DfuIXlFg",
+                    "type": "text"
+                  },
+                  {
+                    "key": "client",
+                    "value": "UUVTuTPdne8pkHH0OBFjyg",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "admin@flowfin.tech",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"password\": \"admin12345\",\n\t\"password_confirmation\": \"admin12345\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/auth/password"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "GzLQKqJXWfIL66DfuIXlFg"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "UUVTuTPdne8pkHH0OBFjyg"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1619799640"
+                },
+                {
+                  "key": "uid",
+                  "value": "admin@flowfin.tech"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"14444efd5e96084588055ba699c3a6cb\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "5d150e09-51ce-44ff-9c57-918b19519257"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.655928"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"provider\": \"email\",\n        \"allow_password_change\": false,\n        \"id\": \"90d8b89a-5b49-47c3-80b0-3038d67f7791\",\n        \"email\": \"admin@flowfin.tech\",\n        \"username\": \"SuperFlower\",\n        \"uid\": \"admin@flowfin.tech\",\n        \"currency_id\": null,\n        \"country_id\": null,\n        \"created_at\": \"2021-01-17T17:39:42.663Z\",\n        \"updated_at\": \"2021-04-16T16:21:17.150Z\",\n        \"dob\": null,\n        \"name\": null,\n        \"surname\": null,\n        \"contact_id\": null\n    },\n    \"message\": \"Your password has been successfully updated.\"\n}"
+            }
+          ]
         },
         {
           "name": "Password Reset Email API",
@@ -8476,22 +8778,22 @@
   ],
   "variable": [
     {
-      "id": "560e6d03-68ab-47dd-a55d-74bfbc57e8e7",
+      "id": "01b0d8f9-00ee-4e9e-a1a6-75dc474556e7",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "cd4243f6-a386-4a4f-b716-3ec340408b3a",
+      "id": "c9d23243-cd8a-412a-a69c-1b1df18b3ca7",
       "key": "client",
       "value": ""
     },
     {
-      "id": "056c3db3-3f52-41dc-97b9-250a5c51eb55",
+      "id": "9e387c64-4061-4e7b-9645-c3765d392946",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "5f1702ba-ec49-47c7-856d-95d837cc40ef",
+      "id": "85b47ef7-aeac-4c5a-a408-7d95c3233f17",
       "key": "uid",
       "value": ""
     }
