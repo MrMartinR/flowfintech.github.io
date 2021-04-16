@@ -3385,132 +3385,6 @@
               "body": "{\n    \"data\": [\n        {\n            \"id\": \"error 404 not found or something..\"\n            }\n    ]\n}"
             },
             {
-              "id": "7e27e613-0673-446e-83fc-2aaea46facb1",
-              "name": "contacts_methods[List]",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "client",
-                    "value": "{{client}}",
-                    "type": "text"
-                  },
-                  {
-                    "key": "access-token",
-                    "value": "{{access-token}}",
-                    "type": "text"
-                  },
-                  {
-                    "key": "expiry",
-                    "value": "{{expiry}}",
-                    "type": "text"
-                  },
-                  {
-                    "key": "uid",
-                    "value": "{{uid}}",
-                    "type": "text"
-                  }
-                ],
-                "url": {
-                  "raw": "{{hostname}}/api/v1/contact_methods?contact_id=ab1d962c-f80c-4113-9390-aaeddcc7ed68",
-                  "host": [
-                    "{{hostname}}"
-                  ],
-                  "path": [
-                    "api",
-                    "v1",
-                    "contact_methods"
-                  ],
-                  "query": [
-                    {
-                      "key": "contact_id",
-                      "value": "ab1d962c-f80c-4113-9390-aaeddcc7ed68"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "X-Frame-Options",
-                  "value": "SAMEORIGIN"
-                },
-                {
-                  "key": "X-XSS-Protection",
-                  "value": "1; mode=block"
-                },
-                {
-                  "key": "X-Content-Type-Options",
-                  "value": "nosniff"
-                },
-                {
-                  "key": "X-Download-Options",
-                  "value": "noopen"
-                },
-                {
-                  "key": "X-Permitted-Cross-Domain-Policies",
-                  "value": "none"
-                },
-                {
-                  "key": "Referrer-Policy",
-                  "value": "strict-origin-when-cross-origin"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "appliaction/vnd.api+json; charset=utf-8"
-                },
-                {
-                  "key": "access-token",
-                  "value": "zUVzVO4Kr78H8o4OcZRRyQ"
-                },
-                {
-                  "key": "token-type",
-                  "value": "Bearer"
-                },
-                {
-                  "key": "client",
-                  "value": "vyPZ7Zy6cCvYi3R5U_TY-A"
-                },
-                {
-                  "key": "expiry",
-                  "value": "1619794397"
-                },
-                {
-                  "key": "uid",
-                  "value": "admin@flowfin.tech"
-                },
-                {
-                  "key": "ETag",
-                  "value": "W/\"0e74191277a2f60c3331ff90cb99cbad\""
-                },
-                {
-                  "key": "Cache-Control",
-                  "value": "max-age=0, private, must-revalidate"
-                },
-                {
-                  "key": "X-Request-Id",
-                  "value": "4646ba69-08ef-4630-9682-fa4aa3f9e4ef"
-                },
-                {
-                  "key": "X-Runtime",
-                  "value": "0.306712"
-                },
-                {
-                  "key": "Vary",
-                  "value": "Origin"
-                },
-                {
-                  "key": "Transfer-Encoding",
-                  "value": "chunked"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"data\": [\n        {\n            \"id\": \"e9309226-1885-4e21-b740-9f66aa84b15d\",\n            \"type\": \"contact_method\",\n            \"attributes\": {\n                \"user_id\": null,\n                \"visibility\": \"PUBLIC\",\n                \"kind\": \"Phone\",\n                \"data\": \"+433169192290\",\n                \"notes\": \"\"\n            }\n        },\n        {\n            \"id\": \"4f6f7365-6ef9-447e-9723-4a28f01b5e9e\",\n            \"type\": \"contact_method\",\n            \"attributes\": {\n                \"user_id\": \"499ad3c2-97d2-441f-8d00-77acc2139c70\",\n                \"visibility\": \"PRIVATE\",\n                \"kind\": \"Web\",\n                \"data\": \"https://www.kompany.ch/p/at/410915m\",\n                \"notes\": \"\"\n            }\n        },\n        {\n            \"id\": \"7d185d8f-5af2-4b3e-a71f-3c63124353cd\",\n            \"type\": \"contact_method\",\n            \"attributes\": {\n                \"user_id\": null,\n                \"visibility\": \"PUBLIC\",\n                \"kind\": \"LinkedIn\",\n                \"data\": \"https://www.linkedin.com/in/reinhardwillfort\",\n                \"notes\": \"Founder 1000x1000 Dr. Reinhard WillfortView\"\n            }\n        },\n        {\n            \"id\": \"c177e79a-22de-48e4-b78f-8acbd003afb8\",\n            \"type\": \"contact_method\",\n            \"attributes\": {\n                \"user_id\": null,\n                \"visibility\": \"PUBLIC\",\n                \"kind\": \"Web\",\n                \"data\": \"https://1000x1000.at\",\n                \"notes\": \"\"\n            }\n        }\n    ]\n}"
-            },
-            {
               "id": "4f2f749d-ccba-4588-be5f-7d18cf4e8ccb",
               "name": "contacts_methods[List]",
               "originalRequest": {
@@ -8206,22 +8080,22 @@
   ],
   "variable": [
     {
-      "id": "b50cc437-a992-40e9-a1f1-45ebe0751a80",
+      "id": "486dcc51-c847-41a1-bcb8-c8c4cb5090ab",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "7a15d27c-0bd6-417e-a5dd-ce00c8112c28",
+      "id": "e94cd154-9dd5-4016-ba8d-1a57e9eaf063",
       "key": "client",
       "value": ""
     },
     {
-      "id": "64158844-c269-4f42-9ce6-6dbfb84a2ff0",
+      "id": "b032336d-ee73-49de-a6a6-c87a8f0ce184",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "c32c80c2-2db9-4922-887e-e757eacf5fc2",
+      "id": "9e037150-e27c-4f71-aa88-d6b6356a5c33",
       "key": "uid",
       "value": ""
     }
