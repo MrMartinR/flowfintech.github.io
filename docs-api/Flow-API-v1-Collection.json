@@ -1156,7 +1156,7 @@
       "id": "9b527bde-d56f-495b-8ada-c8df8e36044e"
     },
     {
-      "name": "currencies",
+      "name": "Currencies",
       "item": [
         {
           "name": "currencies [ALL]",
@@ -8080,22 +8080,22 @@
   ],
   "variable": [
     {
-      "id": "d8cb685b-1928-4140-9231-206506bea6df",
+      "id": "3fec6b4e-9b7b-4cb6-b58b-b2bf2eba70ab",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "e181bb65-cb5c-4839-a635-01d572123f17",
+      "id": "345945fe-34d5-44a7-87cc-9aac9ce1c211",
       "key": "client",
       "value": ""
     },
     {
-      "id": "32251cd5-fa47-48e9-9c2e-c0dd3220e8e0",
+      "id": "e0599f5a-8914-4678-bce7-355b3a64b40c",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "47b7bc85-e953-4bea-b71a-d37ef0ae0ffb",
+      "id": "407192ca-302c-4858-b5fd-244903ab4fe9",
       "key": "uid",
       "value": ""
     }
