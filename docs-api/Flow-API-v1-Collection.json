@@ -1872,7 +1872,8 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{hostname}}/api/v1/countries"
+            "url": "{{hostname}}/api/v1/countries",
+            "description": "This request shows a list of countries\n\n**Required Parameters:** none\n\n**Optional Parameters:** none\n\n**Roles:** Admin, Contributor, User\n\n*Notes*"
           },
           "response": []
         },
@@ -8084,22 +8085,22 @@
   ],
   "variable": [
     {
-      "id": "744b16ba-2137-4607-86fb-314081bbeb50",
+      "id": "7697d1a1-9e09-4470-a2a3-1d3696d953bb",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "71fe6837-9984-4107-b7b9-d96ea1d58331",
+      "id": "15729b8c-b4eb-4cec-b85b-210d175af0c5",
       "key": "client",
       "value": ""
     },
     {
-      "id": "1993fa83-a207-4169-a942-015f6e14c6c5",
+      "id": "f9959d27-cf3b-4aef-890f-9dac4b4fa469",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "0ae821d7-d2f4-47b8-b78b-68baf6ef52c4",
+      "id": "910bf539-a23d-40f0-adbe-7a329320d77e",
       "key": "uid",
       "value": ""
     }
