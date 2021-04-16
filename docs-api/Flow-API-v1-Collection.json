@@ -27,12 +27,13 @@
               "mode": "raw",
               "raw": "{\n    \"user\": {\n        \"email\": \"admin@flowfin.tech\",\n        \"password\": \"admin1234\"\n    }\n}"
             },
-            "url": "{{hostname}}/api/v1/auth/sign_in"
+            "url": "{{hostname}}/api/v1/auth/sign_in",
+            "description": "This is the authentication endpoint to Sign in into the app using email and password"
           },
           "response": [
             {
               "id": "5338696a-9c00-4f7f-b0d9-b1f0f534b709",
-              "name": "Sign In",
+              "name": "Sign In [200]",
               "originalRequest": {
                 "method": "POST",
                 "header": [
@@ -137,18 +138,25 @@
             },
             {
               "id": "1db283c5-16d3-4b16-a7b0-42ddfbf069f3",
-              "name": "Sign In",
+              "name": "Sign In [401]",
               "originalRequest": {
                 "method": "POST",
                 "header": [
                   {
                     "key": "Content-Type",
-                    "value": "application/json"
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
                   }
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"user\": {\n        \"email\": \"admin@flowfin.tech\",\n        \"password\": \"banana\"\n    }\n}"
+                  "raw": "{\n    \"user\": {\n        \"email\": \"admin@flowfin.tech\",\n        \"password\": \"banana\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": "{{hostname}}/api/v1/auth/sign_in"
               },
@@ -8467,22 +8475,22 @@
   ],
   "variable": [
     {
-      "id": "934fdbbc-cf72-4a44-bfa9-a084cb5bb148",
+      "id": "840e28f1-7049-465e-bcec-652a4b370fea",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "67f18a1a-24d0-49a8-9122-b2b7e9fb6f0e",
+      "id": "0a35dd42-829e-4269-8670-15a2b1ef4941",
       "key": "client",
       "value": ""
     },
     {
-      "id": "be3e4a95-21b4-4265-b23f-2f91213dea81",
+      "id": "69037a78-f4f8-4da8-b4b5-1000a6ad7e84",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "628bce45-df0c-44b6-b211-722e6c5e1c8d",
+      "id": "c60d331a-4402-4584-807a-59dffe0caea3",
       "key": "uid",
       "value": ""
     }
