@@ -276,12 +276,109 @@
                 "type": "text"
               }
             ],
-            "url": "{{hostname}}/api/v1/auth/sign_out"
+            "url": "{{hostname}}/api/v1/auth/sign_out",
+            "description": "Endpoint for Sign Out from the App"
           },
-          "response": []
+          "response": [
+            {
+              "id": "cf126648-3d7b-46be-b383-554ee162a4c1",
+              "name": "Sign Out [200]",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "access-token",
+                    "value": "{{access-token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "client",
+                    "value": "{{client}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "{{uid}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "{{expiry}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "token-type",
+                    "value": "Bearer",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{hostname}}/api/v1/auth/sign_out"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"c955e57777ec0d73639dca6748560d00\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "0e559b8c-8b29-4de0-b9d3-c6b73c979181"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.362333"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"success\": true\n}"
+            }
+          ]
         },
         {
-          "name": "Password Update API",
+          "name": "Password Update API (Not working)",
           "id": "1b8ca259-684f-4825-844b-69338397be4b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -316,7 +413,98 @@
             },
             "url": "{{hostname}}/api/v1/auth/password"
           },
-          "response": []
+          "response": [
+            {
+              "id": "14484109-e798-4fc1-a0e9-a1506c5daea9",
+              "name": "Password Update API [401]",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "access-token",
+                    "value": "VehXjx91BfZg6W_zQxzKvg",
+                    "type": "text"
+                  },
+                  {
+                    "key": "client",
+                    "value": "gk8osc_b-noD8Dgi6_FMoQ",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "mbainurb@gmail.com",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"password\": 12345,\n\t\"password_confirmation\": 12345\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/auth/password"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "14ab4010-abb1-4099-a0b5-f4724e60844c"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.345136"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"success\": false,\n    \"errors\": [\n        \"Unauthorized\"\n    ]\n}"
+            }
+          ]
         },
         {
           "name": "Password Reset Email API",
@@ -8475,22 +8663,22 @@
   ],
   "variable": [
     {
-      "id": "4c141fca-ae65-442e-ba36-8b2f3d878769",
+      "id": "0c6ed03a-0d86-4086-bc0f-e3b57ee5b348",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "ef32fc13-798c-43b5-86de-9fa25c25bf4a",
+      "id": "4b7ec42f-ccce-4bbd-abda-3e4358d0f6a4",
       "key": "client",
       "value": ""
     },
     {
-      "id": "b65e4043-63b6-441e-8614-41e117f3de2b",
+      "id": "81128833-896b-4c35-968f-57c11d6d4579",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "997e02e1-34cb-499d-9495-b4322fa696a9",
+      "id": "084e1716-ec60-4855-92e8-e4c5005a8a17",
       "key": "uid",
       "value": ""
     }
