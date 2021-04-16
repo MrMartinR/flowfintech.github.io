@@ -32,7 +32,109 @@
             },
             "url": "{{hostname}}/api/v1/auth/sign_in"
           },
-          "response": []
+          "response": [
+            {
+              "id": "5338696a-9c00-4f7f-b0d9-b1f0f534b709",
+              "name": "Sign In",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"user\": {\n        \"email\": \"admin@flowfin.tech\",\n        \"password\": \"admin1234\"\n    }\n}",
+                  "options": {
+                    "raw": {}
+                  }
+                },
+                "url": "{{hostname}}/api/v1/auth/sign_in"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "ckU3PwjdbTt_K3vXJ-RIbw"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "GO7Facb8IYWYwzCA3B5IOw"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1619798812"
+                },
+                {
+                  "key": "uid",
+                  "value": "admin@flowfin.tech"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"153a258e288e7037d4e3b6a1df6b5759\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "4a7a398b-89de-4c57-bc0d-9bcc5b0c7b42"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "1.300141"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"success\": true,\n    \"role\": \"admin\",\n    \"data\": {\n        \"id\": \"90d8b89a-5b49-47c3-80b0-3038d67f7791\",\n        \"email\": \"admin@flowfin.tech\",\n        \"provider\": \"email\",\n        \"username\": \"SuperFlower\",\n        \"uid\": \"admin@flowfin.tech\",\n        \"allow_password_change\": false,\n        \"currency_id\": null,\n        \"country_id\": null,\n        \"created_at\": \"2021-01-17T17:39:42.663Z\",\n        \"updated_at\": \"2021-04-16T16:06:53.141Z\",\n        \"dob\": null,\n        \"name\": null,\n        \"surname\": null,\n        \"contact_id\": null\n    },\n    \"token\": {\n        \"client\": \"GO7Facb8IYWYwzCA3B5IOw\",\n        \"token\": \"ckU3PwjdbTt_K3vXJ-RIbw\",\n        \"token_hash\": \"$2a$10$0cu3DUyZ.iCKYQssx2bWvuoJ268Pfa0rh6/5Fkk9qK8rSrErtykPm\",\n        \"expiry\": 1619798812\n    }\n}"
+            }
+          ]
         },
         {
           "name": "Sign Up",
@@ -8305,25 +8407,25 @@
   ],
   "variable": [
     {
-      "id": "acb2bbd4-0b94-42be-9a3b-855c2d2e5bcc",
+      "id": "02923b13-327e-4544-817c-a3d37592981d",
       "key": "access-token",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6f7e878e-1d77-40ad-b3b6-eec1aac32805",
+      "id": "8071867c-a92d-4d77-ad75-81e25de387f1",
       "key": "client",
       "value": "",
       "type": "string"
     },
     {
-      "id": "16b9e678-ab6c-4421-bee1-bec775e1a42e",
+      "id": "50dc1bfe-fa66-4dde-826d-ff51d23fe6e6",
       "key": "expiry",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3c5cc028-c187-4105-a4e1-70515226f80d",
+      "id": "c98a0635-fa4d-4352-a202-bfb54bdc46fc",
       "key": "uid",
       "value": "",
       "type": "string"
