@@ -622,7 +622,7 @@
           ]
         },
         {
-          "name": "Password Reset Email API",
+          "name": "Password Reset Email",
           "id": "7e1f319f-dcf3-40ba-a9d6-d1f1bbb2b761",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -645,7 +645,7 @@
           "response": [
             {
               "id": "6c2aa06b-d1ec-4ba8-a11b-32ed958c3d0d",
-              "name": "Password Reset Email API",
+              "name": "Password Reset Email [404]",
               "originalRequest": {
                 "method": "POST",
                 "header": [],
@@ -8853,22 +8853,22 @@
   ],
   "variable": [
     {
-      "id": "3505d603-5937-41d4-8082-7ebfb9fbcfc5",
+      "id": "d188560b-1fe8-458f-b5c5-f0991a1b2097",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "77794645-2ef7-4b0a-865d-b02ebdd68317",
+      "id": "82a1082a-179c-4900-a9d8-061f1b6c6fa4",
       "key": "client",
       "value": ""
     },
     {
-      "id": "74aea170-05e1-4f49-be90-f0117dcd6f38",
+      "id": "0cdab98d-5d2f-4ef2-9c10-31adea43cb3d",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "3b23e8fa-bd0a-48b9-ae2b-b4c90cc162c1",
+      "id": "4b29a2f9-d505-47f2-81d0-8748894f802e",
       "key": "uid",
       "value": ""
     }
