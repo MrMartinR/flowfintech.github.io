@@ -3386,7 +3386,7 @@
             },
             {
               "id": "4f2f749d-ccba-4588-be5f-7d18cf4e8ccb",
-              "name": "contacts_methods[List]",
+              "name": "contacts_methods [500]",
               "originalRequest": {
                 "method": "GET",
                 "header": [
@@ -3949,6 +3949,116 @@
                 {
                   "key": "X-Runtime",
                   "value": "0.107847"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"success\": true,\n    \"message\": \"Contact method deleted\"\n}"
+            },
+            {
+              "id": "eb659747-15fb-40b3-99d5-5e92e46a0296",
+              "name": "contact_methods[Delete]",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "client",
+                    "value": "{{client}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "access-token",
+                    "value": "{{access-token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "{{expiry}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "uid",
+                    "value": "{{uid}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{hostname}}/api/v1/contact_methods/e9309226-1885-4e21-b740-9f66aa84b15d"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "lqiR-hQX2ItAbnsfmbRpjw"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "3yeK8NY213mvDzK379PhTg"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1619794843"
+                },
+                {
+                  "key": "uid",
+                  "value": "admin@flowfin.tech"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"45e4c12b0b0e9889b25771a4c16d3273\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "a9ea016f-42a8-472b-91c4-89890ca35b46"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.332787"
                 },
                 {
                   "key": "Vary",
@@ -8080,22 +8190,22 @@
   ],
   "variable": [
     {
-      "id": "486dcc51-c847-41a1-bcb8-c8c4cb5090ab",
+      "id": "627b24d5-9f5a-4276-b082-1af60e237289",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "e94cd154-9dd5-4016-ba8d-1a57e9eaf063",
+      "id": "b22a8136-a232-4cf7-a33c-9f5006541817",
       "key": "client",
       "value": ""
     },
     {
-      "id": "b032336d-ee73-49de-a6a6-c87a8f0ce184",
+      "id": "7340448d-400a-4e61-9f48-4de8872fa776",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "9e037150-e27c-4f71-aa88-d6b6356a5c33",
+      "id": "96083f64-48a3-49b6-93a1-f28fad2a516c",
       "key": "uid",
       "value": ""
     }
