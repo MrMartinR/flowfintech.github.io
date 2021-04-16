@@ -716,6 +716,84 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n    \"success\": false,\n    \"errors\": [\n        \"Unable to find user with email 'hi@flowfin.tech'.\"\n    ]\n}"
+            },
+            {
+              "id": "a80a76de-4e8f-46af-88a9-df0a96307c4a",
+              "name": "Password Reset Email API",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n \"email\": \"admin@flowfin.tech\",\n \"redirect_url\": \"https://app.flowfin.tech\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/auth/password"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"0ca871728b82dc9ed7aa29883f92a7a6\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "70e8f13a-b8dd-496f-a9cf-36085d2204eb"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.534417"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"success\": true,\n    \"message\": \"An email has been sent to 'admin@flowfin.tech' containing instructions for resetting your password.\"\n}"
             }
           ]
         }
@@ -8853,22 +8931,22 @@
   ],
   "variable": [
     {
-      "id": "d188560b-1fe8-458f-b5c5-f0991a1b2097",
+      "id": "5f02dcb5-1dce-403b-a030-5698312dac63",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "82a1082a-179c-4900-a9d8-061f1b6c6fa4",
+      "id": "de034353-50cc-4872-88c3-c71c53e59c3f",
       "key": "client",
       "value": ""
     },
     {
-      "id": "0cdab98d-5d2f-4ef2-9c10-31adea43cb3d",
+      "id": "17d93c32-77f4-4616-874b-0e6cb710fdef",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "4b29a2f9-d505-47f2-81d0-8748894f802e",
+      "id": "6d33490e-d41d-4521-a6d6-417fc0898a23",
       "key": "uid",
       "value": ""
     }
