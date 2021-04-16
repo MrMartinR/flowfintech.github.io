@@ -4345,14 +4345,14 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"contact\":\r\n    {\r\n        \"name\": \"Billing\"\r\n    }\r\n}",
+              "raw": "{\r\n    \"contact\":\r\n    {\r\n        \"company_name\": \"1000x1000 Crowdbusiness GmbH\"\r\n    }\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
                 }
               }
             },
-            "url": "{{hostname}}/api/v1/contacts/57bb71be-a827-4bb2-977e-fe5da5c9981d"
+            "url": "{{hostname}}/api/v1/contacts/ab1d962c-f80c-4113-9390-aaeddcc7ed68"
           },
           "response": [
             {
@@ -8080,22 +8080,22 @@
   ],
   "variable": [
     {
-      "id": "ea5da8e7-ebe6-4191-b338-b5cc33c98fb0",
+      "id": "fe7d7926-abe6-4148-8fad-e8953923e76d",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "1eddc3cc-b670-4292-bce7-c199bf1dbec4",
+      "id": "837c6bb3-70ca-4392-84c4-034263745fa3",
       "key": "client",
       "value": ""
     },
     {
-      "id": "b9235801-fb57-4b96-9f9e-0613a4177f36",
+      "id": "b4f189eb-e624-4757-b937-af26104d76d8",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "30d4d20d-def1-4b40-8a58-5e2ed044231d",
+      "id": "cd7e92a9-31cc-4044-b566-7aeb135fe70b",
       "key": "uid",
       "value": ""
     }
