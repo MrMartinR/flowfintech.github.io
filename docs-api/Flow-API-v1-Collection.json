@@ -3129,7 +3129,7 @@
                 }
               ]
             },
-            "description": "This request shows a list of contact methods from a specific contact_id"
+            "description": "This request shows a list of contact methods from a specific contact_id\n\n**Required Parameters:** contact_id\n**Roles:** Admin, Contributor, User\n\n*Notes*"
           },
           "response": [
             {
@@ -7880,22 +7880,22 @@
   ],
   "variable": [
     {
-      "id": "306d20a6-e7bb-4c6e-a674-baf0dc64daa2",
+      "id": "97b6c6ab-ff0d-4f64-a0f0-ea7ef288ec84",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "c8439af9-d347-4c1a-a260-9f57d3bdf8b3",
+      "id": "1e56a863-0810-4403-a18c-08d6d41f2c81",
       "key": "client",
       "value": ""
     },
     {
-      "id": "912c3b4c-6991-42f3-9d6d-8fb9553879e0",
+      "id": "a704d267-b7a3-400b-9626-f869fa82759d",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "bdfd00e2-4b7e-4518-8679-1d559d498fa2",
+      "id": "743a3dab-3306-4317-9d0d-4ac811ec2df0",
       "key": "uid",
       "value": ""
     }
