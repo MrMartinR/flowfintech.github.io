@@ -3160,7 +3160,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{hostname}}/api/v1/contact_methods?contact_id=ccd324b7-d986-4a43-b81e-af359dc5f7b7",
+                  "raw": "{{hostname}}/api/v1/contact_methods?contact_id=ab1d962c-f80c-4113-9390-aaeddcc7ed68",
                   "host": [
                     "{{hostname}}"
                   ],
@@ -3172,7 +3172,7 @@
                   "query": [
                     {
                       "key": "contact_id",
-                      "value": "ccd324b7-d986-4a43-b81e-af359dc5f7b7"
+                      "value": "ab1d962c-f80c-4113-9390-aaeddcc7ed68"
                     }
                   ]
                 }
@@ -3256,11 +3256,11 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": [\n        {\n            \"id\": \"0b22d5fe-3594-4b9a-b9e2-c51d6a7aa57a\",\n            \"type\": \"contact_method\",\n            \"attributes\": {\n                \"user_id\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                \"contact\": {\n                    \"id\": \"ccd324b7-d986-4a43-b81e-af359dc5f7b7\",\n                    \"country_id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n                    \"user_id\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                    \"created_by\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                    \"updated_by\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                    \"kind\": \"INDIVIDUAL\",\n                    \"visibility\": \"PUBLIC\",\n                    \"company_name\": \"test\",\n                    \"name\": \"testname\",\n                    \"surname\": \"testsurname\",\n                    \"trade_name\": \"test_trade_name\",\n                    \"description\": \"test categoy\",\n                    \"legal_form\": null,\n                    \"id_number\": null,\n                    \"created_at\": \"2021-01-30T09:39:36.780Z\",\n                    \"updated_at\": \"2021-02-24T15:50:47.772Z\",\n                    \"tags\": \"smae\",\n                    \"nick\": null,\n                    \"founded\": null,\n                    \"dob\": \"2021-01-30\"\n                },\n                \"kind\": \"test\",\n                \"visibility\": \"PUBLIC\",\n                \"notes\": null,\n                \"data\": null\n            }\n        }\n    ]\n}"
+              "body": "{\n    \"data\": [\n        {\n            \"id\": \"e9309226-1885-4e21-b740-9f66aa84b15d\",\n            \"type\": \"contact_method\",\n            \"attributes\": {\n                \"user_id\": null,\n                \"visibility\": \"PUBLIC\",\n                \"kind\": \"Phone\",\n                \"data\": \"+433169192290\",\n                \"notes\": \"\"\n            }\n        },\n        {\n            \"id\": \"4f6f7365-6ef9-447e-9723-4a28f01b5e9e\",\n            \"type\": \"contact_method\",\n            \"attributes\": {\n                \"user_id\": \"499ad3c2-97d2-441f-8d00-77acc2139c70\",\n                \"visibility\": \"PRIVATE\",\n                \"kind\": \"Web\",\n                \"data\": \"https://www.kompany.ch/p/at/410915m\",\n                \"notes\": \"\"\n            }\n        },\n        {\n            \"id\": \"7d185d8f-5af2-4b3e-a71f-3c63124353cd\",\n            \"type\": \"contact_method\",\n            \"attributes\": {\n                \"user_id\": null,\n                \"visibility\": \"PUBLIC\",\n                \"kind\": \"LinkedIn\",\n                \"data\": \"https://www.linkedin.com/in/reinhardwillfort\",\n                \"notes\": \"\"\n            }\n        },\n        {\n            \"id\": \"c177e79a-22de-48e4-b78f-8acbd003afb8\",\n            \"type\": \"contact_method\",\n            \"attributes\": {\n                \"user_id\": null,\n                \"visibility\": \"PUBLIC\",\n                \"kind\": \"Web\",\n                \"data\": \"https://1000x1000.at\",\n                \"notes\": \"\"\n            }\n        }\n    ]\n}"
             },
             {
               "id": "5d006e97-c27f-4b46-9506-98256ab98b47",
-              "name": "contacts_methods [200] Copy",
+              "name": "contacts_methods [404]",
               "originalRequest": {
                 "method": "GET",
                 "header": [
@@ -3286,7 +3286,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{hostname}}/api/v1/contact_methods?contact_id=ccd324b7-d986-4a43-b81e-af359dc5f7b7",
+                  "raw": "{{hostname}}/api/v1/contact_methods?contact_id=banana",
                   "host": [
                     "{{hostname}}"
                   ],
@@ -3298,7 +3298,7 @@
                   "query": [
                     {
                       "key": "contact_id",
-                      "value": "ccd324b7-d986-4a43-b81e-af359dc5f7b7"
+                      "value": "banana"
                     }
                   ]
                 }
@@ -3382,7 +3382,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": [\n        {\n            \"id\": \"0b22d5fe-3594-4b9a-b9e2-c51d6a7aa57a\",\n            \"type\": \"contact_method\",\n            \"attributes\": {\n                \"user_id\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                \"contact\": {\n                    \"id\": \"ccd324b7-d986-4a43-b81e-af359dc5f7b7\",\n                    \"country_id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n                    \"user_id\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                    \"created_by\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                    \"updated_by\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                    \"kind\": \"INDIVIDUAL\",\n                    \"visibility\": \"PUBLIC\",\n                    \"company_name\": \"test\",\n                    \"name\": \"testname\",\n                    \"surname\": \"testsurname\",\n                    \"trade_name\": \"test_trade_name\",\n                    \"description\": \"test categoy\",\n                    \"legal_form\": null,\n                    \"id_number\": null,\n                    \"created_at\": \"2021-01-30T09:39:36.780Z\",\n                    \"updated_at\": \"2021-02-24T15:50:47.772Z\",\n                    \"tags\": \"smae\",\n                    \"nick\": null,\n                    \"founded\": null,\n                    \"dob\": \"2021-01-30\"\n                },\n                \"kind\": \"test\",\n                \"visibility\": \"PUBLIC\",\n                \"notes\": null,\n                \"data\": null\n            }\n        }\n    ]\n}"
+              "body": "{\n    \"data\": [\n        {\n            \"id\": \"error 404 not found or something..\"\n            }\n    ]\n}"
             }
           ]
         },
@@ -3615,14 +3615,14 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"contact_method\":\r\n    {\r\n        \"notes\": \"test here notes\"\r\n    }\r\n}",
+              "raw": "{\r\n    \"contact_method\":\r\n    {\r\n        \"kind\": \"LinkedIn\",\r\n        \"data\":\"https://www.linkedin.com/in/reinhardwillfort\",\r\n        \"notes\": \"Founder 1000x1000 Dr. Reinhard WillfortView\"\r\n    }\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
                 }
               }
             },
-            "url": "{{hostname}}/api/v1/contact_methods/ccd9351b-8ba2-4362-b1d1-da8dc66e710f"
+            "url": "{{hostname}}/api/v1/contact_methods/7d185d8f-5af2-4b3e-a71f-3c63124353cd"
           },
           "response": [
             {
@@ -3654,7 +3654,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n    \"contact_method\":\r\n    {\r\n        \"notes\": \"test here notes\"\r\n    }\r\n}",
+                  "raw": "{\r\n    \"contact_method\":\r\n    {\r\n        \"kind\": \"LinkedIn\",\r\n        \"data\":\"https://www.linkedin.com/in/reinhardwillfort\",\r\n        \"notes\": \"Founder 1000x1000 Dr. Reinhard WillfortView\"\r\n    }\r\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -3742,7 +3742,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": {\n        \"id\": \"ccd9351b-8ba2-4362-b1d1-da8dc66e710f\",\n        \"type\": \"contact_method\",\n        \"attributes\": {\n            \"user_id\": null,\n            \"contact\": {\n                \"id\": \"ccd324b7-d986-4a43-b81e-af359dc5f7b7\",\n                \"country_id\": \"9b6c0179-6322-429b-8e09-df919d0305c2\",\n                \"user_id\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                \"created_by\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                \"updated_by\": \"baa748c4-253d-47a9-97d9-1b9482364891\",\n                \"kind\": \"INDIVIDUAL\",\n                \"visibility\": \"PUBLIC\",\n                \"company_name\": \"test\",\n                \"name\": \"testname\",\n                \"surname\": \"testsurname\",\n                \"trade_name\": \"test_trade_name\",\n                \"description\": \"test categoy\",\n                \"legal_form\": null,\n                \"id_number\": null,\n                \"created_at\": \"2021-01-30T09:39:36.780Z\",\n                \"updated_at\": \"2021-02-24T15:50:47.772Z\",\n                \"tags\": \"smae\",\n                \"nick\": null,\n                \"founded\": null,\n                \"dob\": \"2021-01-30\"\n            },\n            \"kind\": \"test\",\n            \"visibility\": \"PUBLIC\",\n            \"notes\": \"test here notes\",\n            \"data\": \"test data\"\n        }\n    }\n}"
+              "body": "{\n    \"data\": {\n        \"id\": \"7d185d8f-5af2-4b3e-a71f-3c63124353cd\",\n        \"type\": \"contact_method\",\n        \"attributes\": {\n            \"user_id\": null,\n            \"visibility\": \"PUBLIC\",\n            \"kind\": \"LinkedIn\",\n            \"data\": \"https://www.linkedin.com/in/reinhardwillfort\",\n            \"notes\": \"Founder 1000x1000 Dr. Reinhard WillfortView\"\n        }\n    }\n}"
             }
           ]
         },
@@ -8006,22 +8006,22 @@
   ],
   "variable": [
     {
-      "id": "56ce15eb-a332-4bb9-bb4d-adc362dccaa7",
+      "id": "3333481c-8ce5-4fed-8d49-705282ccad44",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "086b25b9-3c2c-4479-a586-9fb3625b9e94",
+      "id": "6e0464d8-c8bd-43dc-88b7-2232defbf7bb",
       "key": "client",
       "value": ""
     },
     {
-      "id": "816a2936-1a04-4824-85fa-27db1f3feec7",
+      "id": "6e5c9046-5e31-410d-b927-b4364591371f",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "a01d3b7e-4d0a-48c1-b5fb-a580cafc4ae7",
+      "id": "254530c2-6b60-425e-9629-25aea0d2e836",
       "key": "uid",
       "value": ""
     }
