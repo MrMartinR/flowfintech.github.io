@@ -953,7 +953,7 @@
       "id": "8a5b9a7d-604a-4767-922c-645427d83486"
     },
     {
-      "name": "Users API",
+      "name": "Users",
       "item": [
         {
           "name": "Get user setting",
@@ -8080,22 +8080,22 @@
   ],
   "variable": [
     {
-      "id": "3fec6b4e-9b7b-4cb6-b58b-b2bf2eba70ab",
+      "id": "b73aaafb-8056-4023-8e84-4243e423c260",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "345945fe-34d5-44a7-87cc-9aac9ce1c211",
+      "id": "90ecc651-3644-4a5b-9eea-3dd725b1abad",
       "key": "client",
       "value": ""
     },
     {
-      "id": "e0599f5a-8914-4678-bce7-355b3a64b40c",
+      "id": "96575371-5890-45b7-8068-81cf69051a0f",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "407192ca-302c-4858-b5fd-244903ab4fe9",
+      "id": "d5710296-85e1-465f-89d7-80a6e1a31bcd",
       "key": "uid",
       "value": ""
     }
