@@ -1835,7 +1835,7 @@
               }
             ],
             "url": {
-              "raw": "{{hostname}}/api/v1/currencies?page=1",
+              "raw": "{{hostname}}/api/v1/currencies",
               "host": [
                 "{{hostname}}"
               ],
@@ -1847,7 +1847,8 @@
               "query": [
                 {
                   "key": "page",
-                  "value": "1"
+                  "value": "1",
+                  "disabled": true
                 }
               ]
             }
@@ -8932,22 +8933,22 @@
   ],
   "variable": [
     {
-      "id": "48d9baa2-97b6-479d-b12d-38aa0fd2334a",
+      "id": "42db744e-e631-46a1-bf9a-c69db21345b0",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "35811b27-1d1c-4827-81d0-e07bd9ef32e3",
+      "id": "c597489a-9a11-4318-bcbd-1ea038a18050",
       "key": "client",
       "value": ""
     },
     {
-      "id": "ffa9f61e-82bf-4f19-95d2-cb5969eb22f6",
+      "id": "7d28d7ff-f18e-4d79-ad47-b87be53fb7eb",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "cdf648c5-6ee8-467d-a8d2-10e27686b6f1",
+      "id": "ad588ff3-4e9b-49eb-a191-8c4f971aba9b",
       "key": "uid",
       "value": ""
     }
