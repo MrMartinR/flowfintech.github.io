@@ -1556,7 +1556,7 @@
       "name": "Platform",
       "item": [
         {
-          "name": "New Folder",
+          "name": "Platform Originators",
           "item": [],
           "id": "40618d1e-f5de-4a7b-8d64-af66a7b2e911"
         },
@@ -1800,6 +1800,40 @@
               "raw": ""
             },
             "url": "{{hostname}}/api/v1/platforms/2e63a062-6f60-4cd1-9af0-3e51441d2d6d"
+          },
+          "response": []
+        },
+        {
+          "name": "platforms [SHOW] Copy",
+          "id": "b6b95724-e96e-47af-bbe9-578671077f67",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{hostname}}/api/v1/platforms/a56f2fca-f54c-394e-82a3-47ebf2fc6597"
           },
           "response": []
         }
@@ -8943,22 +8977,22 @@
   ],
   "variable": [
     {
-      "id": "f328b25d-677b-4531-9fe2-dda28cbb0976",
+      "id": "5dd5c9eb-1ebf-44ba-aa59-75e6ec0199ee",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "66f0daca-a6d3-4952-9a8d-aa0f1b50e14e",
+      "id": "fb08e887-2c1f-461d-aff2-6b2ec9b2871a",
       "key": "client",
       "value": ""
     },
     {
-      "id": "6ab08b58-00f9-4f3a-8ed8-a2f5c56af974",
+      "id": "40e29ba6-fe6b-4cf7-9ee8-055f2b8801f3",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "357aebcc-1e9d-4a4a-a0f0-3133e8498ef0",
+      "id": "14565d59-323d-4109-96e3-d37dbb832f1b",
       "key": "uid",
       "value": ""
     }
