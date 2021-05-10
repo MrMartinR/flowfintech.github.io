@@ -3798,20 +3798,25 @@
               {
                 "key": "access-token",
                 "type": "text",
-                "value": "InrrKdCb2m1X1mVJxN4j8g"
+                "value": "{{access-token}}"
               },
               {
                 "key": "client",
                 "type": "text",
-                "value": "10EDhTSwdxVbNc1pp_Mmhg"
+                "value": "{{client}}"
               },
               {
                 "key": "uid",
                 "type": "text",
-                "value": "user9@example.com"
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
               }
             ],
-            "url": "localhost:3000/api/v1/platform_originators/49241e87-aaab-4d68-8f1a-1b8234a016fb"
+            "url": "{{hostname}}/api/v1/platform_originators/a56f2fca-f54c-394e-82a3-47ebf2fc6597"
           },
           "response": []
         },
@@ -8933,22 +8938,22 @@
   ],
   "variable": [
     {
-      "id": "b29234e2-2ada-4e62-8fe3-27258c302d01",
+      "id": "23d67500-d528-49ec-9c20-368753c49d6c",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "fc7220cf-49e2-42f8-b163-8ccd54a72d90",
+      "id": "4a042ffb-410a-425b-b1e2-97e79c476ae4",
       "key": "client",
       "value": ""
     },
     {
-      "id": "90a132ed-3805-4247-bb37-78d82a3a1d04",
+      "id": "8b632a21-2d0c-4fc7-9123-b5f3528b8eb1",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "b9d6f363-2a2d-4f6c-8738-e8eaf53868fd",
+      "id": "75c8430c-9b32-411d-8653-ccee6bf7a079",
       "key": "uid",
       "value": ""
     }
