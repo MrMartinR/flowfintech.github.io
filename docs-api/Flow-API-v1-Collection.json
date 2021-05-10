@@ -1557,7 +1557,42 @@
       "item": [
         {
           "name": "Platform Originators",
-          "item": [],
+          "item": [
+            {
+              "name": "platforms [SHOW] Copy",
+              "id": "b6b95724-e96e-47af-bbe9-578671077f67",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "access-token",
+                    "type": "text",
+                    "value": "{{access-token}}"
+                  },
+                  {
+                    "key": "client",
+                    "type": "text",
+                    "value": "{{client}}"
+                  },
+                  {
+                    "key": "uid",
+                    "type": "text",
+                    "value": "{{uid}}"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "{{expiry}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{hostname}}/api/v1/platforms/a56f2fca-f54c-394e-82a3-47ebf2fc6597"
+              },
+              "response": []
+            }
+          ],
           "id": "40618d1e-f5de-4a7b-8d64-af66a7b2e911"
         },
         {
@@ -1800,40 +1835,6 @@
               "raw": ""
             },
             "url": "{{hostname}}/api/v1/platforms/2e63a062-6f60-4cd1-9af0-3e51441d2d6d"
-          },
-          "response": []
-        },
-        {
-          "name": "platforms [SHOW] Copy",
-          "id": "b6b95724-e96e-47af-bbe9-578671077f67",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "access-token",
-                "type": "text",
-                "value": "{{access-token}}"
-              },
-              {
-                "key": "client",
-                "type": "text",
-                "value": "{{client}}"
-              },
-              {
-                "key": "uid",
-                "type": "text",
-                "value": "{{uid}}"
-              },
-              {
-                "key": "expiry",
-                "value": "{{expiry}}",
-                "type": "text"
-              }
-            ],
-            "url": "{{hostname}}/api/v1/platforms/a56f2fca-f54c-394e-82a3-47ebf2fc6597"
           },
           "response": []
         }
@@ -8977,22 +8978,22 @@
   ],
   "variable": [
     {
-      "id": "5dd5c9eb-1ebf-44ba-aa59-75e6ec0199ee",
+      "id": "0b595aee-421a-4056-8503-176d66b32079",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "fb08e887-2c1f-461d-aff2-6b2ec9b2871a",
+      "id": "75242ec6-b1e7-4b3b-bddd-a3b6c51c9d68",
       "key": "client",
       "value": ""
     },
     {
-      "id": "40e29ba6-fe6b-4cf7-9ee8-055f2b8801f3",
+      "id": "1acdb446-ee14-4185-8286-3cba8617bd3a",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "14565d59-323d-4109-96e3-d37dbb832f1b",
+      "id": "9f1abe25-c9e0-42cc-8144-b319f7d3b057",
       "key": "uid",
       "value": ""
     }
