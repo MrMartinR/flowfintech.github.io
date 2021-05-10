@@ -1559,7 +1559,7 @@
           "name": "Platform Originators",
           "item": [
             {
-              "name": "platforms [SHOW] Copy",
+              "name": "platform_originators [SHOW]",
               "id": "b6b95724-e96e-47af-bbe9-578671077f67",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -1588,7 +1588,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{hostname}}/api/v1/platforms/a56f2fca-f54c-394e-82a3-47ebf2fc6597"
+                "url": "{{hostname}}/api/v1/platforms/a56f2fca-f54c-394e-82a3-47ebf2fc6597/platform_originators"
               },
               "response": []
             }
@@ -8978,22 +8978,22 @@
   ],
   "variable": [
     {
-      "id": "0fd4f095-fc92-471d-9796-c07f4826416b",
+      "id": "2170d289-e7be-4fb0-9fcd-098682df597d",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "631613bd-4180-42a7-a1b7-6f087e4c6d85",
+      "id": "057b7ff5-4ec9-496b-8d2c-d0bad68f7d20",
       "key": "client",
       "value": ""
     },
     {
-      "id": "555cc195-fe26-4f9c-8b71-6d91fdc951ba",
+      "id": "63d05481-4fa8-44a3-89d0-303b2df70f4d",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "762c012f-a6d9-4d0b-98bf-45f812d898ac",
+      "id": "78720e25-96e9-48ff-aacd-86cd6a2cf5d5",
       "key": "uid",
       "value": ""
     }
