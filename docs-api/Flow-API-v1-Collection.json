@@ -3816,7 +3816,7 @@
                 "type": "text"
               }
             ],
-            "url": "{{hostname}}/api/v1/platform_originators/a56f2fca-f54c-394e-82a3-47ebf2fc6597"
+            "url": "{{hostname}}/api/v1/platform_originators/3d497344-7e1a-43da-bc69-481ad98f4685"
           },
           "response": []
         },
@@ -8938,22 +8938,22 @@
   ],
   "variable": [
     {
-      "id": "23d67500-d528-49ec-9c20-368753c49d6c",
+      "id": "76c3dd94-dd3f-4287-a340-278c994d0cc3",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "4a042ffb-410a-425b-b1e2-97e79c476ae4",
+      "id": "1d3955b4-a441-46a5-bd04-700a0e855bfd",
       "key": "client",
       "value": ""
     },
     {
-      "id": "8b632a21-2d0c-4fc7-9123-b5f3528b8eb1",
+      "id": "6d4cb1a2-152f-4ac3-bd30-0e29bc821dd8",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "75c8430c-9b32-411d-8653-ccee6bf7a079",
+      "id": "2b9e8926-55ce-462b-acae-16641cd78eda",
       "key": "uid",
       "value": ""
     }
