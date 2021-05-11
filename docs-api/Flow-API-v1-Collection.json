@@ -1628,7 +1628,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{hostname}}/api/v1/platforms/a56f2fca-f54c-394e-82a3-47ebf2fc6597/platform_originators"
+                "url": "{{hostname}}/api/v1/platforms/a56f2fca-f54c-394e-82a3-47ebf2fc6597/loans"
               },
               "response": []
             }
@@ -9018,22 +9018,22 @@
   ],
   "variable": [
     {
-      "id": "e4200a72-e5df-4840-9e59-3cf93a7bbec2",
+      "id": "b6bf19ff-26cf-47f2-b23e-dc03681c842d",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "503e4f6e-c489-4af5-9cde-1580387b770c",
+      "id": "6a3b7c60-e865-4a6d-b466-2e5c19c463fd",
       "key": "client",
       "value": ""
     },
     {
-      "id": "2af78ae4-e9eb-42a2-8d6d-7ddad61c6c23",
+      "id": "59733ffa-4029-45f5-941a-741e43cac93c",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "dbfa841a-b304-44e0-9e94-450db1441bde",
+      "id": "8d7996fe-25dc-4dbe-b8ed-14fd7ce35a07",
       "key": "uid",
       "value": ""
     }
