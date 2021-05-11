@@ -1596,6 +1596,46 @@
           "id": "40618d1e-f5de-4a7b-8d64-af66a7b2e911"
         },
         {
+          "name": "Platform Loans",
+          "item": [
+            {
+              "name": "platform_originators [SHOW]",
+              "id": "3c4f424c-c052-458e-bcb5-0c587ceadeab",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "access-token",
+                    "type": "text",
+                    "value": "{{access-token}}"
+                  },
+                  {
+                    "key": "client",
+                    "type": "text",
+                    "value": "{{client}}"
+                  },
+                  {
+                    "key": "uid",
+                    "type": "text",
+                    "value": "{{uid}}"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "{{expiry}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{hostname}}/api/v1/platforms/a56f2fca-f54c-394e-82a3-47ebf2fc6597/platform_originators"
+              },
+              "response": []
+            }
+          ],
+          "id": "18da96c8-991f-4a56-a4ff-7a617e79b9c5"
+        },
+        {
           "name": "platforms [ALL]",
           "id": "69b110d4-b64c-49b6-9b15-8ea1eb442e33",
           "protocolProfileBehavior": {
@@ -8978,22 +9018,22 @@
   ],
   "variable": [
     {
-      "id": "2170d289-e7be-4fb0-9fcd-098682df597d",
+      "id": "e2eaf58b-713f-424b-a5da-ddefcb398e3a",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "057b7ff5-4ec9-496b-8d2c-d0bad68f7d20",
+      "id": "29a0dca0-24d2-4b35-98ea-b8c5a835140e",
       "key": "client",
       "value": ""
     },
     {
-      "id": "63d05481-4fa8-44a3-89d0-303b2df70f4d",
+      "id": "21cea642-7339-4f3e-903d-b5d3c7c1fcf8",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "78720e25-96e9-48ff-aacd-86cd6a2cf5d5",
+      "id": "1693b36b-0ef3-455e-b3ab-18054f296df9",
       "key": "uid",
       "value": ""
     }
