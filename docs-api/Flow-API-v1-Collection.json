@@ -5629,7 +5629,7 @@
                 "type": "text"
               }
             ],
-            "url": "{{hostname}}/api/v1/loans/13446680-0d80-44df-adec-9e9ab87bfceb"
+            "url": "{{hostname}}/api/v1/loans/8b32aef3-42a2-9c49-ac11-7f4a7944f561"
           },
           "response": []
         },
@@ -9018,22 +9018,22 @@
   ],
   "variable": [
     {
-      "id": "e539772f-5191-4efe-b911-0d2a5a361507",
+      "id": "dc9dafa3-bdcc-4a92-87f4-206042b0442c",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "8a49c6bd-ec4a-4488-8dbd-0d4e52f5e7d0",
+      "id": "f143c1d7-a559-41f6-9f6d-2569b49fbb50",
       "key": "client",
       "value": ""
     },
     {
-      "id": "af46618d-c695-430d-b031-cc4239484a56",
+      "id": "ab998b83-f422-49ce-878e-0214619f259e",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "16d49bbc-47b5-4167-ad97-7620239550a0",
+      "id": "73d6a5a5-95e6-41af-bf86-b90faa5c61d9",
       "key": "uid",
       "value": ""
     }
