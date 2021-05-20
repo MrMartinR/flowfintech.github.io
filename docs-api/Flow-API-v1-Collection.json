@@ -1548,6 +1548,49 @@
             "url": "{{hostname}}/api/v1/user_accounts/9e0e1643-8d78-476f-8631-190249422893"
           },
           "response": []
+        },
+        {
+          "name": "user_accounts [CREATE] Copy",
+          "id": "c821f32f-f3ff-47b6-9a7e-a5944653487f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"user_account\":{\n\t \"country_id\": \"5476b9c8-42ab-49ac-9ee1-f57140fed531\",\n      \"account_id\": \"5dba9c0b-0938-4882-a785-9e0c1d339c7a\",\n      \"platform_id\": \"bcb3caf1-a0de-4c19-b139-adc940765fc3\",\n      \"currency_id\": \"a624bd79-b87e-4688-8535-a5e8f55e21c4\",\n\t  \"category\": \"1\",\n\t  \"name\": \"1\",\n\t  \"total_fee\": \"1\", \n\t  \"total_loss\": \"1\",\n\t  \"total_tax\": \"1\",\n\t  \"active\": \"1\",\n\t  \"total_invest\": \"1\",\n\t  \"total_profit\": \"1\",\n\t  \"total_referral\":\"1\",\n\t  \"total_interest\":\"1\",\n\t  \"total_bonus\": \"1\"\n\t}\n\t \n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/user_accounts"
+          },
+          "response": []
         }
       ],
       "id": "4d65cf08-e3aa-4116-a8ae-0efc791e6092"
@@ -9018,22 +9061,22 @@
   ],
   "variable": [
     {
-      "id": "2284f1b3-0b1b-49c7-a283-eb8d33134eac",
+      "id": "37a8b9b2-db21-470c-837a-b9cfb47caf2a",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "f86e92c8-542c-440c-aad9-4583128f7871",
+      "id": "2d0b0f4e-cd9e-4331-97ed-d7f8bbae2ff6",
       "key": "client",
       "value": ""
     },
     {
-      "id": "631f71ea-ce2b-4538-85e7-14264b5d39bf",
+      "id": "8eabeb3e-d14c-4f2a-91f5-cac3c31626ef",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "bbe36b57-5008-4bb8-8495-279895c67656",
+      "id": "19f1ca58-76d6-4800-b4bc-d715e7ff8980",
       "key": "uid",
       "value": ""
     }
