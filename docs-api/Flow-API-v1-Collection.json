@@ -1615,14 +1615,14 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"user_account\":{\n\t  \"country_id\": \"5476b9c8-42ab-49ac-9ee1-f57140fed531\",\n      \"account_id\": \"5dba9c0b-0938-4882-a785-9e0c1d339c7a\",\n      \"platform_id\": \"bcb3caf1-a0de-4c19-b139-adc940765fc3\",\n      \"currency_id\": \"a624bd79-b87e-4688-8535-a5e8f55e21c4\",\n\t  \"category\": \"123\",\n\t  \"name\": \"1\",\n\t  \"total_fee\": \"1\", \n\t  \"total_loss\": \"1\",\n\t  \"total_tax\": \"1\",\n\t  \"active\": \"1\",\n\t  \"total_invest\": \"1\",\n\t  \"total_profit\": \"1\",\n\t  \"total_referral\":\"1\",\n\t  \"total_interest\":\"1\",\n\t  \"total_bonus\": \"1\"\n\t}\n}",
+              "raw": "{\n\t\"user_account\":{\n\t \"country_id\": \"5476b9c8-42ab-49ac-9ee1-f57140fed531\",\n      \"account_id\": \"dc91a73c-6109-4417-9b8b-cc5f5dbedfed\",\n      \"platform_id\": \"36974dae-b423-a64d-89ee-282f99a8287d\",\n      \"currency_id\": \"a624bd79-b87e-4688-8535-a5e8f55e21c4\",\n\t  \"category\": null,\n\t  \"name\": \"Test Account updated\",\n\t  \"active\": true\n\t}\n\t \n}",
               "options": {
                 "raw": {
                   "language": "json"
                 }
               }
             },
-            "url": "{{hostname}}/api/v1/user_accounts/f5d777df-63bd-422c-8f50-2602f3edf119"
+            "url": "{{hostname}}/api/v1/user_accounts/693eeacd-6131-46f6-94c8-6d35d4d29160"
           },
           "response": []
         },
@@ -9138,22 +9138,22 @@
   ],
   "variable": [
     {
-      "id": "a5a37a90-cb35-4a8e-887a-aaf28a36c116",
+      "id": "304b45a8-bc4f-4b4c-88b2-6a8207c7dabe",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "f8b80ddd-1edb-4b85-b4dc-99e29ada65e4",
+      "id": "82bd0aa5-0651-495c-a2e3-e37ff82597a3",
       "key": "client",
       "value": ""
     },
     {
-      "id": "8ca47932-65a4-4b5c-81ae-2367e9e9bb50",
+      "id": "4021fb8b-f5ee-4a65-87c4-8198b5c76b48",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "ad49569f-1b8f-4721-8876-c7307ad76be5",
+      "id": "070e8b4b-c6e4-4c61-9c65-b2512ebb7e86",
       "key": "uid",
       "value": ""
     }
