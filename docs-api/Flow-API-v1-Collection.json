@@ -1668,6 +1668,49 @@
             "url": "{{hostname}}/api/v1/user_accounts/9e0e1643-8d78-476f-8631-190249422893"
           },
           "response": []
+        },
+        {
+          "name": "user_accounts [DELETE] Copy",
+          "id": "a232c2d7-5688-425d-a431-45c46a9bfab6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "access-token",
+                "type": "text",
+                "value": "{{access-token}}"
+              },
+              {
+                "key": "client",
+                "type": "text",
+                "value": "{{client}}"
+              },
+              {
+                "key": "uid",
+                "type": "text",
+                "value": "{{uid}}"
+              },
+              {
+                "key": "expiry",
+                "value": "{{expiry}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"user_account\":{\n\t  \"country_id\": \"1\",\n\t  \"account_id\": \"1\",\n\t  \"platform_id\": \"1\",\n\t  \"currency_id\": \"1\",\n\t  \"user_id\": \"1\",\n\t  \"category\": \"1\",\n\t  \"name\": \"1\",\n\t  \"total_fee\": \"1\", \n\t  \"total_loss\": \"1\",\n\t  \"total_tax\": \"1\",\n\t  \"active\": \"1\",\n\t  \"total_invest\": \"1\",\n\t  \"total_profit\": \"1\",\n\t  \"total_referral\":\"1\",\n\t  \"total_interest\":\"1\",\n\t  \"total_bonus\": \"1\"\n\t}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{hostname}}/api/v1/user_accounts/9e0e1643-8d78-476f-8631-190249422893"
+          },
+          "response": []
         }
       ],
       "id": "4d65cf08-e3aa-4116-a8ae-0efc791e6092"
@@ -9138,22 +9181,22 @@
   ],
   "variable": [
     {
-      "id": "304b45a8-bc4f-4b4c-88b2-6a8207c7dabe",
+      "id": "2172ab9e-ec3f-4cdc-a73e-a1a9103f171d",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "82bd0aa5-0651-495c-a2e3-e37ff82597a3",
+      "id": "764becc7-3f51-47b5-a133-82f50ba512f9",
       "key": "client",
       "value": ""
     },
     {
-      "id": "4021fb8b-f5ee-4a65-87c4-8198b5c76b48",
+      "id": "5af0b881-412b-4d24-bf62-190b76a50ece",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "070e8b4b-c6e4-4c61-9c65-b2512ebb7e86",
+      "id": "b42683d7-7ab0-4950-9f31-0043e309d2d7",
       "key": "uid",
       "value": ""
     }
