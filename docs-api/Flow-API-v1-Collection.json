@@ -1452,7 +1452,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"user_account\":{\n\t \"country_id\": \"5476b9c8-42ab-49ac-9ee1-f57140fed531\",\n      \"account_id\": \"5dba9c0b-0938-4882-a785-9e0c1d339c7a\",\n      \"platform_id\": \"bcb3caf1-a0de-4c19-b139-adc940765fc3\",\n      \"currency_id\": \"a624bd79-b87e-4688-8535-a5e8f55e21c4\",\n\t  \"category\": \"1\",\n\t  \"name\": \"1\",\n\t  \"total_fee\": \"1\", \n\t  \"total_loss\": \"1\",\n\t  \"total_tax\": \"1\",\n\t  \"active\": \"1\",\n\t  \"total_invest\": \"1\",\n\t  \"total_profit\": \"1\",\n\t  \"total_referral\":\"1\",\n\t  \"total_interest\":\"1\",\n\t  \"total_bonus\": \"1\"\n\t}\n\t \n}",
+              "raw": "{\n\t\"user_account\":{\n\t \"country_id\": \"5476b9c8-42ab-49ac-9ee1-f57140fed531\",\n      \"account_id\": \"dc91a73c-6109-4417-9b8b-cc5f5dbedfed\",\n      \"platform_id\": \"36974dae-b423-a64d-89ee-282f99a8287d\",\n      \"currency_id\": \"a624bd79-b87e-4688-8535-a5e8f55e21c4\",\n\t  \"category\": null,\n\t  \"name\": \"Test Account\",\n\t  \"active\": true\n\t}\n\t \n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -9061,22 +9061,22 @@
   ],
   "variable": [
     {
-      "id": "6f8c3429-79a6-45fd-b00f-77a3b3e0a1ff",
+      "id": "006ec180-3784-409e-a41b-31dde85dfdc8",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "55572aa1-b2d6-47cc-9673-805fb6c9d420",
+      "id": "55e6cf9c-e139-4d5a-b3e3-907a0144573c",
       "key": "client",
       "value": ""
     },
     {
-      "id": "5e24bf58-15dd-49be-823a-0ba9816c49d2",
+      "id": "48fcc933-7215-4d70-b044-0e1d02ae68a3",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "15e026fe-1edc-4987-9bf4-5d4f91a7bd2f",
+      "id": "46d3c9b5-1c11-40ac-a5ee-c0fd0b63f6cf",
       "key": "uid",
       "value": ""
     }
