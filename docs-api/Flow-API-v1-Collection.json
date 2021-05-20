@@ -1656,16 +1656,7 @@
                 "type": "text"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n\t\"user_account\":{\n\t  \"country_id\": \"1\",\n\t  \"account_id\": \"1\",\n\t  \"platform_id\": \"1\",\n\t  \"currency_id\": \"1\",\n\t  \"user_id\": \"1\",\n\t  \"category\": \"1\",\n\t  \"name\": \"1\",\n\t  \"total_fee\": \"1\", \n\t  \"total_loss\": \"1\",\n\t  \"total_tax\": \"1\",\n\t  \"active\": \"1\",\n\t  \"total_invest\": \"1\",\n\t  \"total_profit\": \"1\",\n\t  \"total_referral\":\"1\",\n\t  \"total_interest\":\"1\",\n\t  \"total_bonus\": \"1\"\n\t}\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{hostname}}/api/v1/user_accounts/9e0e1643-8d78-476f-8631-190249422893"
+            "url": "{{hostname}}/api/v1/user_accounts/693eeacd-6131-46f6-94c8-6d35d4d29160"
           },
           "response": [
             {
@@ -1780,7 +1771,7 @@
             },
             {
               "id": "efc7780c-7495-4476-b698-be70b5a328cb",
-              "name": "user_accounts [DELETE]",
+              "name": "Delete User Account [404]",
               "originalRequest": {
                 "method": "DELETE",
                 "header": [
@@ -9335,22 +9326,22 @@
   ],
   "variable": [
     {
-      "id": "f169f1ec-1d70-4daf-a6b8-58dbaf07b76e",
+      "id": "375e7734-dca4-455e-b620-ee9276111066",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "c75badb1-bfb0-441e-bb31-20a691242c53",
+      "id": "7bf881d6-6d30-4ac9-93a8-f9723161ebc5",
       "key": "client",
       "value": ""
     },
     {
-      "id": "a33aa537-348f-4958-8cd4-9254b496e1e8",
+      "id": "36972004-6001-41b2-906f-66c04ca855ef",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "cddcfb8f-9cc6-4cb9-ada9-89a92eeecb57",
+      "id": "f87f9651-be1d-4046-8a3e-8c1c7384193b",
       "key": "uid",
       "value": ""
     }
