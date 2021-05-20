@@ -1667,7 +1667,118 @@
             },
             "url": "{{hostname}}/api/v1/user_accounts/9e0e1643-8d78-476f-8631-190249422893"
           },
-          "response": []
+          "response": [
+            {
+              "id": "6e603dd3-6b32-4fef-891c-3738fbb79e60",
+              "name": "user_accounts [DELETE]",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "access-token",
+                    "type": "text",
+                    "value": "{{access-token}}"
+                  },
+                  {
+                    "key": "client",
+                    "type": "text",
+                    "value": "{{client}}"
+                  },
+                  {
+                    "key": "uid",
+                    "type": "text",
+                    "value": "{{uid}}"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "{{expiry}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{hostname}}/api/v1/user_accounts/693eeacd-6131-46f6-94c8-6d35d4d29160"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "WLjwLfBtFs_sfv_oTC_sJA"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "sou4-WuK800Nxs7VkYtLjQ"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1622760606"
+                },
+                {
+                  "key": "uid",
+                  "value": "admin@flowfin.tech"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"19f9703b16657c68420e1d6f9bde0506\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "b34867bb-99da-40f2-bd4e-ca6bd96e01a4"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.273070"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"success\": true,\n    \"message\": \"User account deleted\"\n}"
+            }
+          ]
         }
       ],
       "id": "4d65cf08-e3aa-4116-a8ae-0efc791e6092"
@@ -9138,22 +9249,22 @@
   ],
   "variable": [
     {
-      "id": "599529c2-6b05-4d79-a642-3a077942d18e",
+      "id": "99423350-310d-483f-8a7c-6e1b2f963385",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "eb38b21a-0e7a-469d-9dbf-559a05bc5973",
+      "id": "06dfe271-7fa6-407a-845b-0067d5d67249",
       "key": "client",
       "value": ""
     },
     {
-      "id": "f5cd05f8-2cfb-4bfb-9734-6a541518e68f",
+      "id": "0b67d09d-c2a8-4853-90a0-6c3a7490803e",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "63e30314-5d35-4266-a45e-e4f9818f47bf",
+      "id": "2f618333-332e-45a1-a771-ad8b63b95e7c",
       "key": "uid",
       "value": ""
     }
