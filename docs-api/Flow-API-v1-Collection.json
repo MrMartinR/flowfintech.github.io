@@ -1464,7 +1464,7 @@
           "response": [
             {
               "id": "9823fa2e-7fd2-4e26-a415-0633ba6205b7",
-              "name": "Create User Account",
+              "name": "Create User Account [200]",
               "originalRequest": {
                 "method": "POST",
                 "header": [
@@ -1582,49 +1582,6 @@
               "body": "{\n    \"data\": {\n        \"id\": \"693eeacd-6131-46f6-94c8-6d35d4d29160\",\n        \"type\": \"user_account\",\n        \"attributes\": {\n            \"name\": \"Test Account\",\n            \"active\": true,\n            \"category\": null,\n            \"country\": {\n                \"id\": \"5476b9c8-42ab-49ac-9ee1-f57140fed531\",\n                \"name\": \"Slovenia\",\n                \"iso_code\": \"SI\",\n                \"continent\": \"Europe\",\n                \"currency_id\": \"13fb3c72-4227-4fa2-849a-b597a03d4494\",\n                \"created_at\": \"2020-11-14T17:28:57.000Z\",\n                \"updated_at\": \"2020-11-14T17:28:57.000Z\",\n                \"fiscal_year_start\": null\n            },\n            \"account\": {\n                \"id\": \"dc91a73c-6109-4417-9b8b-cc5f5dbedfed\",\n                \"category\": \"Platform\",\n                \"created_at\": \"2020-11-19T21:32:21.000Z\",\n                \"updated_at\": \"2020-11-19T21:32:21.000Z\",\n                \"platform_id\": \"36974dae-b423-a64d-89ee-282f99a8287d\",\n                \"country_id\": [\n                    \"1311bf44-b096-4d23-9021-47e4e315da24\"\n                ],\n                \"currency_id\": [\n                    \"67f1d878-5314-49d7-8510-0606d204b475\"\n                ],\n                \"contact_id\": \"fa6142c6-dfee-42be-9b50-e94d8b4976df\"\n            },\n            \"currency\": {\n                \"id\": \"a624bd79-b87e-4688-8535-a5e8f55e21c4\",\n                \"name\": \"Swazi Lilangeni\",\n                \"code\": \"SZL\",\n                \"symbol\": \"L\",\n                \"decimal_places\": null,\n                \"created_at\": \"2020-11-14T17:12:52.000Z\",\n                \"updated_at\": \"2020-11-14T17:12:52.000Z\",\n                \"kind\": \"Fiat\",\n                \"fx_eur\": 0\n            },\n            \"user\": {\n                \"id\": \"90d8b89a-5b49-47c3-80b0-3038d67f7791\",\n                \"provider\": \"email\",\n                \"uid\": \"admin@flowfin.tech\",\n                \"allow_password_change\": false,\n                \"username\": \"SuperFlower\",\n                \"email\": \"admin@flowfin.tech\",\n                \"currency_id\": null,\n                \"country_id\": null,\n                \"created_at\": \"2021-01-17T17:39:42.663Z\",\n                \"updated_at\": \"2021-05-20T22:33:53.145Z\",\n                \"dob\": null,\n                \"name\": null,\n                \"surname\": null,\n                \"contact_id\": null\n            },\n            \"user_loans\": []\n        }\n    }\n}"
             }
           ]
-        },
-        {
-          "name": "user_accounts [CREATE] Copy",
-          "id": "c821f32f-f3ff-47b6-9a7e-a5944653487f",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "access-token",
-                "type": "text",
-                "value": "{{access-token}}"
-              },
-              {
-                "key": "client",
-                "type": "text",
-                "value": "{{client}}"
-              },
-              {
-                "key": "uid",
-                "type": "text",
-                "value": "{{uid}}"
-              },
-              {
-                "key": "expiry",
-                "value": "{{expiry}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n\t\"user_account\":{\n\t \"country_id\": \"5476b9c8-42ab-49ac-9ee1-f57140fed531\",\n      \"account_id\": \"5dba9c0b-0938-4882-a785-9e0c1d339c7a\",\n      \"platform_id\": \"bcb3caf1-a0de-4c19-b139-adc940765fc3\",\n      \"currency_id\": \"a624bd79-b87e-4688-8535-a5e8f55e21c4\",\n\t  \"category\": \"1\",\n\t  \"name\": \"1\",\n\t  \"total_fee\": \"1\", \n\t  \"total_loss\": \"1\",\n\t  \"total_tax\": \"1\",\n\t  \"active\": \"1\",\n\t  \"total_invest\": \"1\",\n\t  \"total_profit\": \"1\",\n\t  \"total_referral\":\"1\",\n\t  \"total_interest\":\"1\",\n\t  \"total_bonus\": \"1\"\n\t}\n\t \n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{hostname}}/api/v1/user_accounts"
-          },
-          "response": []
         },
         {
           "name": "user_accounts [UPDATE]",
@@ -9181,22 +9138,22 @@
   ],
   "variable": [
     {
-      "id": "299fef3b-408a-4020-abfa-35285b73793c",
+      "id": "4d0959ea-d9af-4532-b1e7-9f9abf408963",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "82c25c52-4b54-4583-b590-d9c5a9a19401",
+      "id": "7963af58-615f-4f8c-aa94-6ba48875c9fd",
       "key": "client",
       "value": ""
     },
     {
-      "id": "5bfbe0bb-e7ea-401c-84a1-4c9636c57291",
+      "id": "364f56ae-b77c-4f5a-8632-2d255884514f",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "6172c3bf-08ac-4a01-bcea-7ea47735166a",
+      "id": "5e0fad7c-e58b-43bc-bc74-fc797279c444",
       "key": "uid",
       "value": ""
     }
