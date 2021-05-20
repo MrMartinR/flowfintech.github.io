@@ -1670,7 +1670,7 @@
           "response": [
             {
               "id": "6e603dd3-6b32-4fef-891c-3738fbb79e60",
-              "name": "user_accounts [DELETE]",
+              "name": "Delete User Account [200]",
               "originalRequest": {
                 "method": "DELETE",
                 "header": [
@@ -1777,6 +1777,92 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n    \"success\": true,\n    \"message\": \"User account deleted\"\n}"
+            },
+            {
+              "id": "efc7780c-7495-4476-b698-be70b5a328cb",
+              "name": "user_accounts [DELETE]",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "access-token",
+                    "type": "text",
+                    "value": "{{access-token}}"
+                  },
+                  {
+                    "key": "client",
+                    "type": "text",
+                    "value": "{{client}}"
+                  },
+                  {
+                    "key": "uid",
+                    "type": "text",
+                    "value": "{{uid}}"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "{{expiry}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{hostname}}/api/v1/user_accounts/693eeacd-6131-46f6-94c8-6d35d4d29160"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "70a3d190-4748-4160-83f0-3d8b31adac2a"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.165448"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"success\": false,\n    \"message\": \"Couldn't find UserAccount with 'id'=693eeacd-6131-46f6-94c8-6d35d4d29160 [WHERE \\\"user_accounts\\\".\\\"user_id\\\" = $1]\"\n}"
             }
           ]
         }
@@ -9249,22 +9335,22 @@
   ],
   "variable": [
     {
-      "id": "6b4790ed-52c9-4c64-8493-73a24ce96a8a",
+      "id": "18007550-54ee-48fe-b436-a7813088aed8",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "5ded91e0-308f-4c65-811b-8d0ad2cc1e59",
+      "id": "e426e144-61f5-4402-b3db-9a68fda42032",
       "key": "client",
       "value": ""
     },
     {
-      "id": "7d9c3a18-74f0-49a8-8a74-af8494ea67b8",
+      "id": "43a53ddb-6245-4eb6-818d-292233f6d7b9",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "7c48e4da-ec8c-47c8-8c6f-9e6fa2fe6ab3",
+      "id": "ee0d2f66-0cab-4033-a18b-79ebc6e817b3",
       "key": "uid",
       "value": ""
     }
