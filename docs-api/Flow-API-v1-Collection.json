@@ -1461,7 +1461,127 @@
             },
             "url": "{{hostname}}/api/v1/user_accounts"
           },
-          "response": []
+          "response": [
+            {
+              "id": "9823fa2e-7fd2-4e26-a415-0633ba6205b7",
+              "name": "Create User Account",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "access-token",
+                    "type": "text",
+                    "value": "{{access-token}}"
+                  },
+                  {
+                    "key": "client",
+                    "type": "text",
+                    "value": "{{client}}"
+                  },
+                  {
+                    "key": "uid",
+                    "type": "text",
+                    "value": "{{uid}}"
+                  },
+                  {
+                    "key": "expiry",
+                    "value": "{{expiry}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"user_account\":{\n\t \"country_id\": \"5476b9c8-42ab-49ac-9ee1-f57140fed531\",\n      \"account_id\": \"dc91a73c-6109-4417-9b8b-cc5f5dbedfed\",\n      \"platform_id\": \"36974dae-b423-a64d-89ee-282f99a8287d\",\n      \"currency_id\": \"a624bd79-b87e-4688-8535-a5e8f55e21c4\",\n\t  \"category\": null,\n\t  \"name\": \"Test Account\",\n\t  \"active\": true\n\t}\n\t \n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{hostname}}/api/v1/user_accounts"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "appliaction/vnd.api+json; charset=utf-8"
+                },
+                {
+                  "key": "access-token",
+                  "value": "WT6TqHiA9NtaznCt2ovCrg"
+                },
+                {
+                  "key": "token-type",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "client",
+                  "value": "rlSVU5WObOav4IDVmaaq1w"
+                },
+                {
+                  "key": "expiry",
+                  "value": "1622759633"
+                },
+                {
+                  "key": "uid",
+                  "value": "admin@flowfin.tech"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"b0d03e1656cd6caede043ecc01c68e9c\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "82a80790-4cf3-43fd-9bf4-930b4d42588f"
+                },
+                {
+                  "key": "X-Runtime",
+                  "value": "0.540717"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"id\": \"693eeacd-6131-46f6-94c8-6d35d4d29160\",\n        \"type\": \"user_account\",\n        \"attributes\": {\n            \"name\": \"Test Account\",\n            \"active\": true,\n            \"category\": null,\n            \"country\": {\n                \"id\": \"5476b9c8-42ab-49ac-9ee1-f57140fed531\",\n                \"name\": \"Slovenia\",\n                \"iso_code\": \"SI\",\n                \"continent\": \"Europe\",\n                \"currency_id\": \"13fb3c72-4227-4fa2-849a-b597a03d4494\",\n                \"created_at\": \"2020-11-14T17:28:57.000Z\",\n                \"updated_at\": \"2020-11-14T17:28:57.000Z\",\n                \"fiscal_year_start\": null\n            },\n            \"account\": {\n                \"id\": \"dc91a73c-6109-4417-9b8b-cc5f5dbedfed\",\n                \"category\": \"Platform\",\n                \"created_at\": \"2020-11-19T21:32:21.000Z\",\n                \"updated_at\": \"2020-11-19T21:32:21.000Z\",\n                \"platform_id\": \"36974dae-b423-a64d-89ee-282f99a8287d\",\n                \"country_id\": [\n                    \"1311bf44-b096-4d23-9021-47e4e315da24\"\n                ],\n                \"currency_id\": [\n                    \"67f1d878-5314-49d7-8510-0606d204b475\"\n                ],\n                \"contact_id\": \"fa6142c6-dfee-42be-9b50-e94d8b4976df\"\n            },\n            \"currency\": {\n                \"id\": \"a624bd79-b87e-4688-8535-a5e8f55e21c4\",\n                \"name\": \"Swazi Lilangeni\",\n                \"code\": \"SZL\",\n                \"symbol\": \"L\",\n                \"decimal_places\": null,\n                \"created_at\": \"2020-11-14T17:12:52.000Z\",\n                \"updated_at\": \"2020-11-14T17:12:52.000Z\",\n                \"kind\": \"Fiat\",\n                \"fx_eur\": 0\n            },\n            \"user\": {\n                \"id\": \"90d8b89a-5b49-47c3-80b0-3038d67f7791\",\n                \"provider\": \"email\",\n                \"uid\": \"admin@flowfin.tech\",\n                \"allow_password_change\": false,\n                \"username\": \"SuperFlower\",\n                \"email\": \"admin@flowfin.tech\",\n                \"currency_id\": null,\n                \"country_id\": null,\n                \"created_at\": \"2021-01-17T17:39:42.663Z\",\n                \"updated_at\": \"2021-05-20T22:33:53.145Z\",\n                \"dob\": null,\n                \"name\": null,\n                \"surname\": null,\n                \"contact_id\": null\n            },\n            \"user_loans\": []\n        }\n    }\n}"
+            }
+          ]
         },
         {
           "name": "user_accounts [CREATE] Copy",
@@ -9061,22 +9181,22 @@
   ],
   "variable": [
     {
-      "id": "006ec180-3784-409e-a41b-31dde85dfdc8",
+      "id": "f72dc8a9-695f-4639-ae2d-9b6f02f5e8f2",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "55e6cf9c-e139-4d5a-b3e3-907a0144573c",
+      "id": "59e5d4b8-2bc5-4094-ba08-0d21c2a18ccc",
       "key": "client",
       "value": ""
     },
     {
-      "id": "48fcc933-7215-4d70-b044-0e1d02ae68a3",
+      "id": "219ed4cb-0495-43bf-bc2a-e571bf0c2e11",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "46d3c9b5-1c11-40ac-a5ee-c0fd0b63f6cf",
+      "id": "0eae4bca-675d-447a-a7b1-9c49cadac6aa",
       "key": "uid",
       "value": ""
     }
