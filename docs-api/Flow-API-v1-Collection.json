@@ -1421,7 +1421,7 @@
           "response": []
         },
         {
-          "name": "user_accounts [CREATE]",
+          "name": "Create User Account",
           "id": "e97ed848-e657-4d9d-93e0-f21581e7c24d",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -9061,22 +9061,22 @@
   ],
   "variable": [
     {
-      "id": "7860d086-833c-49eb-98a9-ef33b2446bb9",
+      "id": "6f8c3429-79a6-45fd-b00f-77a3b3e0a1ff",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "4b1ccf34-479e-4422-aa91-4f4476fbf8f5",
+      "id": "55572aa1-b2d6-47cc-9673-805fb6c9d420",
       "key": "client",
       "value": ""
     },
     {
-      "id": "cb518feb-72ac-40d8-8d6f-539ab8e6c80f",
+      "id": "5e24bf58-15dd-49be-823a-0ba9816c49d2",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "67f40437-3ad0-49d0-8fa5-0a4f4ae7e4c0",
+      "id": "15e026fe-1edc-4987-9bf4-5d4f91a7bd2f",
       "key": "uid",
       "value": ""
     }
