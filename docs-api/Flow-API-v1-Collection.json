@@ -1627,7 +1627,7 @@
           "response": []
         },
         {
-          "name": "user_accounts [DELETE]",
+          "name": "Delete User Account",
           "id": "c9c34187-61d1-4855-b822-46e7ad2e004b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -9138,22 +9138,22 @@
   ],
   "variable": [
     {
-      "id": "afe636de-cd08-4068-b07b-3bd4fc83c0bc",
+      "id": "599529c2-6b05-4d79-a642-3a077942d18e",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "9a406f62-5a31-4643-912b-611a1115182b",
+      "id": "eb38b21a-0e7a-469d-9dbf-559a05bc5973",
       "key": "client",
       "value": ""
     },
     {
-      "id": "ecca958a-a65f-4dd7-b575-4b54c9864fdc",
+      "id": "f5cd05f8-2cfb-4bfb-9734-6a541518e68f",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "622d12dc-ab94-4f4c-a3d5-781119fec2e0",
+      "id": "63e30314-5d35-4266-a45e-e4f9818f47bf",
       "key": "uid",
       "value": ""
     }
