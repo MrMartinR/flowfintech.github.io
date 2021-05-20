@@ -1584,7 +1584,7 @@
           ]
         },
         {
-          "name": "user_accounts [UPDATE]",
+          "name": "Update User Account",
           "id": "49ed4a6a-6da6-4608-afa9-9ebf760f7ae0",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -9138,22 +9138,22 @@
   ],
   "variable": [
     {
-      "id": "5b42ad0a-b6f8-4b1b-a5b9-01ec14a20be0",
+      "id": "a5a37a90-cb35-4a8e-887a-aaf28a36c116",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "bb758b24-2127-4251-a08a-f102253c37a3",
+      "id": "f8b80ddd-1edb-4b85-b4dc-99e29ada65e4",
       "key": "client",
       "value": ""
     },
     {
-      "id": "a4589702-a55b-4bd3-b165-c4e31f596dab",
+      "id": "8ca47932-65a4-4b5c-81ae-2367e9e9bb50",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "a781c827-d0ac-47c8-aa74-81ec0cf5461c",
+      "id": "ad49569f-1b8f-4721-8876-c7307ad76be5",
       "key": "uid",
       "value": ""
     }
