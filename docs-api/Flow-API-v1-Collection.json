@@ -1353,7 +1353,7 @@
       "name": "User Accounts",
       "item": [
         {
-          "name": "user_accounts [ALL]",
+          "name": "user_accounts [All]",
           "id": "2cccadda-4276-4f61-97f0-8a9c6abc7956",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -9018,22 +9018,22 @@
   ],
   "variable": [
     {
-      "id": "dc9dafa3-bdcc-4a92-87f4-206042b0442c",
+      "id": "8df61829-bc1a-473d-8cff-0c2d330a0cef",
       "key": "access-token",
       "value": ""
     },
     {
-      "id": "f143c1d7-a559-41f6-9f6d-2569b49fbb50",
+      "id": "cffe348e-08a1-4a89-b8cc-beb9c2e3a879",
       "key": "client",
       "value": ""
     },
     {
-      "id": "ab998b83-f422-49ce-878e-0214619f259e",
+      "id": "803082d8-59c2-4005-b272-858776a8785b",
       "key": "expiry",
       "value": ""
     },
     {
-      "id": "73d6a5a5-95e6-41af-bf86-b90faa5c61d9",
+      "id": "a34a7af1-26b0-4581-9202-3c6d33a41c3b",
       "key": "uid",
       "value": ""
     }
