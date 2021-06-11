@@ -33,6 +33,7 @@ body {
   display: -ms-flexbox;
   flex-shrink: 0;
   -webkit-flex-shrink: 0;
+  flex: 1 0;
   -ms-flex: 1 0;
 }
 #resizer {
@@ -410,6 +411,7 @@ p.inherited {
 .box_info dl dd {
   flex-grow: 1;
   -webkit-flex-grow: 1;
+  flex: 1 0;
   -ms-flex: 1;
   max-width: 420px;
   padding: 6px 0;
